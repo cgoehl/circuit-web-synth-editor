@@ -77,6 +77,12 @@ Patch file example:
 | ------------------------ | ---------------| ---------------------------------  |
 | 0x00000029 to 0x0000015C | Synth's values | [See Novation Circuit PDF](resources/circuit-midi-parameters-v4.pdf) |
 
+The values follow an order quite close to the circuit PDF table.
+
+Look at the html file on order attributes of <input/> and </select> to see the order for each values.
+
+There are 308 values for synth's data.
+
 #### LFO
 
 Params values **0:122** and **0:123** are grouped on **0x0000003B** for *LFO1* and **0x00000044** for *LFO2*
