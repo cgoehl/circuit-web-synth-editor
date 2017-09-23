@@ -8,7 +8,7 @@ The purpose of this project is to cover my personnal needs by avoiding the use o
 
 It can edit an existing patch on the circuit, create new ones and export to Sysex file compatible with Novation Component.
 
-It's a work in progress.
+It's a work in progress quickly made.
 
 ![PrintScreen of Circuit Web Synth Editor](resources/printscreen.png)
 
@@ -24,10 +24,15 @@ I can not be held liable for material damage, loss of data or any other inconven
 
 - Clone this repository or download and extract a zipped release.
 - Open the html file with one supported browsers.
+- If the connection is successful, *Connected* appears in green on the screen and a sound is played by the Circuit.
+
+You always have to refresh the page if you connect the Circuit after the page is loaded.
 
 # Troubleshootings
 
-If the Circuit freezes, unplug USB wire.
+If the Circuit freezes for some reason, unplug USB wire.
+
+[You can report any problems](https://framagit.org/pumpkin/circuit-web-synth-editor/issues).
 
 # TODO
 
