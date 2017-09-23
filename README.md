@@ -136,11 +136,3 @@ midi-out:
 | Position   |     |   |    |    |   |    |    |   |   |     |
 | ---------- | --- | - | -- | -- | - | -- | -- | - | - | --- |
 | 0x00000000 | 240 | 0 | 32 | 41 | 1 | 96 | 64 | 0 | 0 | 247 |
-
-midi-in:
-
-| Position   |     |   |    |    |   |    |    |   |   |     |
-| -----------| --- | - | -- | -- | - | -- | -- | - | - | --- |
-| 0x00000000 | 240 | 0 | 32 | 41 | 1 | 96 | 0  | 0 | 0 | ... |
-
-The next step (...) concerns the sequence of metadata and the data synth (see patch file above).
