@@ -33,6 +33,29 @@ function getLFO(lfo) {
     return data;
 }
 
+function getCurrentSelectedPatch() {
+    output.sendSysex([0, 32, 41], [1, 96, 64, 0, 0]);
+}
+
+function getData() {
+    let allItems = [].slice.call(document.querySelectorAll('fieldset input[order], fieldset select[order]'));
+
+    // Sort
+    allItems.sort(function(a, b) {
+        var orderA = parseInt(a.getAttribute('order'));
+        var orderB = parseInt(b.getAttribute('order'));
+
+        return (orderA < orderB) ? -1 : (orderA > orderB) ? 1 : 0;
+    });
+
+    console.log('allItems length', allItems.length);
+
+    // Synth values
+    let synthData = extractSynthValuesFromDOM(allItems);
+
+    return mergeDataWithSysexMetadata(synthData);
+}
+
 function injectNonSupportedInputs() {
     var unsupportedValuesContainer = document.querySelector('#unsupportedValuesContainer');
 
@@ -93,7 +116,7 @@ function injectNonSupportedInputs() {
     unsupportedValuesContainer.innerHTML += unsupportedInput;
 }
 
-function mergeDataWithSysexMetadata(data) {
+function mergeDataWithSysexMetadata(data, type) {
     if (data.length !== 308) {
         throw "Synth data incoherent. Must be 308: " + data.length;
     }
@@ -271,6 +294,29 @@ function setLFO(data, lfo) {
     if (data < 0) {
         console.error('Bad LFO values');
     }
+}
+
+function storePatch(slot) {
+    if ((slot < 0) || (slot > 63)) {
+        return;
+    }
+
+    var data = getData();
+
+    // Set storage metadata
+    data.splice(6, 1, 1);
+    data.splice(7, 1, slot);
+
+    // Remove BOF and EOF
+    data.splice(349, 1);
+    data.splice(0, 1);
+
+    // Remove manufacturer
+    data.splice(0, 3);
+
+    console.log("storePatch", data);
+
+    output.sendSysex([0, 32, 41], data);
 }
 
 function writeSysexFile(data) {

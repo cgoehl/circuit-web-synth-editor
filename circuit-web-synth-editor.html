@@ -24,16 +24,20 @@
 
         <div class="container-fluid">
 
-            <p class="menu">
-                <select id="synth" class="float-left">
+            <br/>
+
+            <p>
+                <button id="getPatch" type="button" class="btn btn-primary">Get Current Patch</button>
+                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#slotModal">Store Patch</button>
+                <button id="export" type="button" class="btn btn-warning">Export to patch file</button>
+            </p>
+
+            <p>
+                <input placeholder="Patch name" maxlength="16" name="name" class="patchName"/>
+                <select id="synth" class="float-right">
                     <option value="1">Synth 1</option>
                     <option value="2">Synth 2</option>
                 </select>
-
-                <input placeholder="Patch name" maxlength="16" name="name" class="patchName"/>
-
-                <button id="getPatch" type="button" class="btn btn-warning float-right">Get Current Patch</button>
-                <button id="export" type="button" class="btn btn-warning float-right">Export to patch file</button>
             </p>
 
             <fieldset>
@@ -1634,6 +1638,27 @@
 
             <!-- ModMatrix and some Macros-->
         </fieldset>
+
+        <!-- Modal -->
+        <div class="modal fade" id="slotModal" tabindex="-1" role="dialog" aria-labelledby="slotModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="slotModalLabel">Store patch to Circuit</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <input id="slot" type="number" min="1" max="64" class="input-group" placeholder="Slot to store the patch (number from 1 to 64)"/>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-warning" id="storePatch" data-dismiss="modal">Store Patch</button>
+              </div>
+            </div>
+          </div>
+        </div>
 
     </body>
 

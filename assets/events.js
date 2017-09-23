@@ -20,30 +20,21 @@ for (let select of allSelects) {
 
 var exportBtn = document.querySelector('#export');
 var getPatchBtn = document.querySelector('#getPatch');
+var storePatchBtn = document.querySelector('#storePatch');
 
 exportBtn.addEventListener('click', function(event) {
-    let allItems = [].slice.call(document.querySelectorAll('fieldset input[order], fieldset select[order]'));
-
-    // Sort
-    allItems.sort(function(a, b) {
-        var orderA = parseInt(a.getAttribute('order'));
-        var orderB = parseInt(b.getAttribute('order'));
-
-        return (orderA < orderB) ? -1 : (orderA > orderB) ? 1 : 0;
-    });
-
-    console.log('allItems length', allItems.length);
-
-    // Synth values
-    let synthData = extractSynthValuesFromDOM(allItems);
-
-    let data = mergeDataWithSysexMetadata(synthData);
-
-    writeSysexFile(data);
-
+    writeSysexFile(getData());
 });
 
 getPatchBtn.addEventListener('click', function(event) {
     console.log('Get Current Selected Patch');
-    output.sendSysex([0, 32, 41], [1, 96, 64, 0, 0]);
+    getCurrentSelectedPatch();
+});
+
+storePatchBtn.addEventListener('click', function(event) {
+    console.log('Store patch to Circuit');
+    var slot = document.querySelector('#slot').value;
+    slot--;
+
+    storePatch(slot);
 });

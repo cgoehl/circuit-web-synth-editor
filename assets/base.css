@@ -30,10 +30,6 @@ select {
     color: #f7f7f8;
 }
 
-.menu {
-    text-align: center;
-}
-
 .bg-darkblue {
     background-color: #1D628B;
 }
@@ -41,18 +37,15 @@ select {
 .patchName {
     background-color: #282c34;
     border: none;
-    padding: 5px 10px;  
+    padding: 5px 10px;
     color: white;
-    font-size: 24px;  
+    font-size: 24px;
     text-align: center;
 }
 #synth {
     background-color: #282c34;
-    
+
     border: none;
     padding: 10px 8px;
-    font-size: 20px; 
-}
-.patchName, #export, #synth, #getPatch {
-    margin: 10px;
+    font-size: 20px;
 }

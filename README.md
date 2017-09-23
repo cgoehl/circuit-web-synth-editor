@@ -50,8 +50,6 @@ Circuit Web Synth Editor uses:
 - Support of multiple macro parameters
 - Support of ModMatrix
 
-- Send to Circuit
-
 - Code refactoring
 
 - Better UI
@@ -156,3 +154,26 @@ midi-out:
 | Position   |     |   |    |    |   |    |    |   |   |     |
 | ---------- | --- | - | -- | -- | - | -- | -- | - | - | --- |
 | 0x00000000 | 240 | 0 | 32 | 41 | 1 | 96 | 64 | 0 | 0 | 247 |
+
+## Store patch data on Circuit
+
+midi-out:
+
+| Position   |     |   |    |    |   |    |   |    |   |     |
+| ---------- | --- | - | -- | -- | - | -- | - | -- | - | --- |
+| 0x00000000 | 240 | 0 | 32 | 41 | 1 | 96 | 1 | 32 | 0 | ... |
+
+- At **0x00000007** is the index position of the slot (32 in this case) where the patch has to be stored. Decimal values allowed are 0 to 63.
+
+- From **0x00000009** to end is the rest of the metadata and data sequence as described in the patch file part (see above).
+
+## Initialize new buffered patch
+
+midi-out:
+
+| Position   |     |   |    |    |   |    |   |   |   |     |
+| ---------- | --- | - | -- | -- | - | -- | - | - | - | --- |
+| 0x00000000 | 240 | 0 | 32 | 41 | 1 | 96 | 0 | 0 | 0 | ... |
+
+- From **0x00000009** to end is the rest of the metadata and data sequence as described in the patch file part (see above).
+
