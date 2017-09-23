@@ -14,19 +14,20 @@ It's a work in progress quickly made.
 
 # License
 
-This application if under GPL3 license.
+This application is published under the GPL3 license.
 
 # Terms of use
 
-I can not be held liable for material damage, loss of data or any other inconvenience resulting from the use of this software. **Use at your own risk**.
+I can not be held liable for material damage, loss of data or any other inconvenience resulting from the use of this software. **Use it at your own risk**.
 
 # Installation & usage
 
 - Clone this repository or download and extract a zipped release.
-- Open the html file with one supported browsers.
-- If the connection is successful, *Connected* appears in green on the screen and a sound is played by the Circuit.
+- Plug in the Circuit USB.
+- Open the html file with one supported browser.
+- If the connection is successful, *Connected* appears in green on the screen and a short sound is played by the Circuit.
 
-You always have to refresh the page if you connect the Circuit after the page is loaded.
+You always have to connect the Circuit first or must reload the page after the plug in.
 
 # Troubleshootings
 
