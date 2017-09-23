@@ -33,7 +33,7 @@ function getLFO(lfo) {
     return data;
 }
 
-function injectNonSupportedInput() {
+function injectNonSupportedInputs() {
     var unsupportedValuesContainer = document.querySelector('#unsupportedValuesContainer');
 
     var unsupportedInput = "";
