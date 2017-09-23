@@ -218,29 +218,7 @@ exportBtn.addEventListener('click', function(event) {
 	console.log('allItems length', allItems.length);
 
     // Synth values
-    let synthData = extractSynthValuesFromDOM(allItems)
-
-	/* WORKAROUND - Compute missing values with 0 */
-    //~ let synthValues = synthData.slice(0, 92);
-
-    //~ // Fill missing modMatrix
-    //~ let modMatrixValues = []
-
-    //~ for (var i = 0; i < 80; i++) {
-      //~ modMatrixValues.push(0)
-    //~ }
-
-    //~ // Fill missing macro
-    //~ let macroValues = synthData.slice(92, 132);
-    //~ var macroFiller = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-    //~ var macroIndex = [5, 22, 39, 56, 73, 90, 107, 124]
-    //~ for (var i = 0; i < macroIndex.length; i++) {
-        //~ var index = macroIndex[i];
-        //~ macroValues.splice.apply(macroValues, [index, 0].concat(macroFiller));
-    //~ }
-
-    //~ synthData = synthValues.concat(modMatrixValues.concat(macroValues));
-    /* WORKAROUND - END */
+    let synthData = extractSynthValuesFromDOM(allItems);
 
 	let data = mergeDataWithSysexMetadata(synthData);
 
