@@ -1,0 +1,32 @@
+input[type="range"] {
+    -webkit-appearance:none;
+    background: linear-gradient(to right, #4589B0 0%, #4589B0 100%);
+    background-size:190px 10px;
+    background-position:center;
+    background-repeat:no-repeat;
+    overflow:hidden;
+
+    width:200px;
+}
+
+input[type="range"]::-webkit-slider-thumb{
+    -webkit-appearance:none;
+    width:20px;
+    height:20px;
+    background:#1D628B;
+    position:relative;
+    z-index:3;
+    box-shadow:0 0 5px 0 rgba(0,0,0,0.3);
+}
+
+input[type="range"]::-webkit-slider-thumb:after{
+    content:" ";
+    width:200px;
+    height:10px;
+    position:absolute;
+    z-index:1;
+    right:20px;
+    top:5px;
+    background: #ff5b32;
+    background: linear-gradient(to right, #f088fc 1%, #AC6CFF 70%);
+}

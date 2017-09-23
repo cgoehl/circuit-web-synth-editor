@@ -1,0 +1,58 @@
+html, body {
+  background: #21252b;
+  font-family: Sans-serif;
+  color: #abb2bf;
+}
+
+h1 small {
+    font-size: 20px;
+}
+
+fieldset {
+    background:#282c34;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+fieldset > legend {
+    color: #f7f7f8;
+}
+
+label {
+    margin-top: 15px;
+}
+
+select {
+    width: 200px;
+}
+
+.navbar {
+    color: #f7f7f8;
+}
+
+.menu {
+    text-align: center;
+}
+
+.bg-darkblue {
+    background-color: #1D628B;
+}
+
+.patchName {
+    background-color: #282c34;
+    border: none;
+    padding: 5px 10px;  
+    color: white;
+    font-size: 24px;  
+    text-align: center;
+}
+#synth {
+    background-color: #282c34;
+    
+    border: none;
+    padding: 10px 8px;
+    font-size: 20px; 
+}
+.patchName, #export, #synth {
+    margin: 10px 0;
+}
