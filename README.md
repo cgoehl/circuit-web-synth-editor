@@ -35,6 +35,14 @@ If the Circuit freezes for some reason, unplug USB wire.
 
 [You can report any problems](https://framagit.org/pumpkin/circuit-web-synth-editor/issues).
 
+# Libraries
+
+Circuit Web Synth Editor uses:
+
+- Bootstrap 4.0.0-beta and its dependencies (jquery, popper).
+- FileSaver.js
+- WebMidi.js
+
 # TODO
 
 - Display values on sliders
