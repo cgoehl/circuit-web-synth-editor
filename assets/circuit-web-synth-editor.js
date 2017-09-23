@@ -54,12 +54,10 @@ function parseCircuitPatch(circuitData) {
 		if (order == 60) {
 			// LFO 1 exceptions
 			setLFO(synthValuesArr[i], 1);
-            console.log(order, synthValuesArr[i], item);
 		}
 		if (order == 69) {
 			// LFO 2 exceptions
 			setLFO(synthValuesArr[i], 2);
-            console.log(order, synthValuesArr[i], item);
 		}
 
 		if (item) {
