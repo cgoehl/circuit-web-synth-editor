@@ -155,6 +155,10 @@ midi-out:
 | ---------- | --- | - | -- | -- | - | -- | -- | - | - | --- |
 | 0x00000000 | 240 | 0 | 32 | 41 | 1 | 96 | 64 | 0 | 0 | 247 |
 
+midi-in:
+
+Patch data as described into the patch file part.
+
 ## Store patch data on Circuit
 
 midi-out:
