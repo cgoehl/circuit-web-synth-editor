@@ -127,17 +127,13 @@ So for example:
 
   The others CC values are 0.
 
-## Midi-Out
-
-### Request data of current selected patch on Circuit
+## Request data of current selected patch on Circuit
 
 midi-out:
 
 | Position   |     |   |    |    |   |    |    |   |   |     |
 | ---------- | --- | - | -- | -- | - | -- | -- | - | - | --- |
 | 0x00000000 | 240 | 0 | 32 | 41 | 1 | 96 | 64 | 0 | 0 | 247 |
-
-### Response
 
 midi-in:
 
