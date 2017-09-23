@@ -10,6 +10,8 @@ It can edit an existing patch on the circuit, create new ones and export to Syse
 
 It's a work in progress.
 
+![PrintScreen of Circuit Web Synth Editor](resources/printscreen.png)
+
 # License
 
 This application if under GPL3 license.
@@ -46,7 +48,7 @@ If the Circuit freezes, unplug USB wire.
 
 Patch file example:
 
-![Patch HEX s](resources/patch.png)
+![Patch HEX](resources/patch.png)
 
 ### BOF and EOF
 

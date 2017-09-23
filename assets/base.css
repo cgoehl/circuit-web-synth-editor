@@ -53,6 +53,6 @@ select {
     padding: 10px 8px;
     font-size: 20px; 
 }
-.patchName, #export, #synth {
-    margin: 10px 0;
+.patchName, #export, #synth, #getPatch {
+    margin: 10px;
 }
