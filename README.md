@@ -79,7 +79,7 @@ Patch file example:
 
 The values follow an order quite close to the circuit PDF table.
 
-Look at the html file on order attributes of <input/> and </select> to see the order for each values.
+Look at the html file on order attributes of *input* and *select* to see the order for each values.
 
 There are 308 values for synth's data.
 
