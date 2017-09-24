@@ -356,5 +356,5 @@ function writeSysexFile(data) {
     }
 
     var blob = new Blob([ia], {type: "application/octet-stream"});
-    saveAs(blob, "export.syx");
+    saveAs(blob, "circuit-patch.syx");
 }

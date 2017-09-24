@@ -49,3 +49,6 @@ select {
     padding: 10px 8px;
     font-size: 20px;
 }
+#export {
+    margin-left: 3px;
+}
