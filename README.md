@@ -69,7 +69,7 @@ Patch file example:
 | 0x00000000    | BOF char      | F0     |
 | 0x0000015D    | EOF char      | F7     |
 
-### Metadata
+### Header
 
 | Position                 | Type of data            | Values                     |
 | ------------------------ | ----------------------- | -------------------------- |
@@ -78,6 +78,11 @@ Patch file example:
 | 0x00000006               | unknown                 | 00                         |
 | 0x00000007               | unknown                 | 00                         |
 | 0x00000008               | unknown                 | 00                         |
+
+### Metadata
+
+| Position                 | Type of data            | Values                     |
+| ------------------------ | ----------------------- | -------------------------- |
 | 0x00000009 to 0x00000018 | Patch name (16 chars)   | Chars encoded              |
 | 0x00000019               | Music category          | Classic, drum, poly ...    |
 | 0x0000001A               | Music genre             | Techno, house, classic ... |
@@ -167,9 +172,13 @@ midi-out:
 | ---------- | --- | - | -- | -- | - | -- | - | -- | - | --- |
 | 0x00000000 | 240 | 0 | 32 | 41 | 1 | 96 | 1 | 32 | 0 | ... |
 
-- At **0x00000007** is the index position of the slot (32 in this case) where the patch has to be stored. Decimal values allowed are 0 to 63.
+data:
 
-- From **0x00000009** to end is the rest of the metadata and data sequence as described in the patch file part (see above).
+| Position      | Type of data                     | Values  |
+| ------------- | -------------------------------- | ------- |
+| 0x00000007    | Index position of the patch slot | 0 to 63 |
+
+From **0x00000009** to end is the rest of the metadata and data sequence as described in the patch file part (see above).
 
 ## Initialize new buffered patch
 
@@ -179,4 +188,4 @@ midi-out:
 | ---------- | --- | - | -- | -- | - | -- | - | - | - | --- |
 | 0x00000000 | 240 | 0 | 32 | 41 | 1 | 96 | 0 | 0 | 0 | ... |
 
-- From **0x00000009** to end is the rest of the metadata and data sequence as described in the patch file part (see above).
+From **0x00000009** to end is the rest of the metadata and data sequence as described in the patch file part (see above).
