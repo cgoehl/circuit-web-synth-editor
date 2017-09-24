@@ -21,6 +21,7 @@ for (let select of allSelects) {
 var exportBtn = document.querySelector('#export');
 var getPatchBtn = document.querySelector('#getPatch');
 var storePatchBtn = document.querySelector('#storePatch');
+var resetBtn = document.querySelector('#reset');
 
 exportBtn.addEventListener('click', function(event) {
     writeSysexFile(getData());
@@ -37,4 +38,10 @@ storePatchBtn.addEventListener('click', function(event) {
     slot--;
 
     storePatch(slot);
+});
+
+resetBtn.addEventListener('click', function(event) {
+    console.log('Reset all values');
+
+    resetPatch();
 });

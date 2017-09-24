@@ -62,9 +62,12 @@ function injectNonSupportedInputs() {
     var unsupportedInput = "";
 
     // ModMatrix
-    for (var i = 93; i < 173; i++) {
+    for (var i = 93; i < 173; i+=4) {
         var order = i;
-        unsupportedInput += "<input order='" + order + "' value='0' disabled hidden/>";
+        unsupportedInput += "<input order='" + order + "' value='0' default='0' disabled hidden/>";
+        unsupportedInput += "<input order='" + ++order + "' value='0' default='0' disabled hidden/>";
+        unsupportedInput += "<input order='" + ++order + "' value='64' default='64' disabled hidden/>";
+        unsupportedInput += "<input order='" + ++order + "' value='0' default='0' disabled hidden/>";
     }
 
     // Macros
@@ -177,7 +180,6 @@ function parseCircuitPatch(circuitData) {
 
     // Synth values
     var synthValuesArr = circuitData.slice(41, 349);
-    console.log("synthValuesArr", synthValuesArr);
 
     for (var i=0; i < synthValuesArr.length; i++) {
         var order = i + 1;
@@ -199,12 +201,38 @@ function parseCircuitPatch(circuitData) {
     }
 }
 
+function resetPatch() {
+    resetValues();
+
+    var data = getData();
+
+    // Remove BOF and EOF
+    data.splice(349, 1);
+    data.splice(0, 1);
+
+    // Remove manufacturer
+    data.splice(0, 3);
+
+    console.log("reset Patch", data);
+
+    output.sendSysex([0, 32, 41], data);
+}
+
 function resetValues() {
     let allItems = [].slice.call(document.querySelectorAll('fieldset input, fieldset select'));
 
     for (var i = 0; i < allItems.length; i++) {
-        allItems[i].value = allItems[i].getAttribute('default');
+        var item = allItems[i];
+
+        if (item.hasAttribute("default")) {
+            item.value = allItems[i].getAttribute('default');
+        } else {
+            item.value = 0;
+        }
     }
+
+    let patchName = document.querySelector('#patchName');
+    patchName.value = 'unamed';
 }
 
 function sendMessage(control, value) {

@@ -180,4 +180,3 @@ midi-out:
 | 0x00000000 | 240 | 0 | 32 | 41 | 1 | 96 | 0 | 0 | 0 | ... |
 
 - From **0x00000009** to end is the rest of the metadata and data sequence as described in the patch file part (see above).
-

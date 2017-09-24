@@ -30,10 +30,11 @@
                 <button id="getPatch" type="button" class="btn btn-primary">Get Current Patch</button>
                 <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#slotModal">Store Patch</button>
                 <button id="export" type="button" class="btn btn-warning">Export to patch file</button>
+                <button id="reset" type="button" class="btn btn-warning">Reset all values</button>
             </p>
 
             <p>
-                <input placeholder="Patch name" maxlength="16" name="name" class="patchName"/>
+                <input id="patchName" placeholder="Patch name" maxlength="16" name="name" class="patchName"/>
                 <select id="synth" class="float-right">
                     <option value="1">Synth 1</option>
                     <option value="2">Synth 2</option>
@@ -114,10 +115,10 @@
                             </select><br/>
 
                         <label for="osc_1_wave_interpolate">Wave interpolate</label><br/>
-                            <input id="osc_1_wave_interpolate" name="20" type="range" min="0" max="127" step="1" order="6" default="0"><br/>
+                            <input id="osc_1_wave_interpolate" name="20" type="range" min="0" max="127" step="1" order="6" default="127"><br/>
 
                         <label for="osc_1_wave_pulse_width_index">Pulse width index</label><br/>
-                            <input id="osc_1_wave_pulse_width_index" name="21" type="range" min="0" max="127" step="1" order="7" default="127"><br/>
+                            <input id="osc_1_wave_pulse_width_index" name="21" type="range" min="0" max="127" step="1" order="7" default="64"><br/>
 
                         <label for="osc_1_virtual_sync_depth">Virtual sync depth</label><br/>
                             <input id="osc_1_virtual_sync_depth" name="22" type="range" min="0" max="127" step="1" order="8" default="0"><br/>
@@ -179,10 +180,10 @@
                             </select><br/>
 
                         <label for="osc_2_wave_interpolate">Wave interpolate</label><br/>
-                            <input id="osc_2_wave_interpolate" name="30" type="range" min="0" max="127" step="1" order="15" default="0"><br/>
+                            <input id="osc_2_wave_interpolate" name="30" type="range" min="0" max="127" step="1" order="15" default="127"><br/>
 
                         <label for="osc_2_wave_pulse_width_index">Pulse width index</label><br/>
-                            <input id="osc_2_wave_pulse_width_index" name="31" type="range" min="0" max="127" step="1" order="16" default="127"><br/>
+                            <input id="osc_2_wave_pulse_width_index" name="31" type="range" min="0" max="127" step="1" order="16" default="64"><br/>
 
                         <label for="osc_2_virtual_sync_depth">Virtual sync depth</label><br/>
                             <input id="osc_2_virtual_sync_depth" name="33" type="range" min="0" max="127" step="1" order="17" default="0"><br/>
@@ -714,7 +715,7 @@
                                 </select><br/>
 
                             <label for="chorus_rate">Rate</label><br/>
-                                <input id="chorus_rate" name="1:25" type="range" min="0" max="127" step="1" order="88" default="84"><br/>
+                                <input id="chorus_rate" name="1:25" type="range" min="0" max="127" step="1" order="88" default="20"><br/>
 
                             <label for="chorus_feedback">Feedback</label><br/>
                                 <input id="chorus_feedback" name="1:27" type="range" min="0" max="127" step="1" order="90" default="74"><br/>
@@ -841,7 +842,7 @@
                                     <option value="50">Chorus Delay</option>
 
                                     <option value="51">ModMatrix 1 Depth</option>
-                                    <option value="52">ModMatrix 2  Depth</option>
+                                    <option value="52">ModMatrix 2 Depth</option>
                                     <option value="53">ModMatrix 3 Depth</option>
                                     <option value="54">ModMatrix 4 Depth</option>
                                     <option value="55">ModMatrix 5 Depth</option>
@@ -947,7 +948,7 @@
                                     <option value="50">Chorus Delay</option>
 
                                     <option value="51">ModMatrix 1 Depth</option>
-                                    <option value="52">ModMatrix 2  Depth</option>
+                                    <option value="52">ModMatrix 2 Depth</option>
                                     <option value="53">ModMatrix 3 Depth</option>
                                     <option value="54">ModMatrix 4 Depth</option>
                                     <option value="55">ModMatrix 5 Depth</option>
@@ -1624,17 +1625,17 @@
         <!-- Non supported values -->
         <fieldset id="unsupportedValuesContainer" hidden>
             <!-- LFO -->
-            <input order="60" value="0" hidden disabled>
-            <input order="69" value="0" hidden disabled>
+            <input order="60" value="0" default="0" hidden disabled>
+            <input order="69" value="0" default="0" hidden disabled>
 
-            <input order="70" value="0" hidden disabled>
-            <input order="72" value="0" hidden disabled>
-            <input order="73" value="0" hidden disabled>
-            <input order="80" value="0" hidden disabled>
-            <input order="81" value="0" hidden disabled>
-            <input order="82" value="0" hidden disabled>
-            <input order="83" value="0" hidden disabled>
-            <input order="84" value="0" hidden disabled>
+            <input order="70" value="0" default="0" hidden disabled>
+            <input order="72" value="0" default="0" hidden disabled>
+            <input order="73" value="0" default="0" hidden disabled>
+            <input order="80" value="0" default="0" hidden disabled>
+            <input order="81" value="0" default="0" hidden disabled>
+            <input order="82" value="0" default="0" hidden disabled>
+            <input order="83" value="0" default="0" hidden disabled>
+            <input order="84" value="0" default="0" hidden disabled>
 
             <!-- ModMatrix and some Macros-->
         </fieldset>
