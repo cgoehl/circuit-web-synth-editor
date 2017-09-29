@@ -15,31 +15,40 @@
 
     <body>
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-darkblue">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
             <a class="navbar-brand" href="#">Circuit Web Synth Editor <small id="status"></small></a>
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ml-auto">
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Import/Export
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#" id="getPatch" >Download patch from Circuit</a>
+                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#slotModal">Upload patch to Circuit</a>
+                            <a class="dropdown-item" href="#" id="export">Export patch to .syx file</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="reset">Initialize new patch</a>
+                    </li>
+
+                </ul>
+            </div>
         </nav>
 
         <div class="container-fluid">
 
             <br/>
 
-            <p>
-                <button id="getPatch" type="button" class="btn btn-primary">Get current patch from Circuit</button>
-                <button id="reset" type="button" class="btn btn-default">Initialize new</button>
-
-                <button id="export" type="button" class="btn btn-warning float-right">Export to .syx file</button>
-                <button type="button" class="btn btn-warning float-right" data-toggle="modal" data-target="#slotModal">Upload to Circuit</button>
-            </p>
-
-            <p>
-                <input id="patchName" placeholder="Patch name" maxlength="16" name="name" class="patchName"/>
-                <select id="synth" class="float-right">
-                    <option value="1">Synth 1</option>
-                    <option value="2">Synth 2</option>
-                </select>
-            </p>
-
-            <ul class="nav nav-pills" role="tablist">
+            <ul class="nav nav-pills justify-content-center" role="tablist">
                 <li class="nav-item">
                     <a class="nav-link active" role="tab" data-toggle="tab" href="#synthControls">Synth engine controls</a>
                 </li>
@@ -51,7 +60,19 @@
                 </li>
             </ul>
 
-            <div class="tab-content" id="myTabContent">
+            <br/>
+
+            <p>
+                <input id="patchName" placeholder="Patch name" maxlength="16" name="name" class="patchName"/>
+                <select id="synth" class="float-right">
+                    <option value="1">Synth 1</option>
+                    <option value="2">Synth 2</option>
+                </select>
+            </p>
+
+
+
+            <div class="tab-content">
                 <div class="tab-pane show active" id="synthControls" role="tabpanel">
                     <fieldset>
                         <legend>Voice</legend>
@@ -5475,12 +5496,12 @@
                 </div>
             </div>
 
-            <!-- Non supported values -->
-            <fieldset id="unsupportedValuesContainer" hidden>
+            <fieldset hidden>
                 <!-- LFO -->
                 <input order="60" value="0" default="0" hidden disabled>
                 <input order="69" value="0" default="0" hidden disabled>
 
+                <!-- unknown -->
                 <input order="70" value="0" default="0" hidden disabled>
                 <input order="72" value="0" default="0" hidden disabled>
                 <input order="73" value="0" default="0" hidden disabled>

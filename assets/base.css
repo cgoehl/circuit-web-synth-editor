@@ -26,14 +26,6 @@ select {
     width: 200px;
 }
 
-.navbar {
-    color: #f7f7f8;
-}
-
-.bg-darkblue {
-    background-color: #1D628B;
-}
-
 .patchName {
     background-color: #282c34;
     border: none;
@@ -48,7 +40,4 @@ select {
     border: none;
     padding: 10px 8px;
     font-size: 20px;
-}
-#export {
-    margin-left: 3px;
 }
