@@ -47,7 +47,6 @@ Circuit Web Synth Editor uses:
 
 - Display values on sliders
 
-- Support of ModMatrix
 - Support of category and genre
 
 - Code refactoring
