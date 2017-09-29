@@ -41,3 +41,19 @@ select {
     padding: 10px 8px;
     font-size: 20px;
 }
+
+.synth1 a.nav-link{
+    color: #ff00ff;
+}
+.synth2 a.nav-link{
+    color: #00ff80;
+}
+
+.synth1 a.nav-link.active {
+    background: #ff00ff;
+    color: black;
+}
+.synth2 a.nav-link.active  {
+    background: #00ff80;
+    color: black;
+}

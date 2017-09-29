@@ -45,3 +45,26 @@ resetBtn.addEventListener('click', function(event) {
 
     resetPatch();
 });
+
+var synthSelect = document.querySelector("#synth");
+
+synthSelect.addEventListener('change', function(event) {
+    var containers;
+    var newCssClass;
+    var oldCssClass;
+
+    if (event.target.value == "1") {
+        oldCssClass = "synth2";
+        newCssClass = "synth1";
+    } else {
+        oldCssClass = "synth1";
+        newCssClass = "synth2";
+    }
+    containers = document.querySelectorAll('.' + oldCssClass);
+
+    for (var i=0; i < containers.length ; i++) {
+        var container = containers[i];
+        container.classList.remove(oldCssClass);
+        container.classList.add(newCssClass);
+    }
+});

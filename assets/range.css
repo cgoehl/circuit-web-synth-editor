@@ -30,3 +30,32 @@ input[type="range"]::-webkit-slider-thumb:after{
     background: #ff5b32;
     background: linear-gradient(to right, #f088fc 1%, #AC6CFF 70%);
 }
+
+.synth1 input[type="range"] {
+    -webkit-appearance:none;
+    background: linear-gradient(to right, #be0dc1 0%, #be0dc1 100%);
+    background-size:190px 10px;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+.synth2 input[type="range"] {
+    -webkit-appearance:none;
+    background: linear-gradient(to right, #0cbf69 0%, #0cbf69 100%);
+    background-size:190px 10px;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+.synth1 input[type="range"]::-webkit-slider-thumb {
+    background: #ff00ff;
+}
+.synth2 input[type="range"]::-webkit-slider-thumb {
+    background: #00ff80;
+}
+
+.synth1 input[type="range"]::-webkit-slider-thumb:after {
+    background: #ff00ff;
+}
+.synth2 input[type="range"]::-webkit-slider-thumb:after {
+    background: #00ff80;
+}
