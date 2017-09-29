@@ -70,51 +70,6 @@ function injectNonSupportedInputs() {
         unsupportedInput += "<input order='" + ++order + "' value='0' default='0' disabled hidden/>";
     }
 
-    // Macros
-    var steps = [
-        {
-            "from": 178,
-            "to": 190
-        },
-        {
-            "from": 195,
-            "to": 207
-        },
-        {
-            "from": 212,
-            "to": 224
-        },
-        {
-            "from": 229,
-            "to": 241
-        },
-        {
-            "from": 246,
-            "to": 258
-        },
-        {
-            "from": 263,
-            "to": 275
-        },
-        {
-            "from": 280,
-            "to": 292
-        },
-        {
-            "from": 297,
-            "to": 309
-        },
-    ]
-    for (var i = 0; i < steps.length; i++) {
-        var from = steps[i].from;
-        var to = steps[i].to;
-
-        for (var j = from; j < to; j++) {
-            var order = j;
-            unsupportedInput += "<input order='" + order + "' value='0' disabled hidden/>";
-        }
-    }
-
     // Inject in DOM
     unsupportedValuesContainer.innerHTML += unsupportedInput;
 }
