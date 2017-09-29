@@ -56,24 +56,6 @@ function getData() {
     return mergeDataWithSysexMetadata(synthData);
 }
 
-function injectNonSupportedInputs() {
-    var unsupportedValuesContainer = document.querySelector('#unsupportedValuesContainer');
-
-    var unsupportedInput = "";
-
-    // ModMatrix
-    for (var i = 93; i < 173; i+=4) {
-        var order = i;
-        unsupportedInput += "<input order='" + order + "' value='0' default='0' disabled hidden/>";
-        unsupportedInput += "<input order='" + ++order + "' value='0' default='0' disabled hidden/>";
-        unsupportedInput += "<input order='" + ++order + "' value='64' default='64' disabled hidden/>";
-        unsupportedInput += "<input order='" + ++order + "' value='0' default='0' disabled hidden/>";
-    }
-
-    // Inject in DOM
-    unsupportedValuesContainer.innerHTML += unsupportedInput;
-}
-
 function mergeDataWithSysexMetadata(data, type) {
     if (data.length !== 308) {
         throw "Synth data incoherent. Must be 308: " + data.length;

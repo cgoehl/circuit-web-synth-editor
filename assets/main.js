@@ -48,4 +48,3 @@ WebMidi.enable(function (err) {
 }, sysex=true);
 
 resetValues();
-injectNonSupportedInputs();

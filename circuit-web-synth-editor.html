@@ -43,9 +43,9 @@
                 <li class="nav-item">
                     <a class="nav-link active" role="tab" data-toggle="tab" href="#synthControls">Synth engine controls</a>
                 </li>
-                <!--li class="nav-item">
-                    <a class="nav-link" role="tab" data-toggle="tab" href="#modMatrixControls">Mod matrix</a>
-                </li-->
+                <li class="nav-item">
+                    <a class="nav-link" role="tab" data-toggle="tab" href="#modMatrixControls">Mod matrix controls</a>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link" role="tab" data-toggle="tab" href="#macroControls">Macro controls</a>
                 </li>
@@ -771,9 +771,1314 @@
                     </fieldset>
                 </div>
 
-                <!--fieldset>
-                    <legend>Mod Matrix</legend>
-                </fieldset-->
+                <div class="tab-pane show" id="modMatrixControls" role="tabpanel">
+
+                    <div class="row">
+                        <div class="col">
+                            <fieldset>
+                                <legend>Slot 1</legend>
+
+                                <label for="mod_matrix_1_source_1">Src 1</label><br/>
+                                    <select id="mod_matrix_1_source_1" name="1:83" order="93" default="0">
+                                        <option value="0">Direct</option>
+                                        <option value="1">ModWheel</option>
+                                        <option value="2">AftTouch</option>
+                                        <option value="3">Expression</option>
+                                        <option value="4">Velocity</option>
+                                        <option value="5">Keyboard</option>
+                                        <option value="6">LFO 1 +</option>
+                                        <option value="7">LFO 1 +/-</option>
+                                        <option value="8">LFO 2 +</option>
+                                        <option value="9">LFO 2 +/-</option>
+                                        <option value="10">Env 1 Amp</option>
+                                        <option value="11">Env 2 Filter</option>
+                                        <option value="12">Env3</option>
+                                    </select><br/>
+
+                                <label for="mod_matrix_1_source_2">Src 2</label><br/>
+                                    <select id="mod_matrix_1_source_2" name="1:84" order="94" default="0">
+                                        <option value="0">Direct</option>
+                                        <option value="1">ModWheel</option>
+                                        <option value="2">AftTouch</option>
+                                        <option value="3">Expression</option>
+                                        <option value="4">Velocity</option>
+                                        <option value="5">Keyboard</option>
+                                        <option value="6">LFO 1 +</option>
+                                        <option value="7">LFO 1 +/-</option>
+                                        <option value="8">LFO 2 +</option>
+                                        <option value="9">LFO 2 +/-</option>
+                                        <option value="10">Env 1 Amp</option>
+                                        <option value="11">Env 2 Filter</option>
+                                        <option value="12">Env3</option>
+                                    </select><br/>
+
+                                <label for="mod_matrix_1_destination">Destination</label><br/>
+                                    <select id="mod_matrix_1_destination" name="1:87" order="96" default="0">
+                                        <option value="0">Osc 1/2 Pitch</option>
+                                        <option value="1">Osc 1 Pitch</option>
+                                        <option value="2">Osc 2 Pitch</option>
+                                        <option value="3">Osc 1 VSync</option>
+                                        <option value="4">Osc 2 VSync</option>
+                                        <option value="5">Osc 1 PWld</option>
+                                        <option value="6">Osc 2 PWld</option>
+                                        <option value="7">Osc 1 Level</option>
+                                        <option value="8">Osc 2 Level</option>
+                                        <option value="9">Noise Level</option>
+                                        <option value="10">Ring Modulation 1*2 Level</option>
+                                        <option value="11">Filter Drive</option>
+                                        <option value="12">Filter Frequency</option>
+                                        <option value="13">Filter Resonance</option>
+                                        <option value="14">LFO 1 Rate</option>
+                                        <option value="15">LFO 2 Rate</option>
+                                        <option value="16">AmpEnv Devay</option>
+                                        <option value="17">ModEnv Decay</option>
+                                    </select><br/>
+
+                                <label for="mod_matrix_1_depth">Depth</label><br/>
+                                    <input id="mod_matrix_1_depth" name="1:86" type="range" min="0" max="127" step="1" order="95" default="64"><br/>
+                            </fieldset>
+                        </div>
+
+                        <div class="col">
+                            <fieldset>
+                                <legend>Slot 2</legend>
+
+                                <label for="mod_matrix_2_source_1">Src 1</label><br/>
+                                    <select id="mod_matrix_2_source_1" name="1:88" order="97" default="0">
+                                        <option value="0">Direct</option>
+                                        <option value="1">ModWheel</option>
+                                        <option value="2">AftTouch</option>
+                                        <option value="3">Expression</option>
+                                        <option value="4">Velocity</option>
+                                        <option value="5">Keyboard</option>
+                                        <option value="6">LFO 1 +</option>
+                                        <option value="7">LFO 1 +/-</option>
+                                        <option value="8">LFO 2 +</option>
+                                        <option value="9">LFO 2 +/-</option>
+                                        <option value="10">Env 1 Amp</option>
+                                        <option value="11">Env 2 Filter</option>
+                                        <option value="12">Env3</option>
+                                    </select><br/>
+
+                                <label for="mod_matrix_2_source_2">Src 2</label><br/>
+                                    <select id="mod_matrix_2_source_2" name="1:89" order="98" default="0">
+                                        <option value="0">Direct</option>
+                                        <option value="1">ModWheel</option>
+                                        <option value="2">AftTouch</option>
+                                        <option value="3">Expression</option>
+                                        <option value="4">Velocity</option>
+                                        <option value="5">Keyboard</option>
+                                        <option value="6">LFO 1 +</option>
+                                        <option value="7">LFO 1 +/-</option>
+                                        <option value="8">LFO 2 +</option>
+                                        <option value="9">LFO 2 +/-</option>
+                                        <option value="10">Env 1 Amp</option>
+                                        <option value="11">Env 2 Filter</option>
+                                        <option value="12">Env3</option>
+                                    </select><br/>
+
+                                <label for="mod_matrix_2_destination">Destination</label><br/>
+                                    <select id="mod_matrix_2_destination" name="1:92" order="100" default="0">
+                                        <option value="0">Osc 1/2 Pitch</option>
+                                        <option value="1">Osc 1 Pitch</option>
+                                        <option value="2">Osc 2 Pitch</option>
+                                        <option value="3">Osc 1 VSync</option>
+                                        <option value="4">Osc 2 VSync</option>
+                                        <option value="5">Osc 1 PWld</option>
+                                        <option value="6">Osc 2 PWld</option>
+                                        <option value="7">Osc 1 Level</option>
+                                        <option value="8">Osc 2 Level</option>
+                                        <option value="9">Noise Level</option>
+                                        <option value="10">Ring Modulation 1*2 Level</option>
+                                        <option value="11">Filter Drive</option>
+                                        <option value="12">Filter Frequency</option>
+                                        <option value="13">Filter Resonance</option>
+                                        <option value="14">LFO 1 Rate</option>
+                                        <option value="15">LFO 2 Rate</option>
+                                        <option value="16">AmpEnv Devay</option>
+                                        <option value="17">ModEnv Decay</option>
+                                    </select><br/>
+
+                                <label for="mod_matrix_2_depth">Depth</label><br/>
+                                    <input id="mod_matrix_2_depth" name="1:91" type="range" min="0" max="127" step="1" order="99" default="64"><br/>
+                            </fieldset>
+                        </div>
+
+                        <div class="col">
+                            <fieldset>
+                                <legend>Slot 3</legend>
+
+                                <label for="mod_matrix_3_source_1">Src 1</label><br/>
+                                    <select id="mod_matrix_3_source_1" name="1:93" order="101" default="0">
+                                        <option value="0">Direct</option>
+                                        <option value="1">ModWheel</option>
+                                        <option value="2">AftTouch</option>
+                                        <option value="3">Expression</option>
+                                        <option value="4">Velocity</option>
+                                        <option value="5">Keyboard</option>
+                                        <option value="6">LFO 1 +</option>
+                                        <option value="7">LFO 1 +/-</option>
+                                        <option value="8">LFO 2 +</option>
+                                        <option value="9">LFO 2 +/-</option>
+                                        <option value="10">Env 1 Amp</option>
+                                        <option value="11">Env 2 Filter</option>
+                                        <option value="12">Env3</option>
+                                    </select><br/>
+
+                                <label for="mod_matrix_3_source_2">Src 2</label><br/>
+                                    <select id="mod_matrix_3_source_2" name="1:94" order="102" default="0">
+                                        <option value="0">Direct</option>
+                                        <option value="1">ModWheel</option>
+                                        <option value="2">AftTouch</option>
+                                        <option value="3">Expression</option>
+                                        <option value="4">Velocity</option>
+                                        <option value="5">Keyboard</option>
+                                        <option value="6">LFO 1 +</option>
+                                        <option value="7">LFO 1 +/-</option>
+                                        <option value="8">LFO 2 +</option>
+                                        <option value="9">LFO 2 +/-</option>
+                                        <option value="10">Env 1 Amp</option>
+                                        <option value="11">Env 2 Filter</option>
+                                        <option value="12">Env3</option>
+                                    </select><br/>
+
+                                <label for="mod_matrix_3_destination">Destination</label><br/>
+                                    <select id="mod_matrix_3_destination" name="1:97" order="104" default="0">
+                                        <option value="0">Osc 1/2 Pitch</option>
+                                        <option value="1">Osc 1 Pitch</option>
+                                        <option value="2">Osc 2 Pitch</option>
+                                        <option value="3">Osc 1 VSync</option>
+                                        <option value="4">Osc 2 VSync</option>
+                                        <option value="5">Osc 1 PWld</option>
+                                        <option value="6">Osc 2 PWld</option>
+                                        <option value="7">Osc 1 Level</option>
+                                        <option value="8">Osc 2 Level</option>
+                                        <option value="9">Noise Level</option>
+                                        <option value="10">Ring Modulation 1*2 Level</option>
+                                        <option value="11">Filter Drive</option>
+                                        <option value="12">Filter Frequency</option>
+                                        <option value="13">Filter Resonance</option>
+                                        <option value="14">LFO 1 Rate</option>
+                                        <option value="15">LFO 2 Rate</option>
+                                        <option value="16">AmpEnv Devay</option>
+                                        <option value="17">ModEnv Decay</option>
+                                    </select><br/>
+
+                                <label for="mod_matrix_3_depth">Depth</label><br/>
+                                    <input id="mod_matrix_3_depth" name="1:96" type="range" min="0" max="127" step="1" order="103" default="64"><br/>
+                            </fieldset>
+                        </div>
+
+                        <div class="col">
+                            <fieldset>
+                                <legend>Slot 4</legend>
+
+                                <label for="mod_matrix_4_source_1">Src 1</label><br/>
+                                    <select id="mod_matrix_4_source_1" name="1:98" order="105" default="0">
+                                        <option value="0">Direct</option>
+                                        <option value="1">ModWheel</option>
+                                        <option value="2">AftTouch</option>
+                                        <option value="3">Expression</option>
+                                        <option value="4">Velocity</option>
+                                        <option value="5">Keyboard</option>
+                                        <option value="6">LFO 1 +</option>
+                                        <option value="7">LFO 1 +/-</option>
+                                        <option value="8">LFO 2 +</option>
+                                        <option value="9">LFO 2 +/-</option>
+                                        <option value="10">Env 1 Amp</option>
+                                        <option value="11">Env 2 Filter</option>
+                                        <option value="12">Env3</option>
+                                    </select><br/>
+
+                                <label for="mod_matrix_4_source_2">Src 2</label><br/>
+                                    <select id="mod_matrix_4_source_2" name="1:99" order="106" default="0">
+                                        <option value="0">Direct</option>
+                                        <option value="1">ModWheel</option>
+                                        <option value="2">AftTouch</option>
+                                        <option value="3">Expression</option>
+                                        <option value="4">Velocity</option>
+                                        <option value="5">Keyboard</option>
+                                        <option value="6">LFO 1 +</option>
+                                        <option value="7">LFO 1 +/-</option>
+                                        <option value="8">LFO 2 +</option>
+                                        <option value="9">LFO 2 +/-</option>
+                                        <option value="10">Env 1 Amp</option>
+                                        <option value="11">Env 2 Filter</option>
+                                        <option value="12">Env3</option>
+                                    </select><br/>
+
+                                <label for="mod_matrix_4_destination">Destination</label><br/>
+                                    <select id="mod_matrix_4_destination" name="1:102" order="108" default="0">
+                                        <option value="0">Osc 1/2 Pitch</option>
+                                        <option value="1">Osc 1 Pitch</option>
+                                        <option value="2">Osc 2 Pitch</option>
+                                        <option value="3">Osc 1 VSync</option>
+                                        <option value="4">Osc 2 VSync</option>
+                                        <option value="5">Osc 1 PWld</option>
+                                        <option value="6">Osc 2 PWld</option>
+                                        <option value="7">Osc 1 Level</option>
+                                        <option value="8">Osc 2 Level</option>
+                                        <option value="9">Noise Level</option>
+                                        <option value="10">Ring Modulation 1*2 Level</option>
+                                        <option value="11">Filter Drive</option>
+                                        <option value="12">Filter Frequency</option>
+                                        <option value="13">Filter Resonance</option>
+                                        <option value="14">LFO 1 Rate</option>
+                                        <option value="15">LFO 2 Rate</option>
+                                        <option value="16">AmpEnv Devay</option>
+                                        <option value="17">ModEnv Decay</option>
+                                    </select><br/>
+
+                                <label for="mod_matrix_4_depth">Depth</label><br/>
+                                    <input id="mod_matrix_4_depth" name="1:101" type="range" min="0" max="127" step="1" order="107" default="64"><br/>
+                            </fieldset>
+                        </div>
+
+                        <div class="col">
+                            <fieldset>
+                                <legend>Slot 5</legend>
+
+                                <label for="mod_matrix_5_source_1">Src 1</label><br/>
+                                    <select id="mod_matrix_5_source_1" name="1:103" order="109" default="0">
+                                        <option value="0">Direct</option>
+                                        <option value="1">ModWheel</option>
+                                        <option value="2">AftTouch</option>
+                                        <option value="3">Expression</option>
+                                        <option value="4">Velocity</option>
+                                        <option value="5">Keyboard</option>
+                                        <option value="6">LFO 1 +</option>
+                                        <option value="7">LFO 1 +/-</option>
+                                        <option value="8">LFO 2 +</option>
+                                        <option value="9">LFO 2 +/-</option>
+                                        <option value="10">Env 1 Amp</option>
+                                        <option value="11">Env 2 Filter</option>
+                                        <option value="12">Env3</option>
+                                    </select><br/>
+
+                                <label for="mod_matrix_5_source_2">Src 2</label><br/>
+                                    <select id="mod_matrix_5_source_2" name="1:104" order="110" default="0">
+                                        <option value="0">Direct</option>
+                                        <option value="1">ModWheel</option>
+                                        <option value="2">AftTouch</option>
+                                        <option value="3">Expression</option>
+                                        <option value="4">Velocity</option>
+                                        <option value="5">Keyboard</option>
+                                        <option value="6">LFO 1 +</option>
+                                        <option value="7">LFO 1 +/-</option>
+                                        <option value="8">LFO 2 +</option>
+                                        <option value="9">LFO 2 +/-</option>
+                                        <option value="10">Env 1 Amp</option>
+                                        <option value="11">Env 2 Filter</option>
+                                        <option value="12">Env3</option>
+                                    </select><br/>
+
+                                <label for="mod_matrix_5_destination">Destination</label><br/>
+                                    <select id="mod_matrix_5_destination" name="1:107" order="112" default="0">
+                                        <option value="0">Osc 1/2 Pitch</option>
+                                        <option value="1">Osc 1 Pitch</option>
+                                        <option value="2">Osc 2 Pitch</option>
+                                        <option value="3">Osc 1 VSync</option>
+                                        <option value="4">Osc 2 VSync</option>
+                                        <option value="5">Osc 1 PWld</option>
+                                        <option value="6">Osc 2 PWld</option>
+                                        <option value="7">Osc 1 Level</option>
+                                        <option value="8">Osc 2 Level</option>
+                                        <option value="9">Noise Level</option>
+                                        <option value="10">Ring Modulation 1*2 Level</option>
+                                        <option value="11">Filter Drive</option>
+                                        <option value="12">Filter Frequency</option>
+                                        <option value="13">Filter Resonance</option>
+                                        <option value="14">LFO 1 Rate</option>
+                                        <option value="15">LFO 2 Rate</option>
+                                        <option value="16">AmpEnv Devay</option>
+                                        <option value="17">ModEnv Decay</option>
+                                    </select><br/>
+
+                                <label for="mod_matrix_5_depth">Depth</label><br/>
+                                    <input id="mod_matrix_5_depth" name="1:106" type="range" min="0" max="127" step="1" order="111" default="64"><br/>
+                            </fieldset>
+                        </div>
+
+                        <div class="col">
+                            <fieldset>
+                                <legend>Slot 6</legend>
+
+                                <label for="mod_matrix_6_source_1">Src 1</label><br/>
+                                    <select id="mod_matrix_6_source_1" name="1:108" order="113" default="0">
+                                        <option value="0">Direct</option>
+                                        <option value="1">ModWheel</option>
+                                        <option value="2">AftTouch</option>
+                                        <option value="3">Expression</option>
+                                        <option value="4">Velocity</option>
+                                        <option value="5">Keyboard</option>
+                                        <option value="6">LFO 1 +</option>
+                                        <option value="7">LFO 1 +/-</option>
+                                        <option value="8">LFO 2 +</option>
+                                        <option value="9">LFO 2 +/-</option>
+                                        <option value="10">Env 1 Amp</option>
+                                        <option value="11">Env 2 Filter</option>
+                                        <option value="12">Env3</option>
+                                    </select><br/>
+
+                                <label for="mod_matrix_6_source_2">Src 2</label><br/>
+                                    <select id="mod_matrix_6_source_2" name="1:109" order="114" default="0">
+                                        <option value="0">Direct</option>
+                                        <option value="1">ModWheel</option>
+                                        <option value="2">AftTouch</option>
+                                        <option value="3">Expression</option>
+                                        <option value="4">Velocity</option>
+                                        <option value="5">Keyboard</option>
+                                        <option value="6">LFO 1 +</option>
+                                        <option value="7">LFO 1 +/-</option>
+                                        <option value="8">LFO 2 +</option>
+                                        <option value="9">LFO 2 +/-</option>
+                                        <option value="10">Env 1 Amp</option>
+                                        <option value="11">Env 2 Filter</option>
+                                        <option value="12">Env3</option>
+                                    </select><br/>
+
+                                <label for="mod_matrix_6_destination">Destination</label><br/>
+                                    <select id="mod_matrix_6_destination" name="1:112" order="116" default="0">
+                                        <option value="0">Osc 1/2 Pitch</option>
+                                        <option value="1">Osc 1 Pitch</option>
+                                        <option value="2">Osc 2 Pitch</option>
+                                        <option value="3">Osc 1 VSync</option>
+                                        <option value="4">Osc 2 VSync</option>
+                                        <option value="5">Osc 1 PWld</option>
+                                        <option value="6">Osc 2 PWld</option>
+                                        <option value="7">Osc 1 Level</option>
+                                        <option value="8">Osc 2 Level</option>
+                                        <option value="9">Noise Level</option>
+                                        <option value="10">Ring Modulation 1*2 Level</option>
+                                        <option value="11">Filter Drive</option>
+                                        <option value="12">Filter Frequency</option>
+                                        <option value="13">Filter Resonance</option>
+                                        <option value="14">LFO 1 Rate</option>
+                                        <option value="15">LFO 2 Rate</option>
+                                        <option value="16">AmpEnv Devay</option>
+                                        <option value="17">ModEnv Decay</option>
+                                    </select><br/>
+
+                                <label for="mod_matrix_6_depth">Depth</label><br/>
+                                    <input id="mod_matrix_6_depth" name="1:111" type="range" min="0" max="127" step="1" order="115" default="64"><br/>
+                            </fieldset>
+                        </div>
+
+                        <div class="col">
+                            <fieldset>
+                                <legend>Slot 7</legend>
+
+                                <label for="mod_matrix_7_source_1">Src 1</label><br/>
+                                    <select id="mod_matrix_7_source_1" name="1:113" order="117" default="0">
+                                        <option value="0">Direct</option>
+                                        <option value="1">ModWheel</option>
+                                        <option value="2">AftTouch</option>
+                                        <option value="3">Expression</option>
+                                        <option value="4">Velocity</option>
+                                        <option value="5">Keyboard</option>
+                                        <option value="6">LFO 1 +</option>
+                                        <option value="7">LFO 1 +/-</option>
+                                        <option value="8">LFO 2 +</option>
+                                        <option value="9">LFO 2 +/-</option>
+                                        <option value="10">Env 1 Amp</option>
+                                        <option value="11">Env 2 Filter</option>
+                                        <option value="12">Env3</option>
+                                    </select><br/>
+
+                                <label for="mod_matrix_7_source_2">Src 2</label><br/>
+                                    <select id="mod_matrix_7_source_2" name="1:114" order="118" default="0">
+                                        <option value="0">Direct</option>
+                                        <option value="1">ModWheel</option>
+                                        <option value="2">AftTouch</option>
+                                        <option value="3">Expression</option>
+                                        <option value="4">Velocity</option>
+                                        <option value="5">Keyboard</option>
+                                        <option value="6">LFO 1 +</option>
+                                        <option value="7">LFO 1 +/-</option>
+                                        <option value="8">LFO 2 +</option>
+                                        <option value="9">LFO 2 +/-</option>
+                                        <option value="10">Env 1 Amp</option>
+                                        <option value="11">Env 2 Filter</option>
+                                        <option value="12">Env3</option>
+                                    </select><br/>
+
+                                <label for="mod_matrix_7_destination">Destination</label><br/>
+                                    <select id="mod_matrix_7_destination" name="1:117" order="120" default="0">
+                                        <option value="0">Osc 1/2 Pitch</option>
+                                        <option value="1">Osc 1 Pitch</option>
+                                        <option value="2">Osc 2 Pitch</option>
+                                        <option value="3">Osc 1 VSync</option>
+                                        <option value="4">Osc 2 VSync</option>
+                                        <option value="5">Osc 1 PWld</option>
+                                        <option value="6">Osc 2 PWld</option>
+                                        <option value="7">Osc 1 Level</option>
+                                        <option value="8">Osc 2 Level</option>
+                                        <option value="9">Noise Level</option>
+                                        <option value="10">Ring Modulation 1*2 Level</option>
+                                        <option value="11">Filter Drive</option>
+                                        <option value="12">Filter Frequency</option>
+                                        <option value="13">Filter Resonance</option>
+                                        <option value="14">LFO 1 Rate</option>
+                                        <option value="15">LFO 2 Rate</option>
+                                        <option value="16">AmpEnv Devay</option>
+                                        <option value="17">ModEnv Decay</option>
+                                    </select><br/>
+
+                                <label for="mod_matrix_7_depth">Depth</label><br/>
+                                    <input id="mod_matrix_7_depth" name="1:116" type="range" min="0" max="127" step="1" order="119" default="64"><br/>
+                            </fieldset>
+                        </div>
+
+                        <div class="col">
+                            <fieldset>
+                                <legend>Slot 8</legend>
+
+                                <label for="mod_matrix_8_source_1">Src 1</label><br/>
+                                    <select id="mod_matrix_8_source_1" name="1:118" order="121" default="0">
+                                        <option value="0">Direct</option>
+                                        <option value="1">ModWheel</option>
+                                        <option value="2">AftTouch</option>
+                                        <option value="3">Expression</option>
+                                        <option value="4">Velocity</option>
+                                        <option value="5">Keyboard</option>
+                                        <option value="6">LFO 1 +</option>
+                                        <option value="7">LFO 1 +/-</option>
+                                        <option value="8">LFO 2 +</option>
+                                        <option value="9">LFO 2 +/-</option>
+                                        <option value="10">Env 1 Amp</option>
+                                        <option value="11">Env 2 Filter</option>
+                                        <option value="12">Env3</option>
+                                    </select><br/>
+
+                                <label for="mod_matrix_8_source_2">Src 2</label><br/>
+                                    <select id="mod_matrix_8_source_2" name="1:119" order="122" default="0">
+                                        <option value="0">Direct</option>
+                                        <option value="1">ModWheel</option>
+                                        <option value="2">AftTouch</option>
+                                        <option value="3">Expression</option>
+                                        <option value="4">Velocity</option>
+                                        <option value="5">Keyboard</option>
+                                        <option value="6">LFO 1 +</option>
+                                        <option value="7">LFO 1 +/-</option>
+                                        <option value="8">LFO 2 +</option>
+                                        <option value="9">LFO 2 +/-</option>
+                                        <option value="10">Env 1 Amp</option>
+                                        <option value="11">Env 2 Filter</option>
+                                        <option value="12">Env3</option>
+                                    </select><br/>
+
+                                <label for="mod_matrix_8_destination">Destination</label><br/>
+                                    <select id="mod_matrix_8_destination" name="1:122" order="124" default="0">
+                                        <option value="0">Osc 1/2 Pitch</option>
+                                        <option value="1">Osc 1 Pitch</option>
+                                        <option value="2">Osc 2 Pitch</option>
+                                        <option value="3">Osc 1 VSync</option>
+                                        <option value="4">Osc 2 VSync</option>
+                                        <option value="5">Osc 1 PWld</option>
+                                        <option value="6">Osc 2 PWld</option>
+                                        <option value="7">Osc 1 Level</option>
+                                        <option value="8">Osc 2 Level</option>
+                                        <option value="9">Noise Level</option>
+                                        <option value="10">Ring Modulation 1*2 Level</option>
+                                        <option value="11">Filter Drive</option>
+                                        <option value="12">Filter Frequency</option>
+                                        <option value="13">Filter Resonance</option>
+                                        <option value="14">LFO 1 Rate</option>
+                                        <option value="15">LFO 2 Rate</option>
+                                        <option value="16">AmpEnv Devay</option>
+                                        <option value="17">ModEnv Decay</option>
+                                    </select><br/>
+
+                                <label for="mod_matrix_8_depth">Depth</label><br/>
+                                    <input id="mod_matrix_8_depth" name="1:121" type="range" min="0" max="127" step="1" order="123" default="64"><br/>
+                            </fieldset>
+                        </div>
+
+                        <div class="col">
+                            <fieldset>
+                                <legend>Slot 9</legend>
+
+                                <label for="mod_matrix_9_source_1">Src 1</label><br/>
+                                    <select id="mod_matrix_9_source_1" name="1:123" order="125" default="0">
+                                        <option value="0">Direct</option>
+                                        <option value="1">ModWheel</option>
+                                        <option value="2">AftTouch</option>
+                                        <option value="3">Expression</option>
+                                        <option value="4">Velocity</option>
+                                        <option value="5">Keyboard</option>
+                                        <option value="6">LFO 1 +</option>
+                                        <option value="7">LFO 1 +/-</option>
+                                        <option value="8">LFO 2 +</option>
+                                        <option value="9">LFO 2 +/-</option>
+                                        <option value="10">Env 1 Amp</option>
+                                        <option value="11">Env 2 Filter</option>
+                                        <option value="12">Env3</option>
+                                    </select><br/>
+
+                                <label for="mod_matrix_9_source_2">Src 2</label><br/>
+                                    <select id="mod_matrix_9_source_2" name="1:124" order="126" default="0">
+                                        <option value="0">Direct</option>
+                                        <option value="1">ModWheel</option>
+                                        <option value="2">AftTouch</option>
+                                        <option value="3">Expression</option>
+                                        <option value="4">Velocity</option>
+                                        <option value="5">Keyboard</option>
+                                        <option value="6">LFO 1 +</option>
+                                        <option value="7">LFO 1 +/-</option>
+                                        <option value="8">LFO 2 +</option>
+                                        <option value="9">LFO 2 +/-</option>
+                                        <option value="10">Env 1 Amp</option>
+                                        <option value="11">Env 2 Filter</option>
+                                        <option value="12">Env3</option>
+                                    </select><br/>
+
+                                <label for="mod_matrix_9_destination">Destination</label><br/>
+                                    <select id="mod_matrix_9_destination" name="1:127" order="128" default="0">
+                                        <option value="0">Osc 1/2 Pitch</option>
+                                        <option value="1">Osc 1 Pitch</option>
+                                        <option value="2">Osc 2 Pitch</option>
+                                        <option value="3">Osc 1 VSync</option>
+                                        <option value="4">Osc 2 VSync</option>
+                                        <option value="5">Osc 1 PWld</option>
+                                        <option value="6">Osc 2 PWld</option>
+                                        <option value="7">Osc 1 Level</option>
+                                        <option value="8">Osc 2 Level</option>
+                                        <option value="9">Noise Level</option>
+                                        <option value="10">Ring Modulation 1*2 Level</option>
+                                        <option value="11">Filter Drive</option>
+                                        <option value="12">Filter Frequency</option>
+                                        <option value="13">Filter Resonance</option>
+                                        <option value="14">LFO 1 Rate</option>
+                                        <option value="15">LFO 2 Rate</option>
+                                        <option value="16">AmpEnv Devay</option>
+                                        <option value="17">ModEnv Decay</option>
+                                    </select><br/>
+
+                                <label for="mod_matrix_9_depth">Depth</label><br/>
+                                    <input id="mod_matrix_9_depth" name="1:126" type="range" min="0" max="127" step="1" order="127" default="64"><br/>
+                            </fieldset>
+                        </div>
+
+                        <div class="col">
+                            <fieldset>
+                                <legend>Slot 10</legend>
+
+                                <label for="mod_matrix_10_source_1">Src 1</label><br/>
+                                    <select id="mod_matrix_10_source_1" name="2:0" order="129" default="0">
+                                        <option value="0">Direct</option>
+                                        <option value="1">ModWheel</option>
+                                        <option value="2">AftTouch</option>
+                                        <option value="3">Expression</option>
+                                        <option value="4">Velocity</option>
+                                        <option value="5">Keyboard</option>
+                                        <option value="6">LFO 1 +</option>
+                                        <option value="7">LFO 1 +/-</option>
+                                        <option value="8">LFO 2 +</option>
+                                        <option value="9">LFO 2 +/-</option>
+                                        <option value="10">Env 1 Amp</option>
+                                        <option value="11">Env 2 Filter</option>
+                                        <option value="12">Env3</option>
+                                    </select><br/>
+
+                                <label for="mod_matrix_10_source_2">Src 2</label><br/>
+                                    <select id="mod_matrix_10_source_2" name="2:1" order="130" default="0">
+                                        <option value="0">Direct</option>
+                                        <option value="1">ModWheel</option>
+                                        <option value="2">AftTouch</option>
+                                        <option value="3">Expression</option>
+                                        <option value="4">Velocity</option>
+                                        <option value="5">Keyboard</option>
+                                        <option value="6">LFO 1 +</option>
+                                        <option value="7">LFO 1 +/-</option>
+                                        <option value="8">LFO 2 +</option>
+                                        <option value="9">LFO 2 +/-</option>
+                                        <option value="10">Env 1 Amp</option>
+                                        <option value="11">Env 2 Filter</option>
+                                        <option value="12">Env3</option>
+                                    </select><br/>
+
+                                <label for="mod_matrix_10_destination">Destination</label><br/>
+                                    <select id="mod_matrix_10_destination" name="2:4" order="132" default="0">
+                                        <option value="0">Osc 1/2 Pitch</option>
+                                        <option value="1">Osc 1 Pitch</option>
+                                        <option value="2">Osc 2 Pitch</option>
+                                        <option value="3">Osc 1 VSync</option>
+                                        <option value="4">Osc 2 VSync</option>
+                                        <option value="5">Osc 1 PWld</option>
+                                        <option value="6">Osc 2 PWld</option>
+                                        <option value="7">Osc 1 Level</option>
+                                        <option value="8">Osc 2 Level</option>
+                                        <option value="9">Noise Level</option>
+                                        <option value="10">Ring Modulation 1*2 Level</option>
+                                        <option value="11">Filter Drive</option>
+                                        <option value="12">Filter Frequency</option>
+                                        <option value="13">Filter Resonance</option>
+                                        <option value="14">LFO 1 Rate</option>
+                                        <option value="15">LFO 2 Rate</option>
+                                        <option value="16">AmpEnv Devay</option>
+                                        <option value="17">ModEnv Decay</option>
+                                    </select><br/>
+
+                                <label for="mod_matrix_10_depth">Depth</label><br/>
+                                    <input id="mod_matrix_10_depth" name="2:3" type="range" min="0" max="127" step="1" order="131" default="64"><br/>
+                            </fieldset>
+                        </div>
+
+                        <div class="col">
+                            <fieldset>
+                                <legend>Slot 11</legend>
+
+                                <label for="mod_matrix_11_source_1">Src 1</label><br/>
+                                    <select id="mod_matrix_11_source_1" name="2:5" order="133" default="0">
+                                        <option value="0">Direct</option>
+                                        <option value="1">ModWheel</option>
+                                        <option value="2">AftTouch</option>
+                                        <option value="3">Expression</option>
+                                        <option value="4">Velocity</option>
+                                        <option value="5">Keyboard</option>
+                                        <option value="6">LFO 1 +</option>
+                                        <option value="7">LFO 1 +/-</option>
+                                        <option value="8">LFO 2 +</option>
+                                        <option value="9">LFO 2 +/-</option>
+                                        <option value="10">Env 1 Amp</option>
+                                        <option value="11">Env 2 Filter</option>
+                                        <option value="12">Env3</option>
+                                    </select><br/>
+
+                                <label for="mod_matrix_11_source_2">Src 2</label><br/>
+                                    <select id="mod_matrix_11_source_2" name="2:6" order="134" default="0">
+                                        <option value="0">Direct</option>
+                                        <option value="1">ModWheel</option>
+                                        <option value="2">AftTouch</option>
+                                        <option value="3">Expression</option>
+                                        <option value="4">Velocity</option>
+                                        <option value="5">Keyboard</option>
+                                        <option value="6">LFO 1 +</option>
+                                        <option value="7">LFO 1 +/-</option>
+                                        <option value="8">LFO 2 +</option>
+                                        <option value="9">LFO 2 +/-</option>
+                                        <option value="10">Env 1 Amp</option>
+                                        <option value="11">Env 2 Filter</option>
+                                        <option value="12">Env3</option>
+                                    </select><br/>
+
+                                <label for="mod_matrix_11_destination">Destination</label><br/>
+                                    <select id="mod_matrix_11_destination" name="2:9" order="136" default="0">
+                                        <option value="0">Osc 1/2 Pitch</option>
+                                        <option value="1">Osc 1 Pitch</option>
+                                        <option value="2">Osc 2 Pitch</option>
+                                        <option value="3">Osc 1 VSync</option>
+                                        <option value="4">Osc 2 VSync</option>
+                                        <option value="5">Osc 1 PWld</option>
+                                        <option value="6">Osc 2 PWld</option>
+                                        <option value="7">Osc 1 Level</option>
+                                        <option value="8">Osc 2 Level</option>
+                                        <option value="9">Noise Level</option>
+                                        <option value="10">Ring Modulation 1*2 Level</option>
+                                        <option value="11">Filter Drive</option>
+                                        <option value="12">Filter Frequency</option>
+                                        <option value="13">Filter Resonance</option>
+                                        <option value="14">LFO 1 Rate</option>
+                                        <option value="15">LFO 2 Rate</option>
+                                        <option value="16">AmpEnv Devay</option>
+                                        <option value="17">ModEnv Decay</option>
+                                    </select><br/>
+
+                                <label for="mod_matrix_11_depth">Depth</label><br/>
+                                    <input id="mod_matrix_11_depth" name="2:8" type="range" min="0" max="127" step="1" order="135" default="64"><br/>
+                            </fieldset>
+                        </div>
+
+                        <div class="col">
+                            <fieldset>
+                                <legend>Slot 12</legend>
+
+                                <label for="mod_matrix_12_source_1">Src 1</label><br/>
+                                    <select id="mod_matrix_12_source_1" name="2:10" order="137" default="0">
+                                        <option value="0">Direct</option>
+                                        <option value="1">ModWheel</option>
+                                        <option value="2">AftTouch</option>
+                                        <option value="3">Expression</option>
+                                        <option value="4">Velocity</option>
+                                        <option value="5">Keyboard</option>
+                                        <option value="6">LFO 1 +</option>
+                                        <option value="7">LFO 1 +/-</option>
+                                        <option value="8">LFO 2 +</option>
+                                        <option value="9">LFO 2 +/-</option>
+                                        <option value="10">Env 1 Amp</option>
+                                        <option value="11">Env 2 Filter</option>
+                                        <option value="12">Env3</option>
+                                    </select><br/>
+
+                                <label for="mod_matrix_12_source_2">Src 2</label><br/>
+                                    <select id="mod_matrix_12_source_2" name="2:11" order="138" default="0">
+                                        <option value="0">Direct</option>
+                                        <option value="1">ModWheel</option>
+                                        <option value="2">AftTouch</option>
+                                        <option value="3">Expression</option>
+                                        <option value="4">Velocity</option>
+                                        <option value="5">Keyboard</option>
+                                        <option value="6">LFO 1 +</option>
+                                        <option value="7">LFO 1 +/-</option>
+                                        <option value="8">LFO 2 +</option>
+                                        <option value="9">LFO 2 +/-</option>
+                                        <option value="10">Env 1 Amp</option>
+                                        <option value="11">Env 2 Filter</option>
+                                        <option value="12">Env3</option>
+                                    </select><br/>
+
+                                <label for="mod_matrix_12_destination">Destination</label><br/>
+                                    <select id="mod_matrix_12_destination" name="2:13" order="140" default="0">
+                                        <option value="0">Osc 1/2 Pitch</option>
+                                        <option value="1">Osc 1 Pitch</option>
+                                        <option value="2">Osc 2 Pitch</option>
+                                        <option value="3">Osc 1 VSync</option>
+                                        <option value="4">Osc 2 VSync</option>
+                                        <option value="5">Osc 1 PWld</option>
+                                        <option value="6">Osc 2 PWld</option>
+                                        <option value="7">Osc 1 Level</option>
+                                        <option value="8">Osc 2 Level</option>
+                                        <option value="9">Noise Level</option>
+                                        <option value="10">Ring Modulation 1*2 Level</option>
+                                        <option value="11">Filter Drive</option>
+                                        <option value="12">Filter Frequency</option>
+                                        <option value="13">Filter Resonance</option>
+                                        <option value="14">LFO 1 Rate</option>
+                                        <option value="15">LFO 2 Rate</option>
+                                        <option value="16">AmpEnv Devay</option>
+                                        <option value="17">ModEnv Decay</option>
+                                    </select><br/>
+
+                                <label for="mod_matrix_12_depth">Depth</label><br/>
+                                    <input id="mod_matrix_12_depth" name="2:12" type="range" min="0" max="127" step="1" order="139" default="64"><br/>
+                            </fieldset>
+                        </div>
+
+                        <div class="col">
+                            <fieldset>
+                                <legend>Slot 13</legend>
+
+                                <label for="mod_matrix_13_source_1">Src 1</label><br/>
+                                    <select id="mod_matrix_13_source_1" name="2:15" order="141" default="0">
+                                        <option value="0">Direct</option>
+                                        <option value="1">ModWheel</option>
+                                        <option value="2">AftTouch</option>
+                                        <option value="3">Expression</option>
+                                        <option value="4">Velocity</option>
+                                        <option value="5">Keyboard</option>
+                                        <option value="6">LFO 1 +</option>
+                                        <option value="7">LFO 1 +/-</option>
+                                        <option value="8">LFO 2 +</option>
+                                        <option value="9">LFO 2 +/-</option>
+                                        <option value="10">Env 1 Amp</option>
+                                        <option value="11">Env 2 Filter</option>
+                                        <option value="12">Env3</option>
+                                    </select><br/>
+
+                                <label for="mod_matrix_13_source_2">Src 2</label><br/>
+                                    <select id="mod_matrix_13_source_2" name="2:16" order="142" default="0">
+                                        <option value="0">Direct</option>
+                                        <option value="1">ModWheel</option>
+                                        <option value="2">AftTouch</option>
+                                        <option value="3">Expression</option>
+                                        <option value="4">Velocity</option>
+                                        <option value="5">Keyboard</option>
+                                        <option value="6">LFO 1 +</option>
+                                        <option value="7">LFO 1 +/-</option>
+                                        <option value="8">LFO 2 +</option>
+                                        <option value="9">LFO 2 +/-</option>
+                                        <option value="10">Env 1 Amp</option>
+                                        <option value="11">Env 2 Filter</option>
+                                        <option value="12">Env3</option>
+                                    </select><br/>
+
+                                <label for="mod_matrix_13_destination">Destination</label><br/>
+                                    <select id="mod_matrix_13_destination" name="2:19" order="144" default="0">
+                                        <option value="0">Osc 1/2 Pitch</option>
+                                        <option value="1">Osc 1 Pitch</option>
+                                        <option value="2">Osc 2 Pitch</option>
+                                        <option value="3">Osc 1 VSync</option>
+                                        <option value="4">Osc 2 VSync</option>
+                                        <option value="5">Osc 1 PWld</option>
+                                        <option value="6">Osc 2 PWld</option>
+                                        <option value="7">Osc 1 Level</option>
+                                        <option value="8">Osc 2 Level</option>
+                                        <option value="9">Noise Level</option>
+                                        <option value="10">Ring Modulation 1*2 Level</option>
+                                        <option value="11">Filter Drive</option>
+                                        <option value="12">Filter Frequency</option>
+                                        <option value="13">Filter Resonance</option>
+                                        <option value="14">LFO 1 Rate</option>
+                                        <option value="15">LFO 2 Rate</option>
+                                        <option value="16">AmpEnv Devay</option>
+                                        <option value="17">ModEnv Decay</option>
+                                    </select><br/>
+
+                                <label for="mod_matrix_13_depth">Depth</label><br/>
+                                    <input id="mod_matrix_13_depth" name="2:18" type="range" min="0" max="127" step="1" order="143" default="64"><br/>
+                            </fieldset>
+                        </div>
+
+                        <div class="col">
+                            <fieldset>
+                                <legend>Slot 14</legend>
+
+                                <label for="mod_matrix_14_source_1">Src 1</label><br/>
+                                    <select id="mod_matrix_14_source_1" name="2:20" order="145" default="0">
+                                        <option value="0">Direct</option>
+                                        <option value="1">ModWheel</option>
+                                        <option value="2">AftTouch</option>
+                                        <option value="3">Expression</option>
+                                        <option value="4">Velocity</option>
+                                        <option value="5">Keyboard</option>
+                                        <option value="6">LFO 1 +</option>
+                                        <option value="7">LFO 1 +/-</option>
+                                        <option value="8">LFO 2 +</option>
+                                        <option value="9">LFO 2 +/-</option>
+                                        <option value="10">Env 1 Amp</option>
+                                        <option value="11">Env 2 Filter</option>
+                                        <option value="12">Env3</option>
+                                    </select><br/>
+
+                                <label for="mod_matrix_14_source_2">Src 2</label><br/>
+                                    <select id="mod_matrix_14_source_2" name="2:21" order="146" default="0">
+                                        <option value="0">Direct</option>
+                                        <option value="1">ModWheel</option>
+                                        <option value="2">AftTouch</option>
+                                        <option value="3">Expression</option>
+                                        <option value="4">Velocity</option>
+                                        <option value="5">Keyboard</option>
+                                        <option value="6">LFO 1 +</option>
+                                        <option value="7">LFO 1 +/-</option>
+                                        <option value="8">LFO 2 +</option>
+                                        <option value="9">LFO 2 +/-</option>
+                                        <option value="10">Env 1 Amp</option>
+                                        <option value="11">Env 2 Filter</option>
+                                        <option value="12">Env3</option>
+                                    </select><br/>
+
+                                <label for="mod_matrix_14_destination">Destination</label><br/>
+                                    <select id="mod_matrix_14_destination" name="2:24" order="148" default="0">
+                                        <option value="0">Osc 1/2 Pitch</option>
+                                        <option value="1">Osc 1 Pitch</option>
+                                        <option value="2">Osc 2 Pitch</option>
+                                        <option value="3">Osc 1 VSync</option>
+                                        <option value="4">Osc 2 VSync</option>
+                                        <option value="5">Osc 1 PWld</option>
+                                        <option value="6">Osc 2 PWld</option>
+                                        <option value="7">Osc 1 Level</option>
+                                        <option value="8">Osc 2 Level</option>
+                                        <option value="9">Noise Level</option>
+                                        <option value="10">Ring Modulation 1*2 Level</option>
+                                        <option value="11">Filter Drive</option>
+                                        <option value="12">Filter Frequency</option>
+                                        <option value="13">Filter Resonance</option>
+                                        <option value="14">LFO 1 Rate</option>
+                                        <option value="15">LFO 2 Rate</option>
+                                        <option value="16">AmpEnv Devay</option>
+                                        <option value="17">ModEnv Decay</option>
+                                    </select><br/>
+
+                                <label for="mod_matrix_14_depth">Depth</label><br/>
+                                    <input id="mod_matrix_14_depth" name="2:23" type="range" min="0" max="127" step="1" order="147" default="64"><br/>
+                            </fieldset>
+                        </div>
+
+                        <div class="col">
+                            <fieldset>
+                                <legend>Slot 15</legend>
+
+                                <label for="mod_matrix_15_source_1">Src 1</label><br/>
+                                    <select id="mod_matrix_15_source_1" name="2:25" order="149" default="0">
+                                        <option value="0">Direct</option>
+                                        <option value="1">ModWheel</option>
+                                        <option value="2">AftTouch</option>
+                                        <option value="3">Expression</option>
+                                        <option value="4">Velocity</option>
+                                        <option value="5">Keyboard</option>
+                                        <option value="6">LFO 1 +</option>
+                                        <option value="7">LFO 1 +/-</option>
+                                        <option value="8">LFO 2 +</option>
+                                        <option value="9">LFO 2 +/-</option>
+                                        <option value="10">Env 1 Amp</option>
+                                        <option value="11">Env 2 Filter</option>
+                                        <option value="12">Env3</option>
+                                    </select><br/>
+
+                                <label for="mod_matrix_15_source_2">Src 2</label><br/>
+                                    <select id="mod_matrix_15_source_2" name="2:26" order="150" default="0">
+                                        <option value="0">Direct</option>
+                                        <option value="1">ModWheel</option>
+                                        <option value="2">AftTouch</option>
+                                        <option value="3">Expression</option>
+                                        <option value="4">Velocity</option>
+                                        <option value="5">Keyboard</option>
+                                        <option value="6">LFO 1 +</option>
+                                        <option value="7">LFO 1 +/-</option>
+                                        <option value="8">LFO 2 +</option>
+                                        <option value="9">LFO 2 +/-</option>
+                                        <option value="10">Env 1 Amp</option>
+                                        <option value="11">Env 2 Filter</option>
+                                        <option value="12">Env3</option>
+                                    </select><br/>
+
+                                <label for="mod_matrix_15_destination">Destination</label><br/>
+                                    <select id="mod_matrix_15_destination" name="2:29" order="152" default="0">
+                                        <option value="0">Osc 1/2 Pitch</option>
+                                        <option value="1">Osc 1 Pitch</option>
+                                        <option value="2">Osc 2 Pitch</option>
+                                        <option value="3">Osc 1 VSync</option>
+                                        <option value="4">Osc 2 VSync</option>
+                                        <option value="5">Osc 1 PWld</option>
+                                        <option value="6">Osc 2 PWld</option>
+                                        <option value="7">Osc 1 Level</option>
+                                        <option value="8">Osc 2 Level</option>
+                                        <option value="9">Noise Level</option>
+                                        <option value="10">Ring Modulation 1*2 Level</option>
+                                        <option value="11">Filter Drive</option>
+                                        <option value="12">Filter Frequency</option>
+                                        <option value="13">Filter Resonance</option>
+                                        <option value="14">LFO 1 Rate</option>
+                                        <option value="15">LFO 2 Rate</option>
+                                        <option value="16">AmpEnv Devay</option>
+                                        <option value="17">ModEnv Decay</option>
+                                    </select><br/>
+
+                                <label for="mod_matrix_15_depth">Depth</label><br/>
+                                    <input id="mod_matrix_15_depth" name="2:28" type="range" min="0" max="127" step="1" order="151" default="64"><br/>
+                            </fieldset>
+                        </div>
+
+                        <div class="col">
+                            <fieldset>
+                                <legend>Slot 16</legend>
+
+                                <label for="mod_matrix_16_source_1">Src 1</label><br/>
+                                    <select id="mod_matrix_16_source_1" name="2:30" order="153" default="0">
+                                        <option value="0">Direct</option>
+                                        <option value="1">ModWheel</option>
+                                        <option value="2">AftTouch</option>
+                                        <option value="3">Expression</option>
+                                        <option value="4">Velocity</option>
+                                        <option value="5">Keyboard</option>
+                                        <option value="6">LFO 1 +</option>
+                                        <option value="7">LFO 1 +/-</option>
+                                        <option value="8">LFO 2 +</option>
+                                        <option value="9">LFO 2 +/-</option>
+                                        <option value="10">Env 1 Amp</option>
+                                        <option value="11">Env 2 Filter</option>
+                                        <option value="12">Env3</option>
+                                    </select><br/>
+
+                                <label for="mod_matrix_16_source_2">Src 2</label><br/>
+                                    <select id="mod_matrix_16_source_2" name="2:31" order="154" default="0">
+                                        <option value="0">Direct</option>
+                                        <option value="1">ModWheel</option>
+                                        <option value="2">AftTouch</option>
+                                        <option value="3">Expression</option>
+                                        <option value="4">Velocity</option>
+                                        <option value="5">Keyboard</option>
+                                        <option value="6">LFO 1 +</option>
+                                        <option value="7">LFO 1 +/-</option>
+                                        <option value="8">LFO 2 +</option>
+                                        <option value="9">LFO 2 +/-</option>
+                                        <option value="10">Env 1 Amp</option>
+                                        <option value="11">Env 2 Filter</option>
+                                        <option value="12">Env3</option>
+                                    </select><br/>
+
+                                <label for="mod_matrix_16_destination">Destination</label><br/>
+                                    <select id="mod_matrix_16_destination" name="2:34" order="156" default="0">
+                                        <option value="0">Osc 1/2 Pitch</option>
+                                        <option value="1">Osc 1 Pitch</option>
+                                        <option value="2">Osc 2 Pitch</option>
+                                        <option value="3">Osc 1 VSync</option>
+                                        <option value="4">Osc 2 VSync</option>
+                                        <option value="5">Osc 1 PWld</option>
+                                        <option value="6">Osc 2 PWld</option>
+                                        <option value="7">Osc 1 Level</option>
+                                        <option value="8">Osc 2 Level</option>
+                                        <option value="9">Noise Level</option>
+                                        <option value="10">Ring Modulation 1*2 Level</option>
+                                        <option value="11">Filter Drive</option>
+                                        <option value="12">Filter Frequency</option>
+                                        <option value="13">Filter Resonance</option>
+                                        <option value="14">LFO 1 Rate</option>
+                                        <option value="15">LFO 2 Rate</option>
+                                        <option value="16">AmpEnv Devay</option>
+                                        <option value="17">ModEnv Decay</option>
+                                    </select><br/>
+
+                                <label for="mod_matrix_16_depth">Depth</label><br/>
+                                    <input id="mod_matrix_16_depth" name="2:33" type="range" min="0" max="127" step="1" order="155" default="64"><br/>
+                            </fieldset>
+                        </div>
+
+                        <div class="col">
+                            <fieldset>
+                                <legend>Slot 17</legend>
+
+                                <label for="mod_matrix_17_source_1">Src 1</label><br/>
+                                    <select id="mod_matrix_17_source_1" name="2:35" order="157" default="0">
+                                        <option value="0">Direct</option>
+                                        <option value="1">ModWheel</option>
+                                        <option value="2">AftTouch</option>
+                                        <option value="3">Expression</option>
+                                        <option value="4">Velocity</option>
+                                        <option value="5">Keyboard</option>
+                                        <option value="6">LFO 1 +</option>
+                                        <option value="7">LFO 1 +/-</option>
+                                        <option value="8">LFO 2 +</option>
+                                        <option value="9">LFO 2 +/-</option>
+                                        <option value="10">Env 1 Amp</option>
+                                        <option value="11">Env 2 Filter</option>
+                                        <option value="12">Env3</option>
+                                    </select><br/>
+
+                                <label for="mod_matrix_17_source_2">Src 2</label><br/>
+                                    <select id="mod_matrix_17_source_2" name="2:36" order="158" default="0">
+                                        <option value="0">Direct</option>
+                                        <option value="1">ModWheel</option>
+                                        <option value="2">AftTouch</option>
+                                        <option value="3">Expression</option>
+                                        <option value="4">Velocity</option>
+                                        <option value="5">Keyboard</option>
+                                        <option value="6">LFO 1 +</option>
+                                        <option value="7">LFO 1 +/-</option>
+                                        <option value="8">LFO 2 +</option>
+                                        <option value="9">LFO 2 +/-</option>
+                                        <option value="10">Env 1 Amp</option>
+                                        <option value="11">Env 2 Filter</option>
+                                        <option value="12">Env3</option>
+                                    </select><br/>
+
+                                <label for="mod_matrix_17_destination">Destination</label><br/>
+                                    <select id="mod_matrix_17_destination" name="2:39" order="160" default="0">
+                                        <option value="0">Osc 1/2 Pitch</option>
+                                        <option value="1">Osc 1 Pitch</option>
+                                        <option value="2">Osc 2 Pitch</option>
+                                        <option value="3">Osc 1 VSync</option>
+                                        <option value="4">Osc 2 VSync</option>
+                                        <option value="5">Osc 1 PWld</option>
+                                        <option value="6">Osc 2 PWld</option>
+                                        <option value="7">Osc 1 Level</option>
+                                        <option value="8">Osc 2 Level</option>
+                                        <option value="9">Noise Level</option>
+                                        <option value="10">Ring Modulation 1*2 Level</option>
+                                        <option value="11">Filter Drive</option>
+                                        <option value="12">Filter Frequency</option>
+                                        <option value="13">Filter Resonance</option>
+                                        <option value="14">LFO 1 Rate</option>
+                                        <option value="15">LFO 2 Rate</option>
+                                        <option value="16">AmpEnv Devay</option>
+                                        <option value="17">ModEnv Decay</option>
+                                    </select><br/>
+
+                                <label for="mod_matrix_17_depth">Depth</label><br/>
+                                    <input id="mod_matrix_17_depth" name="2:38" type="range" min="0" max="127" step="1" order="159" default="64"><br/>
+                            </fieldset>
+                        </div>
+
+                        <div class="col">
+                            <fieldset>
+                                <legend>Slot 18</legend>
+
+                                <label for="mod_matrix_18_source_1">Src 1</label><br/>
+                                    <select id="mod_matrix_18_source_1" name="2:40" order="161" default="0">
+                                        <option value="0">Direct</option>
+                                        <option value="1">ModWheel</option>
+                                        <option value="2">AftTouch</option>
+                                        <option value="3">Expression</option>
+                                        <option value="4">Velocity</option>
+                                        <option value="5">Keyboard</option>
+                                        <option value="6">LFO 1 +</option>
+                                        <option value="7">LFO 1 +/-</option>
+                                        <option value="8">LFO 2 +</option>
+                                        <option value="9">LFO 2 +/-</option>
+                                        <option value="10">Env 1 Amp</option>
+                                        <option value="11">Env 2 Filter</option>
+                                        <option value="12">Env3</option>
+                                    </select><br/>
+
+                                <label for="mod_matrix_18_source_2">Src 2</label><br/>
+                                    <select id="mod_matrix_18_source_2" name="2:41" order="162" default="0">
+                                        <option value="0">Direct</option>
+                                        <option value="1">ModWheel</option>
+                                        <option value="2">AftTouch</option>
+                                        <option value="3">Expression</option>
+                                        <option value="4">Velocity</option>
+                                        <option value="5">Keyboard</option>
+                                        <option value="6">LFO 1 +</option>
+                                        <option value="7">LFO 1 +/-</option>
+                                        <option value="8">LFO 2 +</option>
+                                        <option value="9">LFO 2 +/-</option>
+                                        <option value="10">Env 1 Amp</option>
+                                        <option value="11">Env 2 Filter</option>
+                                        <option value="12">Env3</option>
+                                    </select><br/>
+
+                                <label for="mod_matrix_18_destination">Destination</label><br/>
+                                    <select id="mod_matrix_18_destination" name="2:44" order="164" default="0">
+                                        <option value="0">Osc 1/2 Pitch</option>
+                                        <option value="1">Osc 1 Pitch</option>
+                                        <option value="2">Osc 2 Pitch</option>
+                                        <option value="3">Osc 1 VSync</option>
+                                        <option value="4">Osc 2 VSync</option>
+                                        <option value="5">Osc 1 PWld</option>
+                                        <option value="6">Osc 2 PWld</option>
+                                        <option value="7">Osc 1 Level</option>
+                                        <option value="8">Osc 2 Level</option>
+                                        <option value="9">Noise Level</option>
+                                        <option value="10">Ring Modulation 1*2 Level</option>
+                                        <option value="11">Filter Drive</option>
+                                        <option value="12">Filter Frequency</option>
+                                        <option value="13">Filter Resonance</option>
+                                        <option value="14">LFO 1 Rate</option>
+                                        <option value="15">LFO 2 Rate</option>
+                                        <option value="16">AmpEnv Devay</option>
+                                        <option value="17">ModEnv Decay</option>
+                                    </select><br/>
+
+                                <label for="mod_matrix_18_depth">Depth</label><br/>
+                                    <input id="mod_matrix_18_depth" name="2:43" type="range" min="0" max="127" step="1" order="163" default="64"><br/>
+                            </fieldset>
+                        </div>
+
+                        <div class="col">
+                            <fieldset>
+                                <legend>Slot 19</legend>
+
+                                <label for="mod_matrix_19_source_1">Src 1</label><br/>
+                                    <select id="mod_matrix_19_source_1" name="2:45" order="165" default="0">
+                                        <option value="0">Direct</option>
+                                        <option value="1">ModWheel</option>
+                                        <option value="2">AftTouch</option>
+                                        <option value="3">Expression</option>
+                                        <option value="4">Velocity</option>
+                                        <option value="5">Keyboard</option>
+                                        <option value="6">LFO 1 +</option>
+                                        <option value="7">LFO 1 +/-</option>
+                                        <option value="8">LFO 2 +</option>
+                                        <option value="9">LFO 2 +/-</option>
+                                        <option value="10">Env 1 Amp</option>
+                                        <option value="11">Env 2 Filter</option>
+                                        <option value="12">Env3</option>
+                                    </select><br/>
+
+                                <label for="mod_matrix_19_source_2">Src 2</label><br/>
+                                    <select id="mod_matrix_19_source_2" name="2:46" order="166" default="0">
+                                        <option value="0">Direct</option>
+                                        <option value="1">ModWheel</option>
+                                        <option value="2">AftTouch</option>
+                                        <option value="3">Expression</option>
+                                        <option value="4">Velocity</option>
+                                        <option value="5">Keyboard</option>
+                                        <option value="6">LFO 1 +</option>
+                                        <option value="7">LFO 1 +/-</option>
+                                        <option value="8">LFO 2 +</option>
+                                        <option value="9">LFO 2 +/-</option>
+                                        <option value="10">Env 1 Amp</option>
+                                        <option value="11">Env 2 Filter</option>
+                                        <option value="12">Env3</option>
+                                    </select><br/>
+
+                                <label for="mod_matrix_19_destination">Destination</label><br/>
+                                    <select id="mod_matrix_19_destination" name="2:49" order="168" default="0">
+                                        <option value="0">Osc 1/2 Pitch</option>
+                                        <option value="1">Osc 1 Pitch</option>
+                                        <option value="2">Osc 2 Pitch</option>
+                                        <option value="3">Osc 1 VSync</option>
+                                        <option value="4">Osc 2 VSync</option>
+                                        <option value="5">Osc 1 PWld</option>
+                                        <option value="6">Osc 2 PWld</option>
+                                        <option value="7">Osc 1 Level</option>
+                                        <option value="8">Osc 2 Level</option>
+                                        <option value="9">Noise Level</option>
+                                        <option value="10">Ring Modulation 1*2 Level</option>
+                                        <option value="11">Filter Drive</option>
+                                        <option value="12">Filter Frequency</option>
+                                        <option value="13">Filter Resonance</option>
+                                        <option value="14">LFO 1 Rate</option>
+                                        <option value="15">LFO 2 Rate</option>
+                                        <option value="16">AmpEnv Devay</option>
+                                        <option value="17">ModEnv Decay</option>
+                                    </select><br/>
+
+                                <label for="mod_matrix_19_depth">Depth</label><br/>
+                                    <input id="mod_matrix_19_depth" name="2:48" type="range" min="0" max="127" step="1" order="167" default="64"><br/>
+                            </fieldset>
+                        </div>
+
+                        <div class="col">
+                            <fieldset>
+                                <legend>Slot 20</legend>
+
+                                <label for="mod_matrix_20_source_1">Src 1</label><br/>
+                                    <select id="mod_matrix_20_source_1" name="2:50" order="169" default="0">
+                                        <option value="0">Direct</option>
+                                        <option value="1">ModWheel</option>
+                                        <option value="2">AftTouch</option>
+                                        <option value="3">Expression</option>
+                                        <option value="4">Velocity</option>
+                                        <option value="5">Keyboard</option>
+                                        <option value="6">LFO 1 +</option>
+                                        <option value="7">LFO 1 +/-</option>
+                                        <option value="8">LFO 2 +</option>
+                                        <option value="9">LFO 2 +/-</option>
+                                        <option value="10">Env 1 Amp</option>
+                                        <option value="11">Env 2 Filter</option>
+                                        <option value="12">Env3</option>
+                                    </select><br/>
+
+                                <label for="mod_matrix_20_source_2">Src 2</label><br/>
+                                    <select id="mod_matrix_20_source_2" name="2:51" order="170" default="0">
+                                        <option value="0">Direct</option>
+                                        <option value="1">ModWheel</option>
+                                        <option value="2">AftTouch</option>
+                                        <option value="3">Expression</option>
+                                        <option value="4">Velocity</option>
+                                        <option value="5">Keyboard</option>
+                                        <option value="6">LFO 1 +</option>
+                                        <option value="7">LFO 1 +/-</option>
+                                        <option value="8">LFO 2 +</option>
+                                        <option value="9">LFO 2 +/-</option>
+                                        <option value="10">Env 1 Amp</option>
+                                        <option value="11">Env 2 Filter</option>
+                                        <option value="12">Env3</option>
+                                    </select><br/>
+
+                                <label for="mod_matrix_20_destination">Destination</label><br/>
+                                    <select id="mod_matrix_20_destination" name="2:54" order="172" default="0">
+                                        <option value="0">Osc 1/2 Pitch</option>
+                                        <option value="1">Osc 1 Pitch</option>
+                                        <option value="2">Osc 2 Pitch</option>
+                                        <option value="3">Osc 1 VSync</option>
+                                        <option value="4">Osc 2 VSync</option>
+                                        <option value="5">Osc 1 PWld</option>
+                                        <option value="6">Osc 2 PWld</option>
+                                        <option value="7">Osc 1 Level</option>
+                                        <option value="8">Osc 2 Level</option>
+                                        <option value="9">Noise Level</option>
+                                        <option value="10">Ring Modulation 1*2 Level</option>
+                                        <option value="11">Filter Drive</option>
+                                        <option value="12">Filter Frequency</option>
+                                        <option value="13">Filter Resonance</option>
+                                        <option value="14">LFO 1 Rate</option>
+                                        <option value="15">LFO 2 Rate</option>
+                                        <option value="16">AmpEnv Devay</option>
+                                        <option value="17">ModEnv Decay</option>
+                                    </select><br/>
+
+                                <label for="mod_matrix_20_depth">Depth</label><br/>
+                                    <input id="mod_matrix_20_depth" name="2:53" type="range" min="0" max="127" step="1" order="171" default="64"><br/>
+                            </fieldset>
+                        </div>
+
+
+
+                    </div>
+
+                </div>
 
                 <div class="tab-pane show" id="macroControls" role="tabpanel">
                     <div class="row">
@@ -4184,8 +5489,6 @@
                 <input order="82" value="0" default="0" hidden disabled>
                 <input order="83" value="0" default="0" hidden disabled>
                 <input order="84" value="0" default="0" hidden disabled>
-
-                <!-- ModMatrix -->
             </fieldset>
         </div>
 
