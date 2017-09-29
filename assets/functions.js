@@ -1,3 +1,7 @@
+function dialogBox(question) {
+    return confirm(question + "\n\nAre you sure?");
+}
+
 function extractSynthValuesFromDOM(items) {
     let synthData = [];
 
@@ -105,6 +109,10 @@ function mergeDataWithSysexMetadata(data, type) {
 }
 
 function parseCircuitPatch(circuitData) {
+    if (! dialogBox('By uploading the Circuit selected patch you are going to lose current patch edition.')) {
+        return;
+    }
+
     // Patch name
     var patchNameArr = circuitData.slice(9, 25);
     var patchName= "";
@@ -139,6 +147,10 @@ function parseCircuitPatch(circuitData) {
 }
 
 function resetPatch() {
+    if (! dialogBox('By initializing a new patch you are going to lose the current patch edition.')) {
+        return;
+    }
+
     resetValues();
 
     var data = getData();
