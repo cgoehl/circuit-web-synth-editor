@@ -144,13 +144,13 @@ So for example:
 
 - If **0x0000003B** value is decimal **51** (Patch values 48 + 2 + 1) the following CC values are selected:
 
-  Fade Mode 3 / Key sync 15 / One shot 13.
+  LFO 1 Fade Mode 3 / LFO 1 Key sync 15 / LFO 1 One shot 13.
 
   The others CC values are 0.
 
 - If **0x00000044** value is decimal **42** (Patch values 32 + 8 + 2) the following CC values are selected:
 
-  Fade Mode 6 / Delay trigger 29 / Key sync 25.
+  LFO 2 Fade Mode 6 / LFO 2 Delay trigger 29 / LFO 2 Key sync 25.
 
   The others CC values are 0.
 
