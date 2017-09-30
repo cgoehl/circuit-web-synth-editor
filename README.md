@@ -45,6 +45,8 @@ Circuit Web Synth Editor uses:
 
 # TODO
 
+- Get macro position from Circuit in real-time
+
 - Display values on sliders
 
 - Support of category and genre
