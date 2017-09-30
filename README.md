@@ -4,11 +4,11 @@ Circuit Web Synth Editor is a Free/Libre web application to edit patches on the 
 
 It works offline but need a browser compatible with WebMidi API.
 
-The purpose of this project is to cover my personnal needs by avoiding the use of other editors not compatible with GNU/Linux.
+The purpose of this project is to cover my personal needs by avoiding the use of other editors not compatible with GNU/Linux.
 
 It can edit an existing patch on the circuit, create new ones and export to Sysex file compatible with Novation Component.
 
-It's a work in progress quickly made.
+It's a work in progress.
 
 ![PrintScreen of Circuit Web Synth Editor](resources/printscreen.png)
 
@@ -31,7 +31,8 @@ You always have to connect the Circuit first or must reload the page after the p
 
 # Troubleshootings
 
-If the Circuit freezes for some reason, unplug USB wire.
+- Avoid using any other software connected to the Circuit at the same time as you edit a buffered patch in Circuit Web Synth Editor (such as Novation Component or the Isotonik Editor): there may be unwanted behavior in the editor ruining your current edition.
+- If the Circuit freezes for some reason, unplug USB wire.
 
 [You can report any problems](https://framagit.org/pumpkin/circuit-web-synth-editor/issues).
 
