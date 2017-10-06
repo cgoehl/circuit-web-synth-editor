@@ -38,7 +38,8 @@ function getLFO(lfo) {
 }
 
 function getCurrentSelectedPatch() {
-    output.sendSysex([0, 32, 41], [1, 96, 64, 0, 0]);
+    var synth = parseInt(document.querySelector('#synth').value) -1;
+    output.sendSysex([0, 32, 41], [1, 96, 64, synth, 0]);
 }
 
 function getData() {
