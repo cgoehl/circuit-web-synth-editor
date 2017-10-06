@@ -44,18 +44,6 @@ Circuit Web Synth Editor uses:
 - FileSaver.js
 - WebMidi.js
 
-# TODO
-
-- Get macro position from Circuit in real-time
-
-- Display values on sliders
-
-- Support of category and genre
-
-- Code refactoring
-
-- Better UI
-
 # Documentation
 
 ## Patch file
