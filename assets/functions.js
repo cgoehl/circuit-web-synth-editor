@@ -182,7 +182,7 @@ function resetValues() {
     }
 
     let patchName = document.querySelector('#patchName');
-    patchName.value = 'unamed';
+    patchName.value = '';
 }
 
 function sendMessage(control, value) {
