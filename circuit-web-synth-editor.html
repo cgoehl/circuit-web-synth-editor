@@ -70,11 +70,28 @@
                 </select>
             </p>
 
-
-
             <div class="tab-content synth1">
                 <div class="tab-pane show active" id="synthControls" role="tabpanel">
-                    <fieldset>
+
+                    <ul class="nav nav-pills justify-content-center synth-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link btn-sm active" tab="voice">Voice</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-sm active" tab="oscillator">Oscillators</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-sm active" tab="filterEnv">Filter & Env</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-sm active" tab="lfo">LFO's</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-sm active" tab="effectsEQ">Effects & EQ</a>
+                        </li>
+                    </ul>
+
+                    <fieldset tabId="voice">
                         <legend>Voice</legend>
 
                         <div class="row">
@@ -107,7 +124,7 @@
                     </fieldset>
 
 
-                    <div class="row">
+                    <div class="row" tabId="oscillator">
 
                         <div class="col">
                             <fieldset>
@@ -242,7 +259,7 @@
                     </div>
 
 
-                    <fieldset>
+                    <fieldset tabId="oscillator">
                         <legend>Oscillator Mixer</legend>
 
                         <div class="row">
@@ -275,130 +292,135 @@
                     </fieldset>
 
 
-                    <fieldset>
-                        <legend>Filter</legend>
+                    <div class="row" tabId="filterEnv">
+                        <div class="col">
+                            <fieldset>
+                                <legend>Filter</legend>
 
-                        <label for="routing">Routing</label><br/>
-                            <select id="routing" name="60" order="29" default="0">
-                                <option value="0">Normal</option>
-                                <option value="1">Osc 1 bypasses the filter</option>
-                                <option value="2">Osc 1 + Osc 2 bypasses the filter</option>
-                            </select><br/>
+                                <label for="routing">Routing</label><br/>
+                                    <select id="routing" name="60" order="29" default="0">
+                                        <option value="0">Normal</option>
+                                        <option value="1">Osc 1 bypasses the filter</option>
+                                        <option value="2">Osc 1 + Osc 2 bypasses the filter</option>
+                                    </select><br/>
 
-                        <label for="drive">Drive</label><br/>
-                            <input id="drive" name="63" type="range" min="0" max="127" step="1" order="30" default="0"><br/>
+                                <label for="drive">Drive</label><br/>
+                                    <input id="drive" name="63" type="range" min="0" max="127" step="1" order="30" default="0"><br/>
 
-                        <label for="drive_type">Drive type</label><br/>
-                            <select id="drive_type" name="65" order="31" default="0">
-                                <option value="0">Diode</option>
-                                <option value="1">Valve</option>
-                                <option value="2">Clipper</option>
-                                <option value="3">Cross-over</option>
-                                <option value="4">Rectifier</option>
-                                <option value="5">Bit reducer</option>
-                                <option value="6">Rate reducer</option>
-                            </select><br/>
+                                <label for="drive_type">Drive type</label><br/>
+                                    <select id="drive_type" name="65" order="31" default="0">
+                                        <option value="0">Diode</option>
+                                        <option value="1">Valve</option>
+                                        <option value="2">Clipper</option>
+                                        <option value="3">Cross-over</option>
+                                        <option value="4">Rectifier</option>
+                                        <option value="5">Bit reducer</option>
+                                        <option value="6">Rate reducer</option>
+                                    </select><br/>
 
-                        <label for="type">Filter type</label><br/>
-                            <select id="type" name="68" order="32" default="1">
-                                <option value="0">Low pass 12db</option>
-                                <option value="1">Low pass 24db</option>
-                                <option value="2">Band pass 6db</option>
-                                <option value="3">Band pass 12db</option>
-                                <option value="4">High pass 12db</option>
-                                <option value="5">High pass 24db</option>
-                            </select><br/>
+                                <label for="type">Filter type</label><br/>
+                                    <select id="type" name="68" order="32" default="1">
+                                        <option value="0">Low pass 12db</option>
+                                        <option value="1">Low pass 24db</option>
+                                        <option value="2">Band pass 6db</option>
+                                        <option value="3">Band pass 12db</option>
+                                        <option value="4">High pass 12db</option>
+                                        <option value="5">High pass 24db</option>
+                                    </select><br/>
 
-                        <label for="frequency">Frequency</label><br/>
-                            <input id="frequency" name="74" type="range" min="0" max="127" step="1" order="33" default="127"><br/>
+                                <label for="frequency">Frequency</label><br/>
+                                    <input id="frequency" name="74" type="range" min="0" max="127" step="1" order="33" default="127"><br/>
 
-                        <label for="tracking">Tracking</label><br/>
-                            <input id="tracking" name="69" type="range" min="0" max="127" step="1" order="34" default="127"><br/>
+                                <label for="tracking">Tracking</label><br/>
+                                    <input id="tracking" name="69" type="range" min="0" max="127" step="1" order="34" default="127"><br/>
 
-                        <label for="resonance">Resonance</label><br/>
-                            <input id="resonance" name="71" type="range" min="0" max="127" step="1" order="35" default="0"><br/>
+                                <label for="resonance">Resonance</label><br/>
+                                    <input id="resonance" name="71" type="range" min="0" max="127" step="1" order="35" default="0"><br/>
 
-                        <label for="q_normalize">Q normalize</label><br/>
-                            <input id="q_normalize" name="78" type="range" min="0" max="127" step="1" order="36" default="64"><br/>
+                                <label for="q_normalize">Q normalize</label><br/>
+                                    <input id="q_normalize" name="78" type="range" min="0" max="127" step="1" order="36" default="64"><br/>
 
-                        <label for="env_to_frequency">Env to frequency</label><br/>
-                            <input id="env_to_frequency" name="79" type="range" min="0" max="127" step="1" order="37" default="64"><br/>
-                    </fieldset>
-
-
-                    <fieldset>
-                        <legend>Envelope</legend>
-
-                        <div class="row">
-
-                            <div class="col">
-                                <fieldset>
-                                    <legend>AMP</legend>
-
-                                    <label for="env_1_velocity">Veolocity</label><br/>
-                                        <input id="env_1_velocity" name="108" type="range" min="0" max="127" step="1" order="38" default="64"><br/>
-
-                                    <label for="env_1_attack">Attack</label><br/>
-                                        <input id="env_1_attack" name="73" type="range" min="0" max="127" step="1" order="39" default="2"><br/>
-
-                                    <label for="env_1_decay">Decay</label><br/>
-                                        <input id="env_1_decay" name="75" type="range" min="0" max="127" step="1" order="40" default="90"><br/>
-
-                                    <label for="env_1_sustain">Sustain</label><br/>
-                                        <input id="env_1_sustain" name="70" type="range" min="0" max="127" step="1" order="41" default="127"><br/>
-
-                                    <label for="env_1_release">Release</label><br/>
-                                        <input id="env_1_release" name="72" type="range" min="0" max="127" step="1" order="42" default="40"><br/>
-                                </fieldset>
-                            </div>
-
-                            <div class="col">
-                                <fieldset>
-                                    <legend>Filter</legend>
-
-                                    <label for="env_2_velocity">Veolocity</label><br/>
-                                        <input id="env_2_velocity" name="0:0" type="range" min="0" max="127" step="1" order="43" default="64"><br/>
-
-                                    <label for="env_2_attack">Attack</label><br/>
-                                        <input id="env_2_attack" name="0:1" type="range" min="0" max="127" step="1" order="44" default="2"><br/>
-
-                                    <label for="env_2_decay">Decay</label><br/>
-                                        <input id="env_2_decay" name="0:2" type="range" min="0" max="127" step="1" order="45" default="75"><br/>
-
-                                    <label for="env_2_sustain">Sustain</label><br/>
-                                        <input id="env_2_sustain" name="0:3" type="range" min="0" max="127" step="1" order="46" default="35"><br/>
-
-                                    <label for="env_2_release">Release</label><br/>
-                                        <input id="env_2_release" name="0:4" type="range" min="0" max="127" step="1" order="47" default="45"><br/>
-                                </fieldset>
-                            </div>
-
-                            <div class="col">
-                                <fieldset>
-                                    <legend>Env 3</legend>
-
-                                    <label for="env_3_velocity">Veolocity</label><br/>
-                                        <input id="env_3_velocity" name="0:14" type="range" min="0" max="127" step="1" order="48" default="0"><br/>
-
-                                    <label for="env_3_attack">Attack</label><br/>
-                                        <input id="env_3_attack" name="0:15" type="range" min="0" max="127" step="1" order="49" default="10"><br/>
-
-                                    <label for="env_3_decay">Decay</label><br/>
-                                        <input id="env_3_decay" name="0:16" type="range" min="0" max="127" step="1" order="50" default="70"><br/>
-
-                                    <label for="env_3_sustain">Sustain</label><br/>
-                                        <input id="env_3_sustain" name="0:17" type="range" min="0" max="127" step="1" order="51" default="64"><br/>
-
-                                    <label for="env_3_release">Release</label><br/>
-                                        <input id="env_3_release" name="0:18" type="range" min="0" max="127" step="1" order="52" default="40"><br/>
-                                </fieldset>
-                            </div>
-
+                                <label for="env_to_frequency">Env to frequency</label><br/>
+                                    <input id="env_to_frequency" name="79" type="range" min="0" max="127" step="1" order="37" default="64"><br/>
+                            </fieldset>
                         </div>
-                    </fieldset>
+
+                        <div class="col">
+                            <fieldset>
+                                <legend>Envelope</legend>
+
+                                <div class="row">
+
+                                    <div class="col">
+                                        <fieldset>
+                                            <legend>AMP</legend>
+
+                                            <label for="env_1_velocity">Veolocity</label><br/>
+                                                <input id="env_1_velocity" name="108" type="range" min="0" max="127" step="1" order="38" default="64"><br/>
+
+                                            <label for="env_1_attack">Attack</label><br/>
+                                                <input id="env_1_attack" name="73" type="range" min="0" max="127" step="1" order="39" default="2"><br/>
+
+                                            <label for="env_1_decay">Decay</label><br/>
+                                                <input id="env_1_decay" name="75" type="range" min="0" max="127" step="1" order="40" default="90"><br/>
+
+                                            <label for="env_1_sustain">Sustain</label><br/>
+                                                <input id="env_1_sustain" name="70" type="range" min="0" max="127" step="1" order="41" default="127"><br/>
+
+                                            <label for="env_1_release">Release</label><br/>
+                                                <input id="env_1_release" name="72" type="range" min="0" max="127" step="1" order="42" default="40"><br/>
+                                        </fieldset>
+                                    </div>
+
+                                    <div class="col">
+                                        <fieldset>
+                                            <legend>Filter</legend>
+
+                                            <label for="env_2_velocity">Veolocity</label><br/>
+                                                <input id="env_2_velocity" name="0:0" type="range" min="0" max="127" step="1" order="43" default="64"><br/>
+
+                                            <label for="env_2_attack">Attack</label><br/>
+                                                <input id="env_2_attack" name="0:1" type="range" min="0" max="127" step="1" order="44" default="2"><br/>
+
+                                            <label for="env_2_decay">Decay</label><br/>
+                                                <input id="env_2_decay" name="0:2" type="range" min="0" max="127" step="1" order="45" default="75"><br/>
+
+                                            <label for="env_2_sustain">Sustain</label><br/>
+                                                <input id="env_2_sustain" name="0:3" type="range" min="0" max="127" step="1" order="46" default="35"><br/>
+
+                                            <label for="env_2_release">Release</label><br/>
+                                                <input id="env_2_release" name="0:4" type="range" min="0" max="127" step="1" order="47" default="45"><br/>
+                                        </fieldset>
+                                    </div>
+
+                                    <div class="col">
+                                        <fieldset>
+                                            <legend>Env 3</legend>
+
+                                            <label for="env_3_velocity">Veolocity</label><br/>
+                                                <input id="env_3_velocity" name="0:14" type="range" min="0" max="127" step="1" order="48" default="0"><br/>
+
+                                            <label for="env_3_attack">Attack</label><br/>
+                                                <input id="env_3_attack" name="0:15" type="range" min="0" max="127" step="1" order="49" default="10"><br/>
+
+                                            <label for="env_3_decay">Decay</label><br/>
+                                                <input id="env_3_decay" name="0:16" type="range" min="0" max="127" step="1" order="50" default="70"><br/>
+
+                                            <label for="env_3_sustain">Sustain</label><br/>
+                                                <input id="env_3_sustain" name="0:17" type="range" min="0" max="127" step="1" order="51" default="64"><br/>
+
+                                            <label for="env_3_release">Release</label><br/>
+                                                <input id="env_3_release" name="0:18" type="range" min="0" max="127" step="1" order="52" default="40"><br/>
+                                        </fieldset>
+                                    </div>
+
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
 
 
-                    <div class="row">
+                    <div class="row" tabId="lfo">
 
                         <div class="col">
                             <fieldset>
@@ -684,7 +706,7 @@
                     </div>
 
 
-                    <fieldset>
+                    <fieldset tabId="effectsEQ">
                         <legend>Effects and EQ</legend>
 
                         <div class="row">

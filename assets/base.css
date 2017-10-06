@@ -42,6 +42,19 @@ select {
     font-size: 20px;
 }
 
+.synth-tabs.nav-pills a.nav-link {
+    background-color: #282c34;
+    color: white;
+}
+.synth-tabs.nav-pills a.nav-link.active {
+    background-color: white;
+    color: black;
+}
+.synth-tabs .nav-item {
+    margin: 0 3px;
+    cursor: pointer;
+}
+
 .synth1 a.nav-link{
     color: #ff00ff;
 }

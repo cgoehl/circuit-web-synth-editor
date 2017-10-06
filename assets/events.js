@@ -68,3 +68,23 @@ synthSelect.addEventListener('change', function(event) {
         container.classList.add(newCssClass);
     }
 });
+
+var synthTabs = document.querySelectorAll('.synth-tabs a');
+
+for (let synthTab of synthTabs) {
+    synthTab.addEventListener('click', function(event) {
+        var tab = event.target;
+        var containers = document.querySelectorAll('*[tabId="' + tab.getAttribute('tab') + '"]')
+
+        tab.classList.toggle('active');
+
+        for (let container of containers) {
+            if (tab.classList.contains('active')) {
+                container.hidden = false;
+            } else {
+                container.hidden = true;
+            }
+
+        }
+    });
+}
