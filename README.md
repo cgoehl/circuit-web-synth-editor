@@ -167,7 +167,7 @@ midi-in:
 
 Patch data as described into the patch file part.
 
-### Send patch data to Circuit
+### Store patch data on specified slot on Circuit
 
 midi-out:
 
@@ -183,7 +183,7 @@ data:
 
 From **0x00000009** to end is the rest of the metadata and data sequence as described in the patch file part (see above).
 
-### Initialize a new buffered patch on Circuit
+### Initialize a new buffered patch on current selected patch on Circuit
 
 midi-out:
 
