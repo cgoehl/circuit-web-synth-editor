@@ -46,7 +46,7 @@ Circuit Web Synth Editor uses:
 
 # Documentation
 
-## Patch file
+## Patch
 
 Patch file example:
 
@@ -142,7 +142,20 @@ So for example:
 
   The others CC values are 0.
 
-## Request data of current selected patch on Circuit
+## Session
+
+| Position  | Type of data                                         | Values  |
+| ----------| ---------------------------------------------------- | ------- |
+| 0x6EE6    | Index position of the patch slot selected by synth 1 | 0 to 63 |
+| 0x6EEF    | Index position of the patch slot selected by synth 2 | 0 to 63 |
+| 0xDBBD    | Index position of the sample slot selected by drum 1 | 0 to 63 |
+| 0xDBC6    | Index position of the sample slot selected by drum 2 | 0 to 63 |
+| 0xDBCF    | Index position of the sample slot selected by drum 3 | 0 to 63 |
+| 0xDBD8    | Index position of the sample slot selected by drum 4 | 0 to 63 |
+
+## Requests & responses
+
+### Request data of current selected patch on Circuit
 
 midi-out:
 
@@ -154,7 +167,7 @@ midi-in:
 
 Patch data as described into the patch file part.
 
-## Store patch data on Circuit
+### Send patch data to Circuit
 
 midi-out:
 
@@ -170,7 +183,7 @@ data:
 
 From **0x00000009** to end is the rest of the metadata and data sequence as described in the patch file part (see above).
 
-## Initialize new buffered patch
+### Initialize a new buffered patch on Circuit
 
 midi-out:
 
