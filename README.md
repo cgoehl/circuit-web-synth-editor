@@ -54,20 +54,20 @@ Patch file example:
 
 ### BOF and EOF
 
-| Position      | Type of data  | Values |
-| ------------- | ------------- | ------ |
-| 0x00000000    | BOF char      | F0     |
-| 0x0000015D    | EOF char      | F7     |
+| Position      | Type of data  | Values (hex) |
+| ------------- | ------------- | ------------ |
+| 0x00000000    | BOF char      | F0           |
+| 0x0000015D    | EOF char      | F7           |
 
 ### Header
 
-| Position                 | Type of data            | Values                     |
-| ------------------------ | ----------------------- | -------------------------- |
-| 0x00000001 to 0x00000003 | Manufacturer code       | 00 20 29                   |
-| 0x00000004 to 0x00000005 | ? Type of sysex (patch) | 01 60                      |
-| 0x00000006               | unknown                 | 00                         |
-| 0x00000007               | unknown                 | 00                         |
-| 0x00000008               | unknown                 | 00                         |
+| Position                 | Type of data            | Values (hex) |
+| ------------------------ | ----------------------- | -------------|
+| 0x00000001 to 0x00000003 | Manufacturer code       | 00 20 29     |
+| 0x00000004 to 0x00000005 | ? Type of sysex (patch) | 01 60        |
+| 0x00000006               | unknown                 | 00           |
+| 0x00000007               | unknown                 | 00           |
+| 0x00000008               | unknown                 | 00           |
 
 ### Metadata
 
@@ -144,14 +144,14 @@ So for example:
 
 ## Session
 
-| Position  | Type of data                                         | Values  |
-| ----------| ---------------------------------------------------- | ------- |
-| 0x6EE6    | Index position of the patch slot selected by synth 1 | 0 to 63 |
-| 0x6EEF    | Index position of the patch slot selected by synth 2 | 0 to 63 |
-| 0xDBBD    | Index position of the sample slot selected by drum 1 | 0 to 63 |
-| 0xDBC6    | Index position of the sample slot selected by drum 2 | 0 to 63 |
-| 0xDBCF    | Index position of the sample slot selected by drum 3 | 0 to 63 |
-| 0xDBD8    | Index position of the sample slot selected by drum 4 | 0 to 63 |
+| Position  | Type of data                                         | Values (dec) |
+| ----------| ---------------------------------------------------- | ------------ |
+| 0x6EE6    | Index position of the patch slot selected by synth 1 | 0 to 63      |
+| 0x6EEF    | Index position of the patch slot selected by synth 2 | 0 to 63      |
+| 0xDBBD    | Index position of the sample slot selected by drum 1 | 0 to 63      |
+| 0xDBC6    | Index position of the sample slot selected by drum 2 | 0 to 63      |
+| 0xDBCF    | Index position of the sample slot selected by drum 3 | 0 to 63      |
+| 0xDBD8    | Index position of the sample slot selected by drum 4 | 0 to 63      |
 
 ## Requests & responses
 
@@ -177,9 +177,9 @@ midi-out:
 
 data:
 
-| Position      | Type of data                     | Values  |
-| ------------- | -------------------------------- | ------- |
-| 0x00000007    | Index position of the patch slot | 0 to 63 |
+| Position      | Type of data                     | Values (dec) |
+| ------------- | -------------------------------- | ------------ |
+| 0x00000007    | Index position of the patch slot | 0 to 63      |
 
 From **0x00000009** to end is the rest of the metadata and data sequence as described in the patch file part (see above).
 
