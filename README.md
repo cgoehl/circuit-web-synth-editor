@@ -145,7 +145,7 @@ So for example:
 ## Session
 
 | Position  | Type of data                                         | Values (dec) |
-| ----------| ---------------------------------------------------- | ------------ |
+| --------- | ---------------------------------------------------- | ------------ |
 | 0x6EE6    | Index position of the patch slot selected by synth 1 | 0 to 63      |
 | 0x6EEF    | Index position of the patch slot selected by synth 2 | 0 to 63      |
 | 0xDBBD    | Index position of the sample slot selected by drum 1 | 0 to 63      |
@@ -159,9 +159,15 @@ So for example:
 
 midi-out:
 
-| Position   |     |   |    |    |   |    |    |   |   |     |
-| ---------- | --- | - | -- | -- | - | -- | -- | - | - | --- |
-| 0x00000000 | 240 | 0 | 32 | 41 | 1 | 96 | 64 | 0 | 0 | 247 |
+| Position   |     |   |    |    |   |    |    | 07 |   |     |
+| ---------- | --- | - | -- | -- | - | -- | -- | -- | - | --- |
+| 0x00000000 | 240 | 0 | 32 | 41 | 1 | 96 | 64 | 0  | 0 | 247 |
+
+data:
+
+| Position  | Type of data | Values (dec)             |
+| --------- | ------------ | ------------------------ |
+| 0x07      | Synth        | 0 (synth1) or 1 (synth2) |
 
 midi-in:
 
@@ -171,24 +177,24 @@ Patch data as described into the patch file part.
 
 midi-out:
 
-| Position   |     |   |    |    |   |    |   |    |   |     |
-| ---------- | --- | - | -- | -- | - | -- | - | -- | - | --- |
+| Position   |     |   |    |    |   |    |   | 07 |   | 09  |
+| ---------- | --- | - | -- | -- | - | -- | - | -- | - | --  |
 | 0x00000000 | 240 | 0 | 32 | 41 | 1 | 96 | 1 | 32 | 0 | ... |
 
 data:
 
-| Position      | Type of data                     | Values (dec) |
-| ------------- | -------------------------------- | ------------ |
-| 0x00000007    | Index position of the patch slot | 0 to 63      |
+| Position | Type of data                     | Values (dec) |
+| -------- | -------------------------------- | ------------ |
+| 0x07     | Index position of the patch slot | 0 to 63      |
 
-From **0x00000009** to end is the rest of the metadata and data sequence as described in the patch file part (see above).
+From **0x09** to end is the rest of the metadata and data sequence as described in the patch file part.
 
 ### Initialize a new buffered patch on current selected patch on Circuit
 
 midi-out:
 
-| Position   |     |   |    |    |   |    |   |   |   |     |
-| ---------- | --- | - | -- | -- | - | -- | - | - | - | --- |
+| Position   |     |   |    |    |   |    |   |   |   | 09  |
+| ---------- | --- | - | -- | -- | - | -- | - | - | - | --  |
 | 0x00000000 | 240 | 0 | 32 | 41 | 1 | 96 | 0 | 0 | 0 | ... |
 
-From **0x00000009** to end is the rest of the metadata and data sequence as described in the patch file part (see above).
+From **0x09** to end is the rest of the metadata and data sequence as described in the patch file part (see above).
