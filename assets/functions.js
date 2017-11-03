@@ -1,3 +1,8 @@
+function controllerChange(channel, controller, value) {
+    var input = document.querySelector('[name="' + controller +'"]');
+    input.value = value;
+}
+
 function dialogBox(question) {
     return confirm(question + "\n\nAre you sure?");
 }

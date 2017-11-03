@@ -45,6 +45,10 @@ WebMidi.enable(function (err) {
         parseCircuitPatch(event.data);
     });
 
+    input.addListener('controlchange', "all", function(event) {
+        controllerChange(event.channel, event.controller.number, event.value)
+    });
+
 }, sysex=true);
 
 resetValues();
