@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <!-- Vendors -->
-        <link rel="stylesheet" type="text/css" href="assets/vendors/bootstrap.min-v4.0.0-beta.css">
+        <link rel="stylesheet" type="text/css" href="assets/vendors/bootstrap.min.css">
 
         <!-- CircuitWebSynthEditor -->
         <link rel="stylesheet" type="text/css" href="assets/base.css">
@@ -27,17 +27,20 @@
 
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Import/Export
+                          Actions
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#" id="getPatch" >Download patch from Circuit</a>
-                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#slotModal">Upload patch to Circuit</a>
-                            <a class="dropdown-item" href="#" id="export">Export patch to .syx file</a>
+                            <a class="dropdown-item" href="#" id="reset">New patch</a>
+                            <hr/>
+                            <a class="dropdown-item" href="#" id="getPatch" >Get patch</a>
+                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#slotModal">Upload patch</a>
+                            <hr/>
+                            <a class="dropdown-item" href="#" id="export">Export patch</a>
                         </div>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#" id="reset">Initialize new patch</a>
+                        <a class="nav-link" href="https://framagit.org/pumpkin/circuit-web-synth-editor" target="_blank" id="export"><img src="assets/info.png" alt="Informations about Circuitweb Editor"/></a>
                     </li>
 
                 </ul>
@@ -355,7 +358,7 @@
                                         <fieldset>
                                             <legend>AMP</legend>
 
-                                            <label for="env_1_velocity">Veolocity</label><br/>
+                                            <label for="env_1_velocity">Velocity</label><br/>
                                                 <input id="env_1_velocity" name="108" type="range" min="0" max="127" step="1" order="38" default="64"><br/>
 
                                             <label for="env_1_attack">Attack</label><br/>
@@ -376,7 +379,7 @@
                                         <fieldset>
                                             <legend>Filter</legend>
 
-                                            <label for="env_2_velocity">Veolocity</label><br/>
+                                            <label for="env_2_velocity">Velocity</label><br/>
                                                 <input id="env_2_velocity" name="0:0" type="range" min="0" max="127" step="1" order="43" default="64"><br/>
 
                                             <label for="env_2_attack">Attack</label><br/>
@@ -397,7 +400,7 @@
                                         <fieldset>
                                             <legend>Env 3</legend>
 
-                                            <label for="env_3_velocity">Veolocity</label><br/>
+                                            <label for="env_3_velocity">Velocity</label><br/>
                                                 <input id="env_3_velocity" name="0:14" type="range" min="0" max="127" step="1" order="48" default="0"><br/>
 
                                             <label for="env_3_attack">Attack</label><br/>
@@ -2133,7 +2136,9 @@
                                 <label for="macro_knob_1_position">Position</label><br/>
                                     <input id="macro_knob_1 position" name="80" type="range" min="0" max="127" step="1" order="173" default="0"><br/>
 
-                                <ul class="nav nav-pills" role="tablist">
+                                <hr/>
+
+                                <ul class="nav nav-pills nav-fill" role="tablist">
                                     <li class="nav-item">
                                         <a class="nav-link active" role="tab" data-toggle="tab" href="#macro_knob_1_A">A</a>
                                     </li>
@@ -2557,7 +2562,9 @@
                                 <label for="macro_knob_2_position">Position</label><br/>
                                     <input id="macro_knob_2 position" name="81" type="range" min="0" max="127" step="1" order="190" default="0"><br/>
 
-                                <ul class="nav nav-pills" role="tablist">
+                                <hr/>
+
+                                <ul class="nav nav-pills nav-fill" role="tablist">
                                     <li class="nav-item">
                                         <a class="nav-link active" role="tab" data-toggle="tab" href="#macro_knob_2_A">A</a>
                                     </li>
@@ -2980,7 +2987,9 @@
                                 <label for="macro_knob_3_position">Position</label><br/>
                                     <input id="macro_knob_3 position" name="82" type="range" min="0" max="127" step="1" order="207" default="0"><br/>
 
-                                <ul class="nav nav-pills" role="tablist">
+                                <hr/>
+
+                                <ul class="nav nav-pills nav-fill" role="tablist">
                                     <li class="nav-item">
                                         <a class="nav-link active" role="tab" data-toggle="tab" href="#macro_knob_3_A">A</a>
                                     </li>
@@ -3403,7 +3412,9 @@
                                 <label for="macro_knob_4_position">Position</label><br/>
                                     <input id="macro_knob_4 position" name="83" type="range" min="0" max="127" step="1" order="224" default="0"><br/>
 
-                                <ul class="nav nav-pills" role="tablist">
+                                <hr/>
+
+                                <ul class="nav nav-pills nav-fill" role="tablist">
                                     <li class="nav-item">
                                         <a class="nav-link active" role="tab" data-toggle="tab" href="#macro_knob_4_A">A</a>
                                     </li>
@@ -3826,7 +3837,9 @@
                                 <label for="macro_knob_5_position">Position</label><br/>
                                     <input id="macro_knob_5 position" name="84" type="range" min="0" max="127" step="1" order="241" default="0"><br/>
 
-                                <ul class="nav nav-pills" role="tablist">
+                                <hr/>
+
+                                <ul class="nav nav-pills nav-fill" role="tablist">
                                     <li class="nav-item">
                                         <a class="nav-link active" role="tab" data-toggle="tab" href="#macro_knob_5_A">A</a>
                                     </li>
@@ -4249,7 +4262,9 @@
                                 <label for="macro_knob_6_position">Position</label><br/>
                                     <input id="macro_knob_6 position" name="85" type="range" min="0" max="127" step="1" order="258" default="0"><br/>
 
-                                <ul class="nav nav-pills" role="tablist">
+                                <hr/>
+
+                                <ul class="nav nav-pills nav-fill" role="tablist">
                                     <li class="nav-item">
                                         <a class="nav-link active" role="tab" data-toggle="tab" href="#macro_knob_6_A">A</a>
                                     </li>
@@ -4673,7 +4688,9 @@
                                 <label for="macro_knob_7_position">Position</label><br/>
                                     <input id="macro_knob_7 position" name="86" type="range" min="0" max="127" step="1" order="275" default="0"><br/>
 
-                                <ul class="nav nav-pills" role="tablist">
+                                <hr/>
+
+                                <ul class="nav nav-pills nav-fill" role="tablist">
                                     <li class="nav-item">
                                         <a class="nav-link active" role="tab" data-toggle="tab" href="#macro_knob_7_A">A</a>
                                     </li>
@@ -5097,7 +5114,9 @@
                                 <label for="macro_knob_8_position">Position</label><br/>
                                     <input id="macro_knob_8 position" name="87" type="range" min="0" max="127" step="1" order="292" default="0"><br/>
 
-                                <ul class="nav nav-pills" role="tablist">
+                                <hr/>
+
+                                <ul class="nav nav-pills nav-fill" role="tablist">
                                     <li class="nav-item">
                                         <a class="nav-link active" role="tab" data-toggle="tab" href="#macro_knob_8_A">A</a>
                                     </li>
@@ -5561,7 +5580,7 @@
     <!-- Vendors -->
     <script src="assets/vendors/jquery-3.2.1.slim.min.js"></script>
     <script src="assets/vendors/popper.min.js"></script>
-    <script src="assets/vendors/bootstrap.min-v4.0.0-beta.js"></script>
+    <script src="assets/vendors/bootstrap.min.js"></script>
 
     <script src="assets/vendors/webmidi.js"></script>
     <script src="assets/vendors/FileSaver.min.js"></script>
