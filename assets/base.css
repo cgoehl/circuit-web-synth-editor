@@ -11,11 +11,12 @@ h1 small {
 fieldset {
     background:#282c34;
     margin-top: 20px;
-    padding: 20px;
+    padding: 0 20px 10px 20px;
 }
 
 fieldset > legend {
     color: #f7f7f8;
+    margin: 0;
 }
 
 label {
@@ -34,6 +35,12 @@ select {
     font-size: 24px;
     text-align: center;
 }
+
+#export > img {
+    width: 25px;
+    margin: 0 10px;
+}
+
 #synth {
     background-color: #282c34;
 
