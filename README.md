@@ -46,49 +46,13 @@ Circuit Web Synth Editor uses:
 
 # Documentation
 
+See the [Novation Circuit PDF specs](resources/circuit-programmers-reference.guide-v1-0.pdf)
+
 ## Patch
 
 Patch file example:
 
 ![Patch HEX](resources/patch.png)
-
-### BOF and EOF
-
-| Position      | Type of data  | Values (hex) |
-| ------------- | ------------- | ------------ |
-| 0x00000000    | BOF char      | F0           |
-| 0x0000015D    | EOF char      | F7           |
-
-### Header
-
-| Position                 | Type of data            | Values (hex) |
-| ------------------------ | ----------------------- | -------------|
-| 0x00000001 to 0x00000003 | Manufacturer code       | 00 20 29     |
-| 0x00000004 to 0x00000005 | ? Type of sysex (patch) | 01 60        |
-| 0x00000006               | unknown                 | 00           |
-| 0x00000007               | unknown                 | 00           |
-| 0x00000008               | unknown                 | 00           |
-
-### Metadata
-
-| Position                 | Type of data            | Values                     |
-| ------------------------ | ----------------------- | -------------------------- |
-| 0x00000009 to 0x00000018 | Patch name (16 chars)   | Chars encoded              |
-| 0x00000019               | Music category          | Classic, drum, poly ...    |
-| 0x0000001A               | Music genre             | Techno, house, classic ... |
-| 0x0000001B to 0x00000028 | unknown                 | 00                         |
-
-### Synth data
-
-| Position                 | Type of data   | Values                             |
-| ------------------------ | ---------------| ---------------------------------  |
-| 0x00000029 to 0x0000015C | Synth's values | [See Novation Circuit PDF](resources/circuit-midi-parameters-v4.pdf) |
-
-The values follow an order quite close to the circuit PDF table.
-
-Look at the html file on order attributes of *input* and *select* to see the order for each values.
-
-There are 308 values for synth's data.
 
 #### LFO
 
@@ -152,6 +116,15 @@ So for example:
 | 0xDBC6    | Index position of the sample slot selected by drum 2 | 0 to 63      |
 | 0xDBCF    | Index position of the sample slot selected by drum 3 | 0 to 63      |
 | 0xDBD8    | Index position of the sample slot selected by drum 4 | 0 to 63      |
+
+| Position        | Type of data                                         | Values (dec) |
+| --------------- | ---------------------------------------------------- | ------------ |
+| 0x7220 to 0x7232| Index position of the patch slot selected for steps of synth 1 | 0 to 63      |
+| 0x6EEF          | Index position of the patch slot selected by synth 2 | 0 to 63      |
+| 0xDBBD          | Index position of the sample slot selected by drum 1 | 0 to 63      |
+| 0xDBC6          | Index position of the sample slot selected by drum 2 | 0 to 63      |
+| 0xDBCF          | Index position of the sample slot selected by drum 3 | 0 to 63      |
+| 0xDBD8          | Index position of the sample slot selected by drum 4 | 0 to 63      |
 
 ## Requests & responses
 
