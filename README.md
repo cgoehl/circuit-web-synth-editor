@@ -46,7 +46,7 @@ Circuit Web Synth Editor uses:
 
 # Documentation
 
-See the [Novation Circuit PDF specs](resources/circuit-programmers-reference-guide-v1-0.pdf)
+See the [Novation Circuit PDF specs](resources/circuit-programmers-reference-guide-v1-0.pdf).
 
 ## Patch
 
@@ -125,49 +125,3 @@ So for example:
 | 0xDBC6          | Index position of the sample slot selected by drum 2 | 0 to 63      |
 | 0xDBCF          | Index position of the sample slot selected by drum 3 | 0 to 63      |
 | 0xDBD8          | Index position of the sample slot selected by drum 4 | 0 to 63      |
-
-## Requests & responses
-
-### Request data of current selected patch on Circuit
-
-midi-out:
-
-| Position   |     |   |    |    |   |    |    | 07 |   |     |
-| ---------- | --- | - | -- | -- | - | -- | -- | -- | - | --- |
-| 0000       | 240 | 0 | 32 | 41 | 1 | 96 | 64 | 0  | 0 | 247 |
-
-data:
-
-| Position  | Type of data | Values (dec)             |
-| --------- | ------------ | ------------------------ |
-| 0x07      | Synth        | 0 (synth1) or 1 (synth2) |
-
-midi-in:
-
-Patch data as described into the patch file part.
-
-### Store patch data on specified slot on Circuit
-
-midi-out:
-
-| Position   |     |   |    |    |   |    |   | 07 |   | 09  |
-| ---------- | --- | - | -- | -- | - | -- | - | -- | - | --  |
-| 0000       | 240 | 0 | 32 | 41 | 1 | 96 | 1 | 32 | 0 | ... |
-
-data:
-
-| Position | Type of data                     | Values (dec) |
-| -------- | -------------------------------- | ------------ |
-| 0x07     | Index position of the patch slot | 0 to 63      |
-
-From **0x09** to end is the rest of the metadata and data sequence as described in the patch file part.
-
-### Initialize a new buffered patch on current selected patch on Circuit
-
-midi-out:
-
-| Position   |     |   |    |    |   |    |   |   |   | 09  |
-| ---------- | --- | - | -- | -- | - | -- | - | - | - | --  |
-| 0000       | 240 | 0 | 32 | 41 | 1 | 96 | 0 | 0 | 0 | ... |
-
-From **0x09** to end is the rest of the metadata and data sequence as described in the patch file part (see above).
