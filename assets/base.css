@@ -38,7 +38,7 @@ select {
 
 #export > img {
     width: 25px;
-    margin: 0 10px;
+    margin-left: 10px;
 }
 
 #synth {
@@ -47,6 +47,10 @@ select {
     border: none;
     padding: 10px 8px;
     font-size: 20px;
+}
+
+.dropdown-menu {
+    min-width: auto;
 }
 
 .synth-tabs.nav-pills a.nav-link {
