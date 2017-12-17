@@ -116,12 +116,3 @@ So for example:
 | 0xDBC6    | Index position of the sample slot selected by drum 2 | 0 to 63      |
 | 0xDBCF    | Index position of the sample slot selected by drum 3 | 0 to 63      |
 | 0xDBD8    | Index position of the sample slot selected by drum 4 | 0 to 63      |
-
-| Position        | Type of data                                         | Values (dec) |
-| --------------- | ---------------------------------------------------- | ------------ |
-| 0x7220 to 0x7232| Index position of the patch slot selected for steps of synth 1 | 0 to 63      |
-| 0x6EEF          | Index position of the patch slot selected by synth 2 | 0 to 63      |
-| 0xDBBD          | Index position of the sample slot selected by drum 1 | 0 to 63      |
-| 0xDBC6          | Index position of the sample slot selected by drum 2 | 0 to 63      |
-| 0xDBCF          | Index position of the sample slot selected by drum 3 | 0 to 63      |
-| 0xDBD8          | Index position of the sample slot selected by drum 4 | 0 to 63      |
