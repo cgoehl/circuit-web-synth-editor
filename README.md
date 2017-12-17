@@ -46,7 +46,7 @@ Circuit Web Synth Editor uses:
 
 # Documentation
 
-See the [Novation Circuit PDF specs](resources/circuit-programmers-reference.guide-v1-0.pdf)
+See the [Novation Circuit PDF specs](resources/circuit-programmers-reference-guide-v1-0.pdf)
 
 ## Patch
 
