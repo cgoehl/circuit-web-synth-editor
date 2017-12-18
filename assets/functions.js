@@ -43,6 +43,10 @@ function getLFO(lfo) {
 }
 
 function getCurrentSelectedPatch() {
+    if (! dialogBox(WARNING_PATCH_LOAD)) {
+        return;
+    }
+
     var synth = parseInt(document.querySelector('#synth').value) -1;
     output.sendSysex([0, 32, 41], [1, 96, 64, synth, 0]);
 }
@@ -115,10 +119,6 @@ function mergeDataWithSysexMetadata(data, type) {
 }
 
 function parseCircuitPatch(circuitData) {
-    if (! dialogBox('By uploading the Circuit selected patch you are going to lose current patch edition.')) {
-        return;
-    }
-
     // Patch name
     var patchNameArr = circuitData.slice(9, 25);
     var patchName= "";
@@ -153,7 +153,7 @@ function parseCircuitPatch(circuitData) {
 }
 
 function resetPatch() {
-    if (! dialogBox('By initializing a new patch you are going to lose the current patch edition.')) {
+    if (! dialogBox(WARNING_PATCH_NEW)) {
         return;
     }
 

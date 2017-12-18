@@ -5,9 +5,9 @@ WebMidi.enable(function (err) {
 
     if (err) {
         console.log("WebMidi could not be enabled.", err);
-        alert(LABEL_NOT_COMPATIBLE);
+        alert(STATUS_NOT_COMPATIBLE);
 
-        status.innerHTML = LABEL_NOT_COMPATIBLE;
+        status.innerHTML = STATUS_NOT_COMPATIBLE;
         status.classList.add('text-danger');
         return;
     } else {
@@ -24,10 +24,10 @@ WebMidi.enable(function (err) {
     }
 
     if (output) {
-        status.innerHTML = LABEL_CONNECTED;
+        status.innerHTML = STATUS_CONNECTED;
         status.classList.add('text-info');
     } else {
-        status.innerHTML = LABEL_NOT_CONNECTED;
+        status.innerHTML = STATUS_NOT_CONNECTED;
         status.classList.add('text-warning');
     }
 
