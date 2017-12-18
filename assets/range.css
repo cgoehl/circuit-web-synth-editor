@@ -1,12 +1,12 @@
 input[type="range"] {
     -webkit-appearance:none;
     background: linear-gradient(to right, #4589B0 0%, #4589B0 100%);
-    background-size:190px 6px;
+    background-size:100% 6px;
     background-position:center;
     background-repeat:no-repeat;
     overflow:hidden;
 
-    width:200px;
+    width:-webkit-fill-available;
 }
 
 input[type="range"]::-webkit-slider-thumb{
@@ -21,7 +21,7 @@ input[type="range"]::-webkit-slider-thumb{
 
 input[type="range"]::-webkit-slider-thumb:after{
     content:" ";
-    width:200px;
+    width:-webkit-fill-available;
     height:10px;
     position:absolute;
     z-index:1;
@@ -34,14 +34,14 @@ input[type="range"]::-webkit-slider-thumb:after{
 .synth1 input[type="range"] {
     -webkit-appearance:none;
     background: linear-gradient(to right, #be0dc1 0%, #be0dc1 100%);
-    background-size:190px 6px;
+    background-size:100% 6px;
     background-position:center;
     background-repeat:no-repeat;
 }
 .synth2 input[type="range"] {
     -webkit-appearance:none;
     background: linear-gradient(to right, #0cbf69 0%, #0cbf69 100%);
-    background-size:190px 6px;
+    background-size:100% 6px;
     background-position:center;
     background-repeat:no-repeat;
 }

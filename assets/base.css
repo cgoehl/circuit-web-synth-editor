@@ -24,7 +24,11 @@ label {
 }
 
 select {
-    width: 200px;
+    min-width: 200px;
+}
+
+.tab-content select {
+    width: 100%;
 }
 
 .patchName {
