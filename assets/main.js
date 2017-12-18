@@ -5,7 +5,11 @@ WebMidi.enable(function (err) {
 
     if (err) {
         console.log("WebMidi could not be enabled.", err);
-        alert('Web browser not compatible!');
+        alert(LABEL_NOT_COMPATIBLE);
+
+        status.innerHTML = LABEL_NOT_COMPATIBLE;
+        status.classList.add('text-danger');
+        return;
     } else {
         console.log("WebMidi enabled!");
     }
@@ -21,7 +25,7 @@ WebMidi.enable(function (err) {
 
     if (output) {
         status.innerHTML = LABEL_CONNECTED;
-        status.classList.add('text-success');
+        status.classList.add('text-info');
     } else {
         status.innerHTML = LABEL_NOT_CONNECTED;
         status.classList.add('text-warning');
