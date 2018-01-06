@@ -1,5 +1,7 @@
 input[type="range"] {
     -webkit-appearance:none;
+    -moz-appearance:none;
+    -appearance:none;
     background: linear-gradient(to right, #4589B0 0%, #4589B0 100%);
     background-size:100% 6px;
     background-position:center;
@@ -11,6 +13,8 @@ input[type="range"] {
 
 input[type="range"]::-webkit-slider-thumb{
     -webkit-appearance:none;
+    -moz-appearance:none;
+    -appearance:none;
     width:15px;
     height:15px;
     background:#1D628B;
@@ -33,6 +37,8 @@ input[type="range"]::-webkit-slider-thumb:after{
 
 .synth1 input[type="range"] {
     -webkit-appearance:none;
+    -moz-appearance:none;
+    -appearance:none;
     background: linear-gradient(to right, #be0dc1 0%, #be0dc1 100%);
     background-size:100% 6px;
     background-position:center;
@@ -40,6 +46,8 @@ input[type="range"]::-webkit-slider-thumb:after{
 }
 .synth2 input[type="range"] {
     -webkit-appearance:none;
+    -moz-appearance:none;
+    -appearance:none;
     background: linear-gradient(to right, #0cbf69 0%, #0cbf69 100%);
     background-size:100% 6px;
     background-position:center;
