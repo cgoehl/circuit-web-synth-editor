@@ -1,3 +1,5 @@
+Thanks to the adding of patch editor in the web Novation Circuit Component, this project is no longer relevant and no longer active.
+
 # Circuit Web Synth Editor
 
 Circuit Web Synth Editor is a Free/Libre web application to edit patches on the Novation Circuit.
@@ -7,8 +9,6 @@ It works offline but need a browser compatible with WebMidi API.
 The purpose of this project is to cover my personal needs by avoiding the use of other editors not compatible with GNU/Linux.
 
 It can edit an existing patch on the circuit, create new ones and export to Sysex file compatible with Novation Component.
-
-It's a work in progress.
 
 ![PrintScreen of Circuit Web Synth Editor](resources/printscreen.png)
 
