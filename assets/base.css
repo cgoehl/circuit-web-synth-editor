@@ -58,15 +58,15 @@ select {
     min-width: auto;
 }
 
-.synth-tabs.nav-pills a.nav-link {
+.synth-tabs.nav-pills a.nav-link, #simpleMode {
     background-color: #282c34;
     color: white;
 }
-.synth-tabs.nav-pills a.nav-link.active {
+.synth-tabs.nav-pills a.nav-link.active, #simpleMode.active {
     background-color: white;
     color: black;
 }
-.synth-tabs .nav-item {
+.synth-tabs .nav-item, #simpleMode {
     margin: 0 3px;
     cursor: pointer;
 }

@@ -56,3 +56,7 @@ WebMidi.enable(function (err) {
 }, sysex=true);
 
 resetValues();
+
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
