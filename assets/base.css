@@ -28,6 +28,10 @@ select {
     min-width: 200px;
 }
 
+.flex-column * {
+    margin: 5px 0;
+}
+
 .tab-content select {
     width: 100%;
 }
@@ -46,7 +50,7 @@ select {
     margin-left: 10px;
 }
 
-#synth {
+#synth, #category {
     background-color: #282c34;
 
     border: none;

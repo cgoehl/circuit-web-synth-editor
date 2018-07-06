@@ -67,10 +67,13 @@ function getData() {
     // Synth values
     let synthData = extractSynthValuesFromDOM(allItems);
 
-    return mergeDataWithSysexMetadata(synthData);
+    // Category value
+    let category = document.querySelector('#category').value;
+
+    return mergeDataWithSysexMetadata(synthData, category);
 }
 
-function mergeDataWithSysexMetadata(data, type) {
+function mergeDataWithSysexMetadata(data, category) {
     if (data.length !== 308) {
         throw "Synth data incoherent. Must be 308: " + data.length;
     }
@@ -104,8 +107,8 @@ function mergeDataWithSysexMetadata(data, type) {
     }
     metadata = metadata.concat(patchNameCode);
 
-    // 2 Patch genre & category
-    metadata = metadata.concat([0, 0]);
+    // 2 Patch category & genre
+    metadata = metadata.concat([category, 0]);
 
     // 14 Empty
     metadata = metadata.concat([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
@@ -174,7 +177,7 @@ function resetPatch() {
 }
 
 function resetValues() {
-    let allItems = [].slice.call(document.querySelectorAll('fieldset input, fieldset select'));
+    let allItems = [].slice.call(document.querySelectorAll('fieldset input, fieldset select, #category'));
 
     for (var i = 0; i < allItems.length; i++) {
         var item = allItems[i];
