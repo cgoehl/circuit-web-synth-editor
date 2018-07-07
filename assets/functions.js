@@ -162,6 +162,7 @@ function resetPatch() {
 
     resetValues();
 
+    let synth = parseInt(document.querySelector('#synth').value) -1;
     var data = getData();
 
     // Remove BOF and EOF
@@ -170,6 +171,9 @@ function resetPatch() {
 
     // Remove manufacturer
     data.splice(0, 3);
+
+    // Set selected synth
+    data[3] = synth;
 
     console.log("reset Patch", data);
 
