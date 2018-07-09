@@ -38,7 +38,7 @@ You always have to connect the Circuit first or must reload the page after the p
 
 Circuit Web Synth Editor uses:
 
-- Bootstrap 4.0.0-beta and its dependencies (jquery, popper).
+- Bootstrap 4 and its dependencies (jquery, popper).
 - FileSaver.js
 - WebMidi.js
 
