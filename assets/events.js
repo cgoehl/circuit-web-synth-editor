@@ -5,8 +5,15 @@ for (let input of allInputs) {
     input.addEventListener('input', function(event) {
         let item = event.target;
 
+        setBadgeValue(item, item.value);
+
         sendMessage(item.name, item.value);
     });
+
+    // Initialize badges
+    if (input.type = "range") {
+        setBadgeValue(input, input.getAttribute('default'));
+    }
 }
 
 for (let select of allSelects) {

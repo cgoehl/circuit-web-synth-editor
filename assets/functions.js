@@ -213,6 +213,18 @@ function sendMessage(control, value) {
     }
 }
 
+function setBadgeValue(inputRange, value) {
+    if (inputRange.getAttribute("zero")) {
+        value = value - inputRange.getAttribute("zero");
+    }
+
+    try {
+        inputRange.previousElementSibling.previousElementSibling.innerText = value;
+    } catch(err) {
+        console.log(err);
+    }
+}
+
 function setLFO(data, lfo) {
     // Fade mode
     var fadeOut = 16;
