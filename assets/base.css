@@ -28,6 +28,10 @@ select {
     min-width: 200px;
 }
 
+.bg-dark {
+    background-color: #21252b !important;
+}
+
 .flex-column * {
     margin: 5px 0;
 }
@@ -62,7 +66,7 @@ select {
     min-width: auto;
 }
 
-.synth-tabs.nav-pills a.nav-link, #simpleMode {
+.synth-tabs.nav-pills a.nav-link, .fixedBtn {
     background-color: #282c34;
     color: white;
 }
@@ -70,7 +74,7 @@ select {
     background-color: white;
     color: black;
 }
-.synth-tabs .nav-item, #simpleMode {
+.synth-tabs .nav-item, .fixedBtn {
     margin: 0 3px;
     cursor: pointer;
 }

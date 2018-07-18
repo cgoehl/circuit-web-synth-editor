@@ -1,11 +1,15 @@
 var allInputs = document.querySelectorAll('fieldset input');
 var allSelects = document.querySelectorAll('fieldset select');
 
+synthHistoryInit();
+
 for (let input of allInputs) {
     input.addEventListener('input', function(event) {
         let item = event.target;
 
         setBadgeValue(item, item.value);
+
+        synthHistoryAdd(item.id, item.value);
 
         sendMessage(item.name, item.value);
     });
@@ -19,6 +23,8 @@ for (let input of allInputs) {
 for (let select of allSelects) {
     select.addEventListener('change', function(event) {
         let item = event.target;
+
+        synthHistoryAdd(item.id, item.value);
 
         sendMessage(item.name, item.value);
     });
@@ -112,4 +118,10 @@ simpleModeBtn.addEventListener('click', function(event) {
     for (let item of advancedElts) {
         item.hidden = hide;
     }
+});
+
+var undoBtn = document.querySelector('#undo');
+
+undoBtn.addEventListener('click', function(event) {
+    synthHistoryUndo();
 });

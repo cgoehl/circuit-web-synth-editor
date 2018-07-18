@@ -122,6 +122,8 @@ function mergeDataWithSysexMetadata(data, category) {
 }
 
 function parseCircuitPatch(circuitData) {
+    synthHistoryInit();
+
     // Patch name
     var patchNameArr = circuitData.slice(9, 25);
     var patchName= "";
@@ -152,6 +154,8 @@ function parseCircuitPatch(circuitData) {
         if (item) {
             item.value = synthValuesArr[i];
         }
+
+        synthHistoryAdd(item.id, item.value);
     }
 }
 
@@ -160,6 +164,7 @@ function resetPatch() {
         return;
     }
 
+    synthHistoryInit();
     resetValues();
 
     let synth = parseInt(document.querySelector('#synth').value) -1;
@@ -191,6 +196,8 @@ function resetValues() {
         } else {
             item.value = 0;
         }
+
+        synthHistoryAdd(item.id, item.value);
     }
 
     let patchName = document.querySelector('#patchName');
@@ -321,8 +328,63 @@ function storePatch(slot) {
     output.sendSysex([0, 32, 41], data);
 }
 
+function synthHistoryAdd(id, value) {
+    let length  = synthHistory.length;
+    let item = {
+        "id": id,
+        "value": value
+    };
+
+    if (synthHistory[length -1] && synthHistory[length -1].id == id) {
+        synthHistory.pop();
+    }
+
+    synthHistory.push(item);
+}
+
+function synthHistoryInit() {
+    synthHistory = [];
+}
+
+function synthHistoryUndo() {
+    // Remove last action
+    let undo = synthHistory.pop();
+
+    // Retrive in history the last value of the element undone
+    let previousValue = synthHistoryGetPreviousValue(undo.id);
+
+    if (!previousValue) {
+        synthHistory.push(undo);
+        return;
+    }
+
+    // Get DOM element and set his previous value
+    let element = document.querySelector('#' + undo.id);
+    element.value = previousValue;
+
+    // Update badge if range input
+    if (element.type == 'range') {
+        setBadgeValue(element, element.value);
+    }
+
+    // Send message
+    sendMessage(element.name, element.value);
+}
+
+function synthHistoryGetPreviousValue(id) {
+    let reversedSynthHistory = synthHistory.slice().reverse();
+
+    for (var i = 0; i < reversedSynthHistory.length; i++) {
+        let item = reversedSynthHistory[i];
+
+        if (item.id == id) {
+            return item.value;
+        }
+    };
+}
+
 function writeSysexFile(data) {
-    var ab = new ArrayBuffer(data.length); //bytes is the array with the integer
+    var ab = new ArrayBuffer(data.length); // bytes is the array with the integer
     var ia = new Uint8Array(ab);
 
     for (var i = 0; i < data.length; i++) {
