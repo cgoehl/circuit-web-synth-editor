@@ -369,5 +369,6 @@ function writeSysexFile(data) {
     }
 
     var blob = new Blob([ia], {type: "application/octet-stream"});
-    saveAs(blob, "circuit-patch.syx");
+    let patchName = document.querySelector('input[name="name"]').value || "circuit"
+    saveAs(blob, patchName + "-patch.syx");
 }
