@@ -33,7 +33,6 @@ for (let select of allSelects) {
 
 var exportBtn = document.querySelector('#export');
 var getPatchBtn = document.querySelector('#getPatch');
-var storePatchBtn = document.querySelector('#storePatch');
 var resetBtn = document.querySelector('#reset');
 
 exportBtn.addEventListener('click', function(event) {
@@ -43,14 +42,6 @@ exportBtn.addEventListener('click', function(event) {
 getPatchBtn.addEventListener('click', function(event) {
     console.log('Get Current Selected Patch');
     getCurrentSelectedPatch();
-});
-
-storePatchBtn.addEventListener('click', function(event) {
-    console.log('Store patch to Circuit');
-    var slot = document.querySelector('#slot').value;
-    slot--;
-
-    storePatch(slot);
 });
 
 resetBtn.addEventListener('click', function(event) {

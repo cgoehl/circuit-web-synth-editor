@@ -305,29 +305,6 @@ function setLFO(data, lfo) {
     }
 }
 
-function storePatch(slot) {
-    if ((slot < 0) || (slot > 63)) {
-        return;
-    }
-
-    var data = getData();
-
-    // Set storage metadata
-    data.splice(6, 1, 1);
-    data.splice(7, 1, slot);
-
-    // Remove BOF and EOF
-    data.splice(349, 1);
-    data.splice(0, 1);
-
-    // Remove manufacturer
-    data.splice(0, 3);
-
-    console.log("storePatch", data);
-
-    output.sendSysex([0, 32, 41], data);
-}
-
 function synthHistoryAdd(id, value) {
     let length  = synthHistory.length;
     let item = {
