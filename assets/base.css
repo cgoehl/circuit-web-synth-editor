@@ -49,9 +49,10 @@ select {
     text-align: center;
 }
 
-#export > img {
+nav > a > img{
     width: 25px;
-    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: -5px;
 }
 
 #synth, #category {

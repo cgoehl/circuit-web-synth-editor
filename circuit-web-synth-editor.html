@@ -16,17 +16,15 @@
     <body>
 
         <nav class="navbar navbar-expand-lg navbar-dark">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <a class="navbar-brand" href="https://framagit.org/pumpkin/circuit-web-synth-editor" target="_blank"><img src="assets/info.png" alt="Informations about Circuitweb Editor"/>Circuit Web Synth Editor <small id="status"></small></a>
+        </nav>
 
-            <a class="navbar-brand" href="#">Circuit Web Synth Editor <small id="status"></small></a>
+        <div class="container-fluid">
 
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav ml-auto">
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <nav class="navbar fixed-bottom navbar-light bg-dark">
+                <a class="nav-link btn-sm fixedBtn" id="simpleMode" data-toggle="tooltip" data-placement="bottom" title="Single oscillator and fewer parameters">Simple Mode</a>
+                <div class="nav-item dropup">
+                        <a class="nav-link dropdown-toggle btn-sm fixedBtn" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           Patch
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -37,23 +35,7 @@
                             <a class="dropdown-item" href="#" data-toggle="modal" data-target="#slotModal">Store</a>
                             <a class="dropdown-item" href="#" id="export">Export</a>
                         </div>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://framagit.org/pumpkin/circuit-web-synth-editor" target="_blank" id="export"><img src="assets/info.png" alt="Informations about Circuitweb Editor"/></a>
-                    </li>
-
-                </ul>
-            </div>
-        </nav>
-
-        <div class="container-fluid">
-
-            <div class="nav btn-group justify-content-center" role="group">
                 </div>
-
-            <nav class="navbar fixed-bottom navbar-light bg-dark">
-                <a class="nav-link btn-sm fixedBtn" id="simpleMode" data-toggle="tooltip" data-placement="bottom" title="Single oscillator and fewer parameters">Simple Mode</a>
                 <a class="nav-link btn-sm fixedBtn" id="undo" data-toggle="tooltip" data-placement="bottom" title="Undo last action">Undo</a>
             </nav>
 
