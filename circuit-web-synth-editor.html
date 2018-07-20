@@ -421,112 +421,109 @@
                         </div>
 
                         <div class="col-md-8">
-                            <fieldset>
-                                <legend>Envelope</legend>
 
-                                <div class="row">
+                            <div class="row">
 
-                                    <div class="col">
-                                        <fieldset>
-                                            <legend>AMP</legend>
+                                <div class="col">
+                                    <fieldset>
+                                        <legend>Env Amp</legend>
 
-                                            <label for="env_1_velocity">Velocity</label>
-                                            <span class="badge badge-dark float-right mt-3"></span>
-                                            <br/>
-                                            <input id="env_1_velocity" name="108" type="range" min="0" max="127" step="1" order="38" default="64" zero="64"><br/>
+                                        <label for="env_1_velocity">Velocity</label>
+                                        <span class="badge badge-dark float-right mt-3"></span>
+                                        <br/>
+                                        <input id="env_1_velocity" name="108" type="range" min="0" max="127" step="1" order="38" default="64" zero="64"><br/>
 
-                                            <hr/>
+                                        <hr/>
 
-                                            <label for="env_1_attack">Attack</label>
-                                            <span class="badge badge-dark float-right mt-3"></span>
-                                            <br/>
-                                            <input id="env_1_attack" name="73" type="range" min="0" max="127" step="1" order="39" default="2"><br/>
+                                        <label for="env_1_attack">Attack</label>
+                                        <span class="badge badge-dark float-right mt-3"></span>
+                                        <br/>
+                                        <input id="env_1_attack" name="73" type="range" min="0" max="127" step="1" order="39" default="2"><br/>
 
-                                            <label for="env_1_decay">Decay</label>
-                                            <span class="badge badge-dark float-right mt-3"></span>
-                                            <br/>
-                                            <input id="env_1_decay" name="75" type="range" min="0" max="127" step="1" order="40" default="90"><br/>
+                                        <label for="env_1_decay">Decay</label>
+                                        <span class="badge badge-dark float-right mt-3"></span>
+                                        <br/>
+                                        <input id="env_1_decay" name="75" type="range" min="0" max="127" step="1" order="40" default="90"><br/>
 
-                                            <label for="env_1_sustain">Sustain</label>
-                                            <span class="badge badge-dark float-right mt-3"></span>
-                                            <br/>
-                                            <input id="env_1_sustain" name="70" type="range" min="0" max="127" step="1" order="41" default="127"><br/>
+                                        <label for="env_1_sustain">Sustain</label>
+                                        <span class="badge badge-dark float-right mt-3"></span>
+                                        <br/>
+                                        <input id="env_1_sustain" name="70" type="range" min="0" max="127" step="1" order="41" default="127"><br/>
 
-                                            <label for="env_1_release">Release</label>
-                                            <span class="badge badge-dark float-right mt-3"></span>
-                                            <br/>
-                                            <input id="env_1_release" name="72" type="range" min="0" max="127" step="1" order="42" default="40"><br/>
-                                        </fieldset>
-                                    </div>
-
-                                    <div class="col">
-                                        <fieldset>
-                                            <legend>Filter</legend>
-
-                                            <label for="env_2_velocity">Velocity</label>
-                                            <span class="badge badge-dark float-right mt-3"></span>
-                                            <br/>
-                                            <input id="env_2_velocity" name="0:0" type="range" min="0" max="127" step="1" order="43" default="64" zero="64"><br/>
-
-                                            <hr/>
-
-                                            <label for="env_2_attack">Attack</label>
-                                            <span class="badge badge-dark float-right mt-3"></span>
-                                            <br/>
-                                            <input id="env_2_attack" name="0:1" type="range" min="0" max="127" step="1" order="44" default="2"><br/>
-
-                                            <label for="env_2_decay">Decay</label>
-                                            <span class="badge badge-dark float-right mt-3"></span>
-                                            <br/>
-                                            <input id="env_2_decay" name="0:2" type="range" min="0" max="127" step="1" order="45" default="75"><br/>
-
-                                            <label for="env_2_sustain">Sustain</label>
-                                            <span class="badge badge-dark float-right mt-3"></span>
-                                            <br/>
-                                            <input id="env_2_sustain" name="0:3" type="range" min="0" max="127" step="1" order="46" default="35"><br/>
-
-                                            <label for="env_2_release">Release</label>
-                                            <span class="badge badge-dark float-right mt-3"></span>
-                                            <br/>
-                                            <input id="env_2_release" name="0:4" type="range" min="0" max="127" step="1" order="47" default="45"><br/>
-                                        </fieldset>
-                                    </div>
-
-                                    <div class="col" advanced>
-                                        <fieldset>
-                                            <legend>Env 3</legend>
-
-                                            <label for="env_3_delay">Delay</label>
-                                            <span class="badge badge-dark float-right mt-3"></span>
-                                            <br/>
-                                            <input id="env_3_delay" name="0:14" type="range" min="0" max="127" step="1" order="48" default="0"><br/>
-
-                                            <hr/>
-
-                                            <label for="env_3_attack">Attack</label>
-                                            <span class="badge badge-dark float-right mt-3"></span>
-                                            <br/>
-                                            <input id="env_3_attack" name="0:15" type="range" min="0" max="127" step="1" order="49" default="10"><br/>
-
-                                            <label for="env_3_decay">Decay</label>
-                                            <span class="badge badge-dark float-right mt-3"></span>
-                                            <br/>
-                                            <input id="env_3_decay" name="0:16" type="range" min="0" max="127" step="1" order="50" default="70"><br/>
-
-                                            <label for="env_3_sustain">Sustain</label>
-                                            <span class="badge badge-dark float-right mt-3"></span>
-                                            <br/>
-                                            <input id="env_3_sustain" name="0:17" type="range" min="0" max="127" step="1" order="51" default="64"><br/>
-
-                                            <label for="env_3_release">Release</label>
-                                            <span class="badge badge-dark float-right mt-3"></span>
-                                            <br/>
-                                            <input id="env_3_release" name="0:18" type="range" min="0" max="127" step="1" order="52" default="40"><br/>
-                                        </fieldset>
-                                    </div>
-
+                                        <label for="env_1_release">Release</label>
+                                        <span class="badge badge-dark float-right mt-3"></span>
+                                        <br/>
+                                        <input id="env_1_release" name="72" type="range" min="0" max="127" step="1" order="42" default="40"><br/>
+                                    </fieldset>
                                 </div>
-                            </fieldset>
+
+                                <div class="col">
+                                    <fieldset>
+                                        <legend>Env Filter</legend>
+
+                                        <label for="env_2_velocity">Velocity</label>
+                                        <span class="badge badge-dark float-right mt-3"></span>
+                                        <br/>
+                                        <input id="env_2_velocity" name="0:0" type="range" min="0" max="127" step="1" order="43" default="64" zero="64"><br/>
+
+                                        <hr/>
+
+                                        <label for="env_2_attack">Attack</label>
+                                        <span class="badge badge-dark float-right mt-3"></span>
+                                        <br/>
+                                        <input id="env_2_attack" name="0:1" type="range" min="0" max="127" step="1" order="44" default="2"><br/>
+
+                                        <label for="env_2_decay">Decay</label>
+                                        <span class="badge badge-dark float-right mt-3"></span>
+                                        <br/>
+                                        <input id="env_2_decay" name="0:2" type="range" min="0" max="127" step="1" order="45" default="75"><br/>
+
+                                        <label for="env_2_sustain">Sustain</label>
+                                        <span class="badge badge-dark float-right mt-3"></span>
+                                        <br/>
+                                        <input id="env_2_sustain" name="0:3" type="range" min="0" max="127" step="1" order="46" default="35"><br/>
+
+                                        <label for="env_2_release">Release</label>
+                                        <span class="badge badge-dark float-right mt-3"></span>
+                                        <br/>
+                                        <input id="env_2_release" name="0:4" type="range" min="0" max="127" step="1" order="47" default="45"><br/>
+                                    </fieldset>
+                                </div>
+
+                                <div class="col" advanced>
+                                    <fieldset>
+                                        <legend>Env 3</legend>
+
+                                        <label for="env_3_delay">Delay</label>
+                                        <span class="badge badge-dark float-right mt-3"></span>
+                                        <br/>
+                                        <input id="env_3_delay" name="0:14" type="range" min="0" max="127" step="1" order="48" default="0"><br/>
+
+                                        <hr/>
+
+                                        <label for="env_3_attack">Attack</label>
+                                        <span class="badge badge-dark float-right mt-3"></span>
+                                        <br/>
+                                        <input id="env_3_attack" name="0:15" type="range" min="0" max="127" step="1" order="49" default="10"><br/>
+
+                                        <label for="env_3_decay">Decay</label>
+                                        <span class="badge badge-dark float-right mt-3"></span>
+                                        <br/>
+                                        <input id="env_3_decay" name="0:16" type="range" min="0" max="127" step="1" order="50" default="70"><br/>
+
+                                        <label for="env_3_sustain">Sustain</label>
+                                        <span class="badge badge-dark float-right mt-3"></span>
+                                        <br/>
+                                        <input id="env_3_sustain" name="0:17" type="range" min="0" max="127" step="1" order="51" default="64"><br/>
+
+                                        <label for="env_3_release">Release</label>
+                                        <span class="badge badge-dark float-right mt-3"></span>
+                                        <br/>
+                                        <input id="env_3_release" name="0:18" type="range" min="0" max="127" step="1" order="52" default="40"><br/>
+                                    </fieldset>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
 
