@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="viewport" content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no" />
 
         <!-- Vendors -->
         <link rel="stylesheet" type="text/css" href="assets/vendors/bootstrap.min.css">
@@ -15,13 +15,11 @@
 
     <body>
 
-        <nav class="navbar navbar-expand-lg navbar-dark">
+        <nav class="navbar navbar-dark">
             <a class="navbar-brand" href="https://framagit.org/pumpkin/circuit-web-synth-editor" target="_blank"><img src="assets/info.png" alt="Informations about Circuitweb Editor"/>Circuit Web Synth Editor <small id="status"></small></a>
         </nav>
 
-        <div class="container-fluid">
-
-            <nav class="navbar fixed-bottom navbar-light bg-dark">
+            <nav class="navbar fixed-bottom navbar-dark bg-dark">
                 <a class="nav-link btn-sm fixedBtn" id="simpleMode" data-toggle="tooltip" data-placement="bottom" title="Single oscillator and fewer parameters">Simple Mode</a>
                 <div class="nav-item dropup">
                         <a class="nav-link dropdown-toggle btn-sm fixedBtn" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -37,6 +35,8 @@
                 </div>
                 <a class="nav-link btn-sm fixedBtn" id="undo" data-toggle="tooltip" data-placement="bottom" title="Undo last action">Undo</a>
             </nav>
+
+        <div class="container-fluid">
 
             <br/>
 
