@@ -1,6 +1,10 @@
 function controllerChange(channel, controller, value) {
     var input = document.querySelector('[name="' + controller +'"]');
     input.value = value;
+
+    setBadgeValue(input, value);
+
+    synthHistoryAdd(input.id, value);
 }
 
 function dialogBox(question) {
