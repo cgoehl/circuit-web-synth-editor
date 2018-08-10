@@ -157,9 +157,13 @@ function parseCircuitPatch(circuitData) {
 
         if (item) {
             item.value = synthValuesArr[i];
-        }
 
-        synthHistoryAdd(item.id, item.value);
+            synthHistoryAdd(item.id, item.value);
+
+            if (item.type == 'range') {
+                setBadgeValue(item, item.value);
+            }
+        }
     }
 }
 
@@ -225,6 +229,10 @@ function sendMessage(control, value) {
 }
 
 function setBadgeValue(inputRange, value) {
+    if (inputRange.disabled) {
+        return;
+    }
+
     if (inputRange.getAttribute("zero")) {
         value = value - inputRange.getAttribute("zero");
     }
@@ -232,7 +240,7 @@ function setBadgeValue(inputRange, value) {
     try {
         inputRange.previousElementSibling.previousElementSibling.innerText = value;
     } catch(err) {
-        console.log(err);
+        console.log(err, inputRange, value);
     }
 }
 
