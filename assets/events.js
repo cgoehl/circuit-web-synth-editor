@@ -93,24 +93,6 @@ for (let synthTab of synthTabs) {
     });
 }
 
-var simpleModeBtn = document.querySelector('#simpleMode');
-var advancedElts = document.querySelectorAll('*[advanced]');
-
-simpleModeBtn.addEventListener('click', function(event) {
-    var hide = false;
-
-    this.classList.toggle('active');
-
-
-    if (this.classList.contains('active')) {
-        hide = true;
-    }
-
-    for (let item of advancedElts) {
-        item.hidden = hide;
-    }
-});
-
 var undoBtn = document.querySelector('#undo');
 
 undoBtn.addEventListener('click', function(event) {

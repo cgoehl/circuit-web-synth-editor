@@ -71,7 +71,7 @@ nav > a > img{
     background-color: #282c34;
     color: white;
 }
-.synth-tabs.nav-pills a.nav-link.active, #simpleMode.active {
+.synth-tabs.nav-pills a.nav-link.active {
     background-color: white;
     color: black;
 }
