@@ -10,8 +10,8 @@ h1 small {
 
 fieldset {
     background:#282c34;
-    margin-top: 20px;
-    padding: 0 20px 10px 20px;
+    /* margin-top: 20px; */
+    /* padding: 0 20px 10px 20px; */
 }
 
 fieldset > legend {
