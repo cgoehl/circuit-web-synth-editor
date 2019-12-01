@@ -17,13 +17,31 @@
 
 <body>
 
-	<nav class="navbar navbar-dark">
-		<a class="navbar-brand" href="https://framagit.org/pumpkin/circuit-web-synth-editor" target="_blank"><img
-				src="assets/info.png" alt="Informations about Circuitweb Editor" />Circuit Web Synth Editor <small
-				id="status"></small></a>
-	</nav>
+	<nav class="navbar fixed-top navbar-dark bg-dark">
 
-	<nav class="navbar fixed-bottom navbar-dark bg-dark">
+					<input id="patchName" placeholder="Patch name" maxlength="16" name="name" class="p-2 patchName" />
+		
+					<select id="category" default="0">
+						<option value="0" selected>No category</option>
+						<option value="1">Arp</option>
+						<option value="2">Bass</option>
+						<option value="3">Bell</option>
+						<option value="4">Classic</option>
+						<option value="5">Drum</option>
+						<option value="6">Keyboard</option>
+						<option value="7">Lead</option>
+						<option value="8">Movement</option>
+						<option value="9">Pad</option>
+						<option value="10">Poly</option>
+						<option value="11">SFX</option>
+						<option value="12">String</option>
+						<option value="13">User</option>
+						<option value="14">Voc/Tune</option>
+					</select>
+
+			<a class="navbar-brand" href="https://framagit.org/pumpkin/circuit-web-synth-editor" target="_blank">Circuit Web Synth Editor <small
+				id="status"></small></a>
+
 		<div class="nav-item dropup">
 			<a class="nav-link dropdown-toggle btn-sm fixedBtn" id="navbarDropdownMenuLink" data-toggle="dropdown"
 				aria-haspopup="true" aria-expanded="false">
@@ -50,29 +68,7 @@
 
 	<div class="container-fluid">
 
-		<p class="d-flex flex-column flex-md-row">
-			<input id="patchName" placeholder="Patch name" maxlength="16" name="name" class="p-2 patchName" />
 
-			<span class="ml-auto p-2"></span>
-
-			<select class="p-2" id="category" default="0">
-				<option value="0" selected>No category</option>
-				<option value="1">Arp</option>
-				<option value="2">Bass</option>
-				<option value="3">Bell</option>
-				<option value="4">Classic</option>
-				<option value="5">Drum</option>
-				<option value="6">Keyboard</option>
-				<option value="7">Lead</option>
-				<option value="8">Movement</option>
-				<option value="9">Pad</option>
-				<option value="10">Poly</option>
-				<option value="11">SFX</option>
-				<option value="12">String</option>
-				<option value="13">User</option>
-				<option value="14">Voc/Tune</option>
-			</select>
-		</p>
 
 		
 

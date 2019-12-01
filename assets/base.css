@@ -32,10 +32,6 @@ select {
     background-color: #21252b !important;
 }
 
-.flex-column * {
-    margin: 5px 0;
-}
-
 .tab-content select {
     width: 100%;
 }
@@ -57,10 +53,6 @@ nav > a > img{
 
 #synth, #category {
     background-color: #282c34;
-
-    border: none;
-    padding: 10px 8px;
-    font-size: 20px;
 }
 
 .dropdown-menu {
