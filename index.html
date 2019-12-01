@@ -39,8 +39,7 @@
 			<option value="14">Voc/Tune</option>
 		</select>
 
-		<a class="navbar-brand" href="https://framagit.org/pumpkin/circuit-web-synth-editor" target="_blank">Circuit Web
-			Synth Editor <small id="status"></small></a>
+		<small id="status"></small>
 
 		<div class="nav-item dropup">
 			<a class="nav-link dropdown-toggle btn-sm fixedBtn" id="navbarDropdownMenuLink" data-toggle="dropdown"
@@ -112,7 +111,7 @@
 					</div>
 				</fieldset>
 
-				<h1>Oscillator</h1>
+				<h1>Oscillators</h1>
 				<div class="row" tabId="oscillator">
 
 					<div class="col">
@@ -344,7 +343,48 @@
 
 				</div>
 
+				<h1>Filter and Envelope</h1>
+
 				<div class="row" tabId="filterEnv">
+
+					<div class="col">
+						<fieldset>
+							<legend>Env Amp</legend>
+
+							<label for="env_1_velocity">Velocity</label>
+							<span class="badge badge-dark float-right mt-3"></span>
+							<br />
+							<input id="env_1_velocity" name="108" type="range" min="0" max="127" step="1" order="38"
+								default="64" zero="64"><br />
+
+							<hr />
+
+							<label for="env_1_attack">Attack</label>
+							<span class="badge badge-dark float-right mt-3"></span>
+							<br />
+							<input id="env_1_attack" name="73" type="range" min="0" max="127" step="1" order="39"
+								default="2"><br />
+
+							<label for="env_1_decay">Decay</label>
+							<span class="badge badge-dark float-right mt-3"></span>
+							<br />
+							<input id="env_1_decay" name="75" type="range" min="0" max="127" step="1" order="40"
+								default="90"><br />
+
+							<label for="env_1_sustain">Sustain</label>
+							<span class="badge badge-dark float-right mt-3"></span>
+							<br />
+							<input id="env_1_sustain" name="70" type="range" min="0" max="127" step="1" order="41"
+								default="127"><br />
+
+							<label for="env_1_release">Release</label>
+							<span class="badge badge-dark float-right mt-3"></span>
+							<br />
+							<input id="env_1_release" name="72" type="range" min="0" max="127" step="1" order="42"
+								default="40"><br />
+						</fieldset>
+					</div>
+
 					<div class="col-md-4">
 						<fieldset>
 							<legend>Filter</legend>
@@ -416,43 +456,7 @@
 					</div>
 
 
-					<div class="col">
-						<fieldset>
-							<legend>Env Amp</legend>
 
-							<label for="env_1_velocity">Velocity</label>
-							<span class="badge badge-dark float-right mt-3"></span>
-							<br />
-							<input id="env_1_velocity" name="108" type="range" min="0" max="127" step="1" order="38"
-								default="64" zero="64"><br />
-
-							<hr />
-
-							<label for="env_1_attack">Attack</label>
-							<span class="badge badge-dark float-right mt-3"></span>
-							<br />
-							<input id="env_1_attack" name="73" type="range" min="0" max="127" step="1" order="39"
-								default="2"><br />
-
-							<label for="env_1_decay">Decay</label>
-							<span class="badge badge-dark float-right mt-3"></span>
-							<br />
-							<input id="env_1_decay" name="75" type="range" min="0" max="127" step="1" order="40"
-								default="90"><br />
-
-							<label for="env_1_sustain">Sustain</label>
-							<span class="badge badge-dark float-right mt-3"></span>
-							<br />
-							<input id="env_1_sustain" name="70" type="range" min="0" max="127" step="1" order="41"
-								default="127"><br />
-
-							<label for="env_1_release">Release</label>
-							<span class="badge badge-dark float-right mt-3"></span>
-							<br />
-							<input id="env_1_release" name="72" type="range" min="0" max="127" step="1" order="42"
-								default="40"><br />
-						</fieldset>
-					</div>
 
 					<div class="col">
 						<fieldset>
@@ -491,357 +495,11 @@
 								default="45"><br />
 						</fieldset>
 					</div>
-
-					<div class="col">
-						<fieldset>
-							<legend>Env 3</legend>
-
-							<label for="env_3_delay">Delay</label>
-							<span class="badge badge-dark float-right mt-3"></span>
-							<br />
-							<input id="env_3_delay" name="0:14" type="range" min="0" max="127" step="1" order="48"
-								default="0"><br />
-
-							<hr />
-
-							<label for="env_3_attack">Attack</label>
-							<span class="badge badge-dark float-right mt-3"></span>
-							<br />
-							<input id="env_3_attack" name="0:15" type="range" min="0" max="127" step="1" order="49"
-								default="10"><br />
-
-							<label for="env_3_decay">Decay</label>
-							<span class="badge badge-dark float-right mt-3"></span>
-							<br />
-							<input id="env_3_decay" name="0:16" type="range" min="0" max="127" step="1" order="50"
-								default="70"><br />
-
-							<label for="env_3_sustain">Sustain</label>
-							<span class="badge badge-dark float-right mt-3"></span>
-							<br />
-							<input id="env_3_sustain" name="0:17" type="range" min="0" max="127" step="1" order="51"
-								default="64"><br />
-
-							<label for="env_3_release">Release</label>
-							<span class="badge badge-dark float-right mt-3"></span>
-							<br />
-							<input id="env_3_release" name="0:18" type="range" min="0" max="127" step="1" order="52"
-								default="40"><br />
-						</fieldset>
-					</div>
-
 				</div>
 
 
-				<div class="row" tabId="lfo">
 
-					<div class="col">
-						<fieldset>
-							<legend>LFO 1</legend>
-
-							<label for="lfo_1_waveform">Wave</label><br />
-							<select id="lfo_1_waveform" name="0:70" order="53" default="0">
-								<option value="0">Sine</option>
-								<option value="1">Triangle</option>
-								<option value="2">Sawtooth</option>
-								<option value="3">Square</option>
-								<option value="4">Random S/H</option>
-								<option value="5">Time S/H</option>
-								<option value="6">Piano envelope</option>
-								<option value="7">Sequence 1</option>
-								<option value="8">Sequence 2</option>
-								<option value="9">Sequence 3</option>
-								<option value="10">Sequence 4</option>
-								<option value="11">Sequence 5</option>
-								<option value="12">Sequence 6</option>
-								<option value="13">Sequence 7</option>
-								<option value="14">Alternative 1</option>
-								<option value="15">Alternative 2</option>
-								<option value="16">Alternative 3</option>
-								<option value="17">Alternative 4</option>
-								<option value="18">Alternative 5</option>
-								<option value="19">Alternative 6</option>
-								<option value="20">Alternative 7</option>
-								<option value="21">Alternative 8</option>
-								<option value="22">Chromatic</option>
-								<option value="23">Chromatic 16</option>
-								<option value="24">Major</option>
-								<option value="25">Major 7</option>
-								<option value="26">Minor 7</option>
-								<option value="27">Min arp 1</option>
-								<option value="28">Min arp 2</option>
-								<option value="29">Diminished</option>
-								<option value="30">Dec minor</option>
-								<option value="31">Minor 3rd</option>
-								<option value="32">Pedal</option>
-								<option value="33">4ths</option>
-								<option value="34">4ths x 12</option>
-								<option value="35">1625 maj</option>
-								<option value="36">1625 Min</option>
-								<option value="37">2511</option>
-							</select><br />
-
-							<label for="lfo_1_phase_offset">Phase offset</label>
-							<span class="badge badge-dark float-right mt-3"></span>
-							<br />
-							<input id="lfo_1_phase_offset" name="0:71" type="range" min="0" max="119" step="1"
-								order="54" default="0"><br />
-
-							<label for="lfo_1_slew_rate">Slew rate</label>
-							<span class="badge badge-dark float-right mt-3"></span>
-							<br />
-							<input id="lfo_1_slew_rate" name="0:72" type="range" min="0" max="127" step="1" order="55"
-								default="0"><br />
-
-							<label for="lfo_1_delay">Delay</label>
-							<span class="badge badge-dark float-right mt-3"></span>
-							<br />
-							<input id="lfo_1_delay" name="0:74" type="range" min="0" max="127" step="1" order="56"
-								default="0"><br />
-
-							<label for="lfo_1_delay_sync">Delay sync</label><br />
-							<select id="lfo_1_delay_sync" name="0:75" order="57" default="0">
-								<option value="0">Off</option>
-								<option value="1">32nd Triplets</option>
-								<option value="2">32nd</option>
-								<option value="3">16th Triplets</option>
-								<option value="4">16th</option>
-								<option value="5">8th Triad</option>
-								<option value="6">16th Dotted</option>
-								<option value="7">8th</option>
-								<option value="8">4th Triad</option>
-								<option value="9">8th Dotted</option>
-								<option value="10">4th</option>
-								<option value="11">1 + 1/3 beats</option>
-								<option value="12">4th Dotted</option>
-								<option value="13">2nd</option>
-								<option value="14">2 +2/3 beats</option>
-								<option value="15">3 beats</option>
-								<option value="16">4 beats</option>
-								<option value="17">5 + 1/3</option>
-								<option value="18">6 beats</option>
-								<option value="19">8 beats</option>
-							</select><br />
-
-							<label for="lfo_1_rate">Rate</label>
-							<span class="badge badge-dark float-right mt-3"></span>
-							<br />
-							<input id="lfo_1_slew_rate" name="0:76" type="range" min="0" max="127" step="1" order="58"
-								default="68"><br />
-
-							<label for="lfo_1_rate_sync">Rate sync</label><br />
-							<select id="lfo_1_rate_sync" name="0:77" order="59" default="0">
-								<option value="0">Off</option>
-								<option value="1">32nd Triplets</option>
-								<option value="2">32nd</option>
-								<option value="3">16th Triplets</option>
-								<option value="4">16th</option>
-								<option value="5">8th Triad</option>
-								<option value="6">16th Dotted</option>
-								<option value="7">8th</option>
-								<option value="8">4th Triad</option>
-								<option value="9">8th Dotted</option>
-								<option value="10">4th</option>
-								<option value="11">1 + 1/3 beats</option>
-								<option value="12">4th Dotted</option>
-								<option value="13">2nd</option>
-								<option value="14">2 +2/3 beats</option>
-								<option value="15">3 beats</option>
-								<option value="16">4 beats</option>
-								<option value="17">5 + 1/3</option>
-								<option value="18">6 beats</option>
-								<option value="19">8 beats</option>
-							</select><br />
-
-							<label for="lfo_1_one_shot">One shot</label><br />
-							<select id="lfo_1_one_shot" name="0:122" default="12">
-								<option value="12">Off</option>
-								<option value="13">On</option>
-							</select><br />
-
-							<label for="lfo_1_key_sync">Key sync</label><br />
-							<select id="lfo_1_key_sync" name="0:122" default="14">
-								<option value="14">Free running</option>
-								<option value="15">Key synced</option>
-							</select><br />
-
-							<label for="lfo_1_common_sync">Common sync</label><br />
-							<select id="lfo_1_common_sync" name="0:122" default="16">
-								<option value="16">Off</option>
-								<option value="17">On</option>
-							</select><br />
-
-							<label for="lfo_1_delay_trigger">Delay trigger</label><br />
-							<select id="lfo_1_delay_trigger" name="0:122" default="18">
-								<option value="18">Single</option>
-								<option value="19">Multi</option>
-							</select><br />
-
-							<label for="lfo_1_fade_mode">Fade mode</label><br />
-							<select id="lfo_1_fade_mode" name="0:123" default="0">
-								<option value="0">Fade In</option>
-								<option value="1">Fade out</option>
-								<option value="2">Gate in</option>
-								<option value="3">Gate out</option>
-							</select><br />
-
-						</fieldset>
-					</div>
-
-					<div class="col">
-						<fieldset>
-							<legend>LFO 2</legend>
-
-							<label for="lfo_2_waveform">Wave</label><br />
-							<select id="lfo_2_waveform" name="0:79" order="61" default="0">
-								<option value="0">Sine</option>
-								<option value="1">Triangle</option>
-								<option value="2">Sawtooth</option>
-								<option value="3">Square</option>
-								<option value="4">Random S/H</option>
-								<option value="5">Time S/H</option>
-								<option value="6">Piano envelope</option>
-								<option value="7">Sequence 1</option>
-								<option value="8">Sequence 2</option>
-								<option value="9">Sequence 3</option>
-								<option value="10">Sequence 4</option>
-								<option value="11">Sequence 5</option>
-								<option value="12">Sequence 6</option>
-								<option value="13">Sequence 7</option>
-								<option value="14">Alternative 1</option>
-								<option value="15">Alternative 2</option>
-								<option value="16">Alternative 3</option>
-								<option value="17">Alternative 4</option>
-								<option value="18">Alternative 5</option>
-								<option value="19">Alternative 6</option>
-								<option value="20">Alternative 7</option>
-								<option value="21">Alternative 8</option>
-								<option value="22">Chromatic</option>
-								<option value="23">Chromatic 16</option>
-								<option value="24">Major</option>
-								<option value="25">Major 7</option>
-								<option value="26">Minor 7</option>
-								<option value="27">Min arp 1</option>
-								<option value="28">Min arp 2</option>
-								<option value="29">Diminished</option>
-								<option value="30">Dec minor</option>
-								<option value="31">Minor 3rd</option>
-								<option value="32">Pedal</option>
-								<option value="33">4ths</option>
-								<option value="34">4ths x 12</option>
-								<option value="35">1625 maj</option>
-								<option value="36">1625 Min</option>
-								<option value="37">2511</option>
-							</select><br />
-
-							<label for="lfo_2_phase_offset">Phase offset</label>
-							<span class="badge badge-dark float-right mt-3"></span>
-							<br />
-							<input id="lfo_2_phase_offset" name="0:80" type="range" min="0" max="119" step="1"
-								order="62" default="0"><br />
-
-							<label for="lfo_2_slew_rate">Slew rate</label>
-							<span class="badge badge-dark float-right mt-3"></span>
-							<br />
-							<input id="lfo_2_slew_rate" name="0:81" type="range" min="0" max="127" step="1" order="63"
-								default="0"><br />
-
-							<label for="lfo_2_delay">Delay</label>
-							<span class="badge badge-dark float-right mt-3"></span>
-							<br />
-							<input id="lfo_2_delay" name="0:83" type="range" min="0" max="127" step="1" order="64"
-								default="0"><br />
-
-							<label for="lfo_2_delay_sync">Delay sync</label><br />
-							<select id="lfo_2_delay_sync" name="0:84" order="65" default="0">
-								<option value="0">Off</option>
-								<option value="1">32nd Triplets</option>
-								<option value="2">32nd</option>
-								<option value="3">16th Triplets</option>
-								<option value="4">16th</option>
-								<option value="5">8th Triad</option>
-								<option value="6">16th Dotted</option>
-								<option value="7">8th</option>
-								<option value="8">4th Triad</option>
-								<option value="9">8th Dotted</option>
-								<option value="10">4th</option>
-								<option value="11">1 + 1/3 beats</option>
-								<option value="12">4th Dotted</option>
-								<option value="13">2nd</option>
-								<option value="14">2 +2/3 beats</option>
-								<option value="15">3 beats</option>
-								<option value="16">4 beats</option>
-								<option value="17">5 + 1/3</option>
-								<option value="18">6 beats</option>
-								<option value="19">8 beats</option>
-							</select><br />
-
-							<label for="lfo_2_rate">Rate</label>
-							<span class="badge badge-dark float-right mt-3"></span>
-							<br />
-							<input id="lfo_2_rate" name="0:85" type="range" min="0" max="127" step="1" order="66"
-								default="68"><br />
-
-							<label for="lfo_2_rate_sync">Rate sync</label><br />
-							<select id="lfo_2_rate_sync" name="0:86" order="67" default="0">
-								<option value="0">Off</option>
-								<option value="1">32nd Triplets</option>
-								<option value="2">32nd</option>
-								<option value="3">16th Triplets</option>
-								<option value="4">16th</option>
-								<option value="5">8th Triad</option>
-								<option value="6">16th Dotted</option>
-								<option value="7">8th</option>
-								<option value="8">4th Triad</option>
-								<option value="9">8th Dotted</option>
-								<option value="10">4th</option>
-								<option value="11">1 + 1/3 beats</option>
-								<option value="12">4th Dotted</option>
-								<option value="13">2nd</option>
-								<option value="14">2 +2/3 beats</option>
-								<option value="15">3 beats</option>
-								<option value="16">4 beats</option>
-								<option value="17">5 + 1/3</option>
-								<option value="18">6 beats</option>
-								<option value="19">8 beats</option>
-							</select><br />
-
-							<label for="lfo_2_one_shot">One shot</label><br />
-							<select id="lfo_2_one_shot" name="0:122" default="22">
-								<option value="22">Off</option>
-								<option value="23">On</option>
-							</select><br />
-
-							<label for="lfo_2_key_sync">Key sync</label><br />
-							<select id="lfo_2_key_sync" name="0:122" default="24">
-								<option value="24">Free running</option>
-								<option value="25">Key synced</option>
-							</select><br />
-
-							<label for="lfo_2_common_sync">Common sync</label><br />
-							<select id="lfo_2_common_sync" name="0:122" default="26">
-								<option value="26">Off</option>
-								<option value="27">On</option>
-							</select><br />
-
-							<label for="lfo_2_delay_trigger">Delay trigger</label><br />
-							<select id="lfo_2_delay_trigger" name="0:122" default="28">
-								<option value="28">Single</option>
-								<option value="29">Multi</option>
-							</select><br />
-
-							<label for="lfo_2_fade_mode">Fade mode</label><br />
-							<select id="lfo_2_fade_mode" name="0:123" default="4">
-								<option value="4">Fade In</option>
-								<option value="5">Fade out</option>
-								<option value="6">Gate in</option>
-								<option value="7">Gate out</option>
-							</select><br />
-						</fieldset>
-
-					</div>
-				</div>
-
+				<h1>FX</h1>
 
 				<div class="row" tabId="effectsEQ">
 
@@ -986,7 +644,357 @@
 				</div>
 			</div>
 
-			<h1>Matrix</h1>
+			<h1>Modulation SRC</h1>
+
+			<div class="row" tabId="lfo">
+
+				<div class="col">
+					<fieldset>
+						<legend>LFO 1</legend>
+
+						<label for="lfo_1_waveform">Wave</label><br />
+						<select id="lfo_1_waveform" name="0:70" order="53" default="0">
+							<option value="0">Sine</option>
+							<option value="1">Triangle</option>
+							<option value="2">Sawtooth</option>
+							<option value="3">Square</option>
+							<option value="4">Random S/H</option>
+							<option value="5">Time S/H</option>
+							<option value="6">Piano envelope</option>
+							<option value="7">Sequence 1</option>
+							<option value="8">Sequence 2</option>
+							<option value="9">Sequence 3</option>
+							<option value="10">Sequence 4</option>
+							<option value="11">Sequence 5</option>
+							<option value="12">Sequence 6</option>
+							<option value="13">Sequence 7</option>
+							<option value="14">Alternative 1</option>
+							<option value="15">Alternative 2</option>
+							<option value="16">Alternative 3</option>
+							<option value="17">Alternative 4</option>
+							<option value="18">Alternative 5</option>
+							<option value="19">Alternative 6</option>
+							<option value="20">Alternative 7</option>
+							<option value="21">Alternative 8</option>
+							<option value="22">Chromatic</option>
+							<option value="23">Chromatic 16</option>
+							<option value="24">Major</option>
+							<option value="25">Major 7</option>
+							<option value="26">Minor 7</option>
+							<option value="27">Min arp 1</option>
+							<option value="28">Min arp 2</option>
+							<option value="29">Diminished</option>
+							<option value="30">Dec minor</option>
+							<option value="31">Minor 3rd</option>
+							<option value="32">Pedal</option>
+							<option value="33">4ths</option>
+							<option value="34">4ths x 12</option>
+							<option value="35">1625 maj</option>
+							<option value="36">1625 Min</option>
+							<option value="37">2511</option>
+						</select><br />
+
+						<label for="lfo_1_phase_offset">Phase offset</label>
+						<span class="badge badge-dark float-right mt-3"></span>
+						<br />
+						<input id="lfo_1_phase_offset" name="0:71" type="range" min="0" max="119" step="1" order="54"
+							default="0"><br />
+
+						<label for="lfo_1_slew_rate">Slew rate</label>
+						<span class="badge badge-dark float-right mt-3"></span>
+						<br />
+						<input id="lfo_1_slew_rate" name="0:72" type="range" min="0" max="127" step="1" order="55"
+							default="0"><br />
+
+						<label for="lfo_1_delay">Delay</label>
+						<span class="badge badge-dark float-right mt-3"></span>
+						<br />
+						<input id="lfo_1_delay" name="0:74" type="range" min="0" max="127" step="1" order="56"
+							default="0"><br />
+
+						<label for="lfo_1_delay_sync">Delay sync</label><br />
+						<select id="lfo_1_delay_sync" name="0:75" order="57" default="0">
+							<option value="0">Off</option>
+							<option value="1">32nd Triplets</option>
+							<option value="2">32nd</option>
+							<option value="3">16th Triplets</option>
+							<option value="4">16th</option>
+							<option value="5">8th Triad</option>
+							<option value="6">16th Dotted</option>
+							<option value="7">8th</option>
+							<option value="8">4th Triad</option>
+							<option value="9">8th Dotted</option>
+							<option value="10">4th</option>
+							<option value="11">1 + 1/3 beats</option>
+							<option value="12">4th Dotted</option>
+							<option value="13">2nd</option>
+							<option value="14">2 +2/3 beats</option>
+							<option value="15">3 beats</option>
+							<option value="16">4 beats</option>
+							<option value="17">5 + 1/3</option>
+							<option value="18">6 beats</option>
+							<option value="19">8 beats</option>
+						</select><br />
+
+						<label for="lfo_1_rate">Rate</label>
+						<span class="badge badge-dark float-right mt-3"></span>
+						<br />
+						<input id="lfo_1_slew_rate" name="0:76" type="range" min="0" max="127" step="1" order="58"
+							default="68"><br />
+
+						<label for="lfo_1_rate_sync">Rate sync</label><br />
+						<select id="lfo_1_rate_sync" name="0:77" order="59" default="0">
+							<option value="0">Off</option>
+							<option value="1">32nd Triplets</option>
+							<option value="2">32nd</option>
+							<option value="3">16th Triplets</option>
+							<option value="4">16th</option>
+							<option value="5">8th Triad</option>
+							<option value="6">16th Dotted</option>
+							<option value="7">8th</option>
+							<option value="8">4th Triad</option>
+							<option value="9">8th Dotted</option>
+							<option value="10">4th</option>
+							<option value="11">1 + 1/3 beats</option>
+							<option value="12">4th Dotted</option>
+							<option value="13">2nd</option>
+							<option value="14">2 +2/3 beats</option>
+							<option value="15">3 beats</option>
+							<option value="16">4 beats</option>
+							<option value="17">5 + 1/3</option>
+							<option value="18">6 beats</option>
+							<option value="19">8 beats</option>
+						</select><br />
+
+						<label for="lfo_1_one_shot">One shot</label><br />
+						<select id="lfo_1_one_shot" name="0:122" default="12">
+							<option value="12">Off</option>
+							<option value="13">On</option>
+						</select><br />
+
+						<label for="lfo_1_key_sync">Key sync</label><br />
+						<select id="lfo_1_key_sync" name="0:122" default="14">
+							<option value="14">Free running</option>
+							<option value="15">Key synced</option>
+						</select><br />
+
+						<label for="lfo_1_common_sync">Common sync</label><br />
+						<select id="lfo_1_common_sync" name="0:122" default="16">
+							<option value="16">Off</option>
+							<option value="17">On</option>
+						</select><br />
+
+						<label for="lfo_1_delay_trigger">Delay trigger</label><br />
+						<select id="lfo_1_delay_trigger" name="0:122" default="18">
+							<option value="18">Single</option>
+							<option value="19">Multi</option>
+						</select><br />
+
+						<label for="lfo_1_fade_mode">Fade mode</label><br />
+						<select id="lfo_1_fade_mode" name="0:123" default="0">
+							<option value="0">Fade In</option>
+							<option value="1">Fade out</option>
+							<option value="2">Gate in</option>
+							<option value="3">Gate out</option>
+						</select><br />
+
+					</fieldset>
+				</div>
+
+				<div class="col">
+					<fieldset>
+						<legend>LFO 2</legend>
+
+						<label for="lfo_2_waveform">Wave</label><br />
+						<select id="lfo_2_waveform" name="0:79" order="61" default="0">
+							<option value="0">Sine</option>
+							<option value="1">Triangle</option>
+							<option value="2">Sawtooth</option>
+							<option value="3">Square</option>
+							<option value="4">Random S/H</option>
+							<option value="5">Time S/H</option>
+							<option value="6">Piano envelope</option>
+							<option value="7">Sequence 1</option>
+							<option value="8">Sequence 2</option>
+							<option value="9">Sequence 3</option>
+							<option value="10">Sequence 4</option>
+							<option value="11">Sequence 5</option>
+							<option value="12">Sequence 6</option>
+							<option value="13">Sequence 7</option>
+							<option value="14">Alternative 1</option>
+							<option value="15">Alternative 2</option>
+							<option value="16">Alternative 3</option>
+							<option value="17">Alternative 4</option>
+							<option value="18">Alternative 5</option>
+							<option value="19">Alternative 6</option>
+							<option value="20">Alternative 7</option>
+							<option value="21">Alternative 8</option>
+							<option value="22">Chromatic</option>
+							<option value="23">Chromatic 16</option>
+							<option value="24">Major</option>
+							<option value="25">Major 7</option>
+							<option value="26">Minor 7</option>
+							<option value="27">Min arp 1</option>
+							<option value="28">Min arp 2</option>
+							<option value="29">Diminished</option>
+							<option value="30">Dec minor</option>
+							<option value="31">Minor 3rd</option>
+							<option value="32">Pedal</option>
+							<option value="33">4ths</option>
+							<option value="34">4ths x 12</option>
+							<option value="35">1625 maj</option>
+							<option value="36">1625 Min</option>
+							<option value="37">2511</option>
+						</select><br />
+
+						<label for="lfo_2_phase_offset">Phase offset</label>
+						<span class="badge badge-dark float-right mt-3"></span>
+						<br />
+						<input id="lfo_2_phase_offset" name="0:80" type="range" min="0" max="119" step="1" order="62"
+							default="0"><br />
+
+						<label for="lfo_2_slew_rate">Slew rate</label>
+						<span class="badge badge-dark float-right mt-3"></span>
+						<br />
+						<input id="lfo_2_slew_rate" name="0:81" type="range" min="0" max="127" step="1" order="63"
+							default="0"><br />
+
+						<label for="lfo_2_delay">Delay</label>
+						<span class="badge badge-dark float-right mt-3"></span>
+						<br />
+						<input id="lfo_2_delay" name="0:83" type="range" min="0" max="127" step="1" order="64"
+							default="0"><br />
+
+						<label for="lfo_2_delay_sync">Delay sync</label><br />
+						<select id="lfo_2_delay_sync" name="0:84" order="65" default="0">
+							<option value="0">Off</option>
+							<option value="1">32nd Triplets</option>
+							<option value="2">32nd</option>
+							<option value="3">16th Triplets</option>
+							<option value="4">16th</option>
+							<option value="5">8th Triad</option>
+							<option value="6">16th Dotted</option>
+							<option value="7">8th</option>
+							<option value="8">4th Triad</option>
+							<option value="9">8th Dotted</option>
+							<option value="10">4th</option>
+							<option value="11">1 + 1/3 beats</option>
+							<option value="12">4th Dotted</option>
+							<option value="13">2nd</option>
+							<option value="14">2 +2/3 beats</option>
+							<option value="15">3 beats</option>
+							<option value="16">4 beats</option>
+							<option value="17">5 + 1/3</option>
+							<option value="18">6 beats</option>
+							<option value="19">8 beats</option>
+						</select><br />
+
+						<label for="lfo_2_rate">Rate</label>
+						<span class="badge badge-dark float-right mt-3"></span>
+						<br />
+						<input id="lfo_2_rate" name="0:85" type="range" min="0" max="127" step="1" order="66"
+							default="68"><br />
+
+						<label for="lfo_2_rate_sync">Rate sync</label><br />
+						<select id="lfo_2_rate_sync" name="0:86" order="67" default="0">
+							<option value="0">Off</option>
+							<option value="1">32nd Triplets</option>
+							<option value="2">32nd</option>
+							<option value="3">16th Triplets</option>
+							<option value="4">16th</option>
+							<option value="5">8th Triad</option>
+							<option value="6">16th Dotted</option>
+							<option value="7">8th</option>
+							<option value="8">4th Triad</option>
+							<option value="9">8th Dotted</option>
+							<option value="10">4th</option>
+							<option value="11">1 + 1/3 beats</option>
+							<option value="12">4th Dotted</option>
+							<option value="13">2nd</option>
+							<option value="14">2 +2/3 beats</option>
+							<option value="15">3 beats</option>
+							<option value="16">4 beats</option>
+							<option value="17">5 + 1/3</option>
+							<option value="18">6 beats</option>
+							<option value="19">8 beats</option>
+						</select><br />
+
+						<label for="lfo_2_one_shot">One shot</label><br />
+						<select id="lfo_2_one_shot" name="0:122" default="22">
+							<option value="22">Off</option>
+							<option value="23">On</option>
+						</select><br />
+
+						<label for="lfo_2_key_sync">Key sync</label><br />
+						<select id="lfo_2_key_sync" name="0:122" default="24">
+							<option value="24">Free running</option>
+							<option value="25">Key synced</option>
+						</select><br />
+
+						<label for="lfo_2_common_sync">Common sync</label><br />
+						<select id="lfo_2_common_sync" name="0:122" default="26">
+							<option value="26">Off</option>
+							<option value="27">On</option>
+						</select><br />
+
+						<label for="lfo_2_delay_trigger">Delay trigger</label><br />
+						<select id="lfo_2_delay_trigger" name="0:122" default="28">
+							<option value="28">Single</option>
+							<option value="29">Multi</option>
+						</select><br />
+
+						<label for="lfo_2_fade_mode">Fade mode</label><br />
+						<select id="lfo_2_fade_mode" name="0:123" default="4">
+							<option value="4">Fade In</option>
+							<option value="5">Fade out</option>
+							<option value="6">Gate in</option>
+							<option value="7">Gate out</option>
+						</select><br />
+					</fieldset>
+
+				</div>
+
+				<div class="col">
+					<fieldset>
+						<legend>Env 3</legend>
+
+						<label for="env_3_delay">Delay</label>
+						<span class="badge badge-dark float-right mt-3"></span>
+						<br />
+						<input id="env_3_delay" name="0:14" type="range" min="0" max="127" step="1" order="48"
+							default="0"><br />
+
+						<hr />
+
+						<label for="env_3_attack">Attack</label>
+						<span class="badge badge-dark float-right mt-3"></span>
+						<br />
+						<input id="env_3_attack" name="0:15" type="range" min="0" max="127" step="1" order="49"
+							default="10"><br />
+
+						<label for="env_3_decay">Decay</label>
+						<span class="badge badge-dark float-right mt-3"></span>
+						<br />
+						<input id="env_3_decay" name="0:16" type="range" min="0" max="127" step="1" order="50"
+							default="70"><br />
+
+						<label for="env_3_sustain">Sustain</label>
+						<span class="badge badge-dark float-right mt-3"></span>
+						<br />
+						<input id="env_3_sustain" name="0:17" type="range" min="0" max="127" step="1" order="51"
+							default="64"><br />
+
+						<label for="env_3_release">Release</label>
+						<span class="badge badge-dark float-right mt-3"></span>
+						<br />
+						<input id="env_3_release" name="0:18" type="range" min="0" max="127" step="1" order="52"
+							default="40"><br />
+					</fieldset>
+				</div>
+
+			</div>
+
+			<h1>Mod Matrix</h1>
 
 			<div class="tab-pane show" id="modMatrixControls" role="tabpanel">
 
@@ -2357,7 +2365,7 @@
 
 			</div>
 
-			<h1>Macros</h1>
+			<h1>Macro Knobs</h1>
 
 			<div class="tab-pane show" id="macroControls" role="tabpanel">
 				<div class="row">
